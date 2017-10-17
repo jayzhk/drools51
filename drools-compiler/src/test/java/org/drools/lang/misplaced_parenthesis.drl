@@ -1,0 +1,9 @@
+package org.com.agfa.hap.drools;
+
+rule "test rule"
+	salience 10
+	when
+		$c: WorkerPerformanceContext(eval)$c.getBalanceMonth() != null))
+	then
+		retract($p);
+end

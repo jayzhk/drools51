@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+                version="1.0">
+    <persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
+        <description>Hibernate 3 Persistence Unit.</description>
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jar-file>target/classes</jar-file>
+		<jar-file>M2_REPO/org/dcm4che/dcm4che-core/dcm4che3.version/dcm4che-core-dcm4che3.version.jar</jar-file>
+		<jar-file>M2_REPO/org/dcm4che/dcm4che-net/dcm4che3.version/dcm4che-net-dcm4che3.version.jar</jar-file>
+		<jar-file>M2_REPO/org/dcm4che/dcm4che-conf-core-api/dcm4che3.version/dcm4che-conf-core-api-dcm4che3.version.jar</jar-file>
+		<jar-file>M2_REPO/org/dcm4che/dcm4chee-arc/dcm4chee-arc-entity/dcm4chee-arc.version/dcm4chee-arc-entity-dcm4chee-arc.version-oracle.jar</jar-file>
+		<jar-file>M2_REPO/com/agfa/hap/accesscontrol/com.agfa.hap.accesscontrol.pap/hap.accesscontrol.version/com.agfa.hap.accesscontrol.pap-hap.accesscontrol.version.jar</jar-file>
+		<jar-file>M2_REPO/com/agfa/hap/utilities/com.agfa.hap.drools.common/hap.com.agfa.hap.drools.version/com.agfa.hap.drools.common-hap.com.agfa.hap.drools.version.jar</jar-file>
+		<jar-file>M2_REPO/com/agfa/agility/model/com.agfa.agility.model.core/project.version/com.agfa.agility.model.core-project.version.jar</jar-file>
+		 <jar-file>M2_REPO/com/agfa/agility/ris/com.agfa.ris.server.api/project.version/com.agfa.ris.server.api-project.version.jar</jar-file>
+        <jar-file>M2_REPO/com/agfa/agility/ris/com.agfa.hap.workflow.sdo/project.version/com.agfa.hap.workflow.sdo-project.version.jar</jar-file>
+        <jar-file>M2_REPO/com/agfa/agility/server/com.agfa.agility.pacs.dicom.entity/agility-server-common.version/com.agfa.agility.pacs.dicom.entity-agility-server-common.version.jar</jar-file>
+
+        <properties>
+        	<property name="hibernate.ejb.entitymanager_factory_name" value="ris.server"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+            <property name="hibernate.session_factory_name" value="java:/hibernate/AgilitySessionFactory"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+            <property name="hibernate.use_query_cache" value="false"/>
+            <property name="hibernate.max_fetch_depth" value="3"/>
+            <property name="hibernate.batch_versioned_data" value="true"/>
+            <property name="hibernate.jdbc.batch_size" value="20"/>
+            <property name="hibernate.query.substitutions" value="true 1, false 0, yes 'Y', no 'N'"/>
+            <property name="hibernate.default_batch_fetch_size" value="50"/>
+            <property name="hibernate.order_updates" value="true"/>
+            <property name="hibernate.order_inserts" value="true"/>
+			<property name="hibernate.archive.autodetection" value="class,hbm"/>
+			<property name="hibernate.jdbc.lob.non_contextual_creation" value="true"/>
+			<property name="hibernate.cache.provider_configuration_file_resource_path" value="hbm/hibernate-cache.xml"/>
+			<property name="hibernate.check_nullability" value="true"/>
+         	<property name="jboss.entity.manager.factory.jndi.name" value="java:/RisEntityManagerFactory"/>
+         	<property name="jadira.usertype.databaseZone" value="jvm"/>
+			<property name="hibernate.search.default.directory_provider" value="ram"/>
+			<property name="hibernate.search.indexing_strategy" value="manual"/>
+			<property name="hibernate.search.default.exclusive_index_use" value="false"/>
+			<property name="hibernate.cache.provider_class" value="org.jboss.hibernate.jbc.cacheprovider.TreeCacheProvider"/>
+			<property name="hibernate.cache.region_prefix" value="agilityRis"/>
+			<property name="hibernate.discriminator.ignore_explicit_for_joined" value="true"/>
+			<property name="hibernate.connection.url" value="jdbc:oracle:thin:@//ei-db01.agfahealthcare.com:1521/APROD"/>
+
+			<property name="hibernate.connection.password" value="OHOCH3"/>
+			<property name="hibernate.connection.username" value="AS_SYS"/>
+			<property name="hibernate.search.default.directory_provider" value="ram"/>
+			<property name="hibernate.search.com.agfa.agility.model.core.CodingCode.locking_strategy" value="none"/>
+			<property name="hibernate.search.indexing_strategy" value="manual"/>
+			<property name="hibernate.search.default.exclusive_index_use" value="false"/>
+        </properties>
+
+    </persistence-unit>
+</persistence>

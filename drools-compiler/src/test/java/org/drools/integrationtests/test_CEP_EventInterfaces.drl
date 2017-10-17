@@ -1,0 +1,13 @@
+package org.com.agfa.hap.drools;
+
+declare StockTickInterface 
+    @role( event )
+    @timestamp( dateTimestamp )
+end
+
+rule "Check event"
+when
+    $st : StockTick( company == "ACME" )
+then
+    // no-op
+end

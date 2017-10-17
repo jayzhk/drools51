@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Bnd-LastModified: 1508250015415
+Build-Jdk: 1.8.0_65
+Built-By: AXIGI
+Bundle-Activator: org.com.agfa.hap.drools.osgi.api.Activator
+Bundle-ManifestVersion: 2
+Bundle-Name: Drools :: API
+Bundle-SymbolicName: org.com.agfa.hap.drools.api;singleton:=true
+Bundle-Version: 5.1.0
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Import-Package: com.sun.tools.xjc;resolution:=optional,com.thoughtworks.
+ xstream;resolution:=optional,javax.management;resolution:=optional,java
+ x.xml.bind;resolution:=optional,org.osgi.framework;resolution:=optional
+ ;version="[1.5,2)",org.osgi.util.tracker;resolution:=optional;version="
+ [1.4,2)",org.quartz;resolution:=optional,com.sun.tools.xjc;resolution:=
+ optional
+Include-Resource: META-INF/MANIFEST.MF=src/main/resources/META-INF/MANIF
+ EST.MF
+Originally-Created-By: Apache Maven
+Private-Package: org.drools,org.drools.agent,org.drools.builder,org.droo
+ ls.builder.conf,org.drools.builder.help,org.drools.command,org.drools.c
+ onf,org.drools.definition,org.drools.definition.process,org.drools.defi
+ nition.rule,org.drools.definition.type,org.drools.event,org.drools.even
+ t.io,org.drools.event.knowledgeagent,org.drools.event.knowledgebase,org
+ .drools.event.process,org.drools.event.rule,org.drools.io,org.drools.lo
+ gger,org.drools.management,org.drools.marshalling,org.drools.osgi.api,o
+ rg.drools.persistence.jpa,org.drools.runtime,org.drools.runtime.conf,or
+ g.drools.runtime.help,org.drools.runtime.process,org.drools.runtime.rul
+ e,org.drools.task.service,org.drools.time,org.drools.util
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"
+Tool: Bnd-3.3.0.201609221906

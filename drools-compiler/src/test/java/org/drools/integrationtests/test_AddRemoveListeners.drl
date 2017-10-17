@@ -1,0 +1,11 @@
+package org.com.agfa.hap.drools
+
+import org.drools.event.rule.WorkingMemoryEventListener
+
+rule "remove listener"
+when
+	listener : WorkingMemoryEventListener();
+then
+	com.agfa.hap.drools.getKnowledgeRuntime().removeEventListener(listener);
+	retract(listener);
+end

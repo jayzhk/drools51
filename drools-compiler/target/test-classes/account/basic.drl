@@ -1,0 +1,11 @@
+package droolsbook
+import com.agfa.hap.drools.Account
+
+//dialect "mvel"
+
+rule "basic rule"
+when
+    Account( balance < 100)
+then
+    System.out.println("Account balance is less than 100");
+ end

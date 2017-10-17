@@ -1,0 +1,12 @@
+# Example DRL with only a package decl
+#
+
+package org.com.agfa.hap.drools.lang;
+
+import java.util.List;
+import java.util.ArrayList;
+
+
+
+
+

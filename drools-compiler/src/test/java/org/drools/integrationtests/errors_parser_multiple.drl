@@ -1,0 +1,28 @@
+package org.com.agfa.hap.drools.test;
+
+impot org.com.agfa.hap.drools.Cheese;
+
+
+rulex "eval rule test"
+    when
+    	#some bad stuff here
+        Stilton()
+		Cheese()
+		Poison()
+    hen
+    	#this is an error
+        list.add( ;
+end 
+
+
+rule "eval rule test"
+    when
+    	#some bad stuff here
+        Stilton()
+		Cheese()
+		Poison()
+    then
+    	#this is an error
+        list.add( ;
+    
+end 

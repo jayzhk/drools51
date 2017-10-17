@@ -1,0 +1,6 @@
+package org.com.agfa.hap.drools
+
+rule "empty rule"
+when
+then
+end

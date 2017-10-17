@@ -1,0 +1,7 @@
+package org.com.agfa.hap.drools.test;
+
+import org.drools.Cheese;
+
+query "simple query"
+        Cheese(type == "stinky")
+end 

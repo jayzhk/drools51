@@ -1,0 +1,9 @@
+package org.com.agfa.hap.drools;
+
+import event org.com.agfa.hap.drools.StockTick;
+
+rule "Check event"
+when
+    StockTick( company == "ACME" )
+then
+end

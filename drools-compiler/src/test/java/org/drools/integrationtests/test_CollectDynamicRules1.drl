@@ -1,0 +1,4 @@
+package org.com.agfa.hap.drools
+
+global java.util.List results
+

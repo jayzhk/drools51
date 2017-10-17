@@ -1,0 +1,15 @@
+package org.com.agfa.hap.drools;
+
+rule "Hello World"
+	dialect "mvel"
+	when
+	then
+		System.out.println( "mvel" ); 
+end
+
+rule "GoodBye"
+	dialect "mvel"
+	when
+	then 
+		System.out.println( "mvel" );
+end
