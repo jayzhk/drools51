@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Archiver-Version: Plexus Archiver
-Bnd-LastModified: 1508295518270
+Bnd-LastModified: 1508306702100
 Build-Jdk: 1.8.0_65
 Built-By: AXIGI
 Bundle-Activator: org.drools.osgi.core.Activator
