@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools;
+package org.drools;
 
 global java.util.List results;
 
@@ -14,6 +14,6 @@ rule "Test Consequence"
   when
     Person(name == "Michael")
   then
-    results.add( com.agfa.hap.drools.getRule().getMetaAttribute("foo"));
-    results.add( com.agfa.hap.drools.getRule().getMetaAttribute("foo2"));
+    results.add( drools.getRule().getMetaAttribute("foo"));
+    results.add( drools.getRule().getMetaAttribute("foo2"));
 end

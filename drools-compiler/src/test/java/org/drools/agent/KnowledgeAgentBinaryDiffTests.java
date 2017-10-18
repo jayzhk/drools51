@@ -295,7 +295,7 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
     public void testDifferentLHS() throws Exception {
 
         String header1 = "";
-        header1 += "package org.com.agfa.hap.drools.test\n";
+        header1 += "package org.drools.test\n";
         header1 += "global java.util.List list\n\n";
 
         String rule1 = this.createCommonRule("rule1");
@@ -308,9 +308,9 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule1.drl' type='DRL' />";
         xml += "    </add> ";
@@ -346,7 +346,7 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
         rule1v2 += "when\n";
         rule1v2 += "\tString()\n";
         rule1v2 += "then\n";
-        rule1v2 += "list.add( com.agfa.hap.drools.getRule().getName()+\"-V2\");\n";
+        rule1v2 += "list.add( drools.getRule().getName()+\"-V2\");\n";
         rule1v2 += "end\n";
 
         output = new BufferedWriter(new FileWriter(f1));
@@ -372,7 +372,7 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
     public void testDifferentConsequences() throws Exception {
 
         String header1 = "";
-        header1 += "package org.com.agfa.hap.drools.test\n";
+        header1 += "package org.drools.test\n";
         header1 += "global java.util.List list\n\n";
 
         String rule1 = this.createCommonRule("rule1");
@@ -385,9 +385,9 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule1.drl' type='DRL' />";
         xml += "    </add> ";
@@ -448,7 +448,7 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
     private void differentRuleAttributeTest(String attribute1, String attribute2,RuleAttributeAsserter asserter) throws Exception {
 
         String header1 = "";
-        header1 += "package org.com.agfa.hap.drools.test\n";
+        header1 += "package org.drools.test\n";
         header1 += "global java.util.List list\n\n";
 
         String rule1 = "";
@@ -457,7 +457,7 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
         rule1 += "when\n";
         rule1 += "\tString()\n";
         rule1 += "then\n";
-        rule1 += "list.add( com.agfa.hap.drools.getRule().getName());\n";
+        rule1 += "list.add( drools.getRule().getName());\n";
         rule1 += "end\n";
 
 
@@ -468,9 +468,9 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule1.drl' type='DRL' />";
         xml += "    </add> ";
@@ -485,7 +485,7 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
 
         kagent.applyChangeSet(ResourceFactory.newUrlResource(fxml.toURI().toURL()));
 
-        Rule rule = (Rule) kagent.getKnowledgeBase().getRule("org.com.agfa.hap.drools.test", "rule1");
+        Rule rule = (Rule) kagent.getKnowledgeBase().getRule("org.drools.test", "rule1");
 
         assertNotNull(rule);
         asserter.assertRuleAttribute(attribute1, rule);
@@ -501,7 +501,7 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
         rule1v2 += "when\n";
         rule1v2 += "\tString()\n";
         rule1v2 += "then\n";
-        rule1v2 += "list.add( com.agfa.hap.drools.getRule().getName());\n";
+        rule1v2 += "list.add( drools.getRule().getName());\n";
         rule1v2 += "end\n";
 
         output = new BufferedWriter(new FileWriter(f1));
@@ -510,7 +510,7 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
         output.close();
         Thread.sleep(3000);
 
-        rule = (Rule) kagent.getKnowledgeBase().getRule("org.com.agfa.hap.drools.test", "rule1");
+        rule = (Rule) kagent.getKnowledgeBase().getRule("org.drools.test", "rule1");
         assertNotNull(rule);
         asserter.assertRuleAttribute(attribute2, rule);
 
@@ -519,16 +519,16 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
 
     private KnowledgeAgent createKAgent(KnowledgeBase kbase) {
         ResourceChangeScannerConfiguration sconf = ResourceFactory.getResourceChangeScannerService().newResourceChangeScannerConfiguration();
-        sconf.setProperty("com.agfa.hap.drools.resource.scanner.interval", "2");
+        sconf.setProperty("drools.resource.scanner.interval", "2");
         ResourceFactory.getResourceChangeScannerService().configure(sconf);
 
-        //System.setProperty(KnowledgeAgentFactory.PROVIDER_CLASS_NAME_PROPERTY_NAME, "org.com.agfa.hap.drools.agent.impl.KnowledgeAgentProviderImpl");
+        //System.setProperty(KnowledgeAgentFactory.PROVIDER_CLASS_NAME_PROPERTY_NAME, "org.drools.agent.impl.KnowledgeAgentProviderImpl");
 
         KnowledgeAgentConfiguration aconf = KnowledgeAgentFactory.newKnowledgeAgentConfiguration();
-        aconf.setProperty("com.agfa.hap.drools.agent.scanDirectories", "true");
-        aconf.setProperty("com.agfa.hap.drools.agent.scanResources", "true");
+        aconf.setProperty("drools.agent.scanDirectories", "true");
+        aconf.setProperty("drools.agent.scanResources", "true");
         // Testing incremental build here
-        aconf.setProperty("com.agfa.hap.drools.agent.newInstance", "false");
+        aconf.setProperty("drools.agent.newInstance", "false");
 
 
 
@@ -547,7 +547,7 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
         sb.append("\n");
         sb.append("when\n");
         sb.append("then\n");
-        sb.append("list.add( com.agfa.hap.drools.getRule().getName() );\n");
+        sb.append("list.add( drools.getRule().getName() );\n");
         sb.append("end\n");
 
         return sb.toString();
@@ -560,7 +560,7 @@ public class KnowledgeAgentBinaryDiffTests extends TestCase {
         sb.append("\n");
         sb.append("when\n");
         sb.append("then\n");
-        sb.append("list.add( com.agfa.hap.drools.getRule().getName()+\"-V" + version + "\");\n");
+        sb.append("list.add( drools.getRule().getName()+\"-V" + version + "\");\n");
         sb.append("end\n");
 
         return sb.toString();

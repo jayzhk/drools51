@@ -166,7 +166,7 @@ public class XMLPersistenceTest extends TestCase {
         variables.add(variable);
         variable = new Variable();
         variable.setName("variable3");
-        variable.setType(new ObjectDataType("org.com.agfa.hap.drools.Person"));
+        variable.setType(new ObjectDataType("org.drools.Person"));
         Person person = new Person();
         person.setName("John");
         variable.setValue(person);

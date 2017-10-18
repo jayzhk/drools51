@@ -1,6 +1,6 @@
-package org.com.agfa.hap.drools;
+package org.drools;
 
-import event org.com.agfa.hap.drools.StockTick;
+import event org.drools.StockTick;
 
 rule "Check event"
 when

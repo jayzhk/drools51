@@ -121,12 +121,12 @@ public class SequentialTest extends TestCase {
     public void testKnowledgeRuntimeAccess() throws Exception {
         String str = "";
         str += "package org.test\n";
-        str +="import org.com.agfa.hap.drools.Message\n";
+        str +="import org.drools.Message\n";
         str +="rule \"Hello World\"\n";
         str +="when\n";
         str +="    Message( )\n";
         str +="then\n";
-        str +="    System.out.println( com.agfa.hap.drools.getKnowledgeRuntime() );\n";
+        str +="    System.out.println( drools.getKnowledgeRuntime() );\n";
         str +="end\n";
         
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
@@ -151,12 +151,12 @@ public class SequentialTest extends TestCase {
     public void testEvents() throws Exception {
         String str = "";
         str += "package org.test\n";
-        str +="import org.com.agfa.hap.drools.Message\n";
+        str +="import org.drools.Message\n";
         str +="rule \"Hello World\"\n";
         str +="when\n";
         str +="    Message( )\n";
         str +="then\n";
-        str +="    System.out.println( com.agfa.hap.drools.getKnowledgeRuntime() );\n";
+        str +="    System.out.println( drools.getKnowledgeRuntime() );\n";
         str +="end\n";
         
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
@@ -352,8 +352,8 @@ public class SequentialTest extends TestCase {
         final Package pkg = builder.getPackage();
 
         Properties properties = new Properties();
-        properties.setProperty( "com.agfa.hap.drools.shadowProxyExcludes",
-                                "org.com.agfa.hap.drools.*" );
+        properties.setProperty( "drools.shadowProxyExcludes",
+                                "org.drools.*" );
 
         RuleBaseConfiguration conf = new RuleBaseConfiguration( properties );
         conf.setSequential( sequentialMode );

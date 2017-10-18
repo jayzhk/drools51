@@ -45,7 +45,7 @@ public class MVELAccumulateBuilderTest extends TestCase {
                                                                mvelDialect );
 
         final AccumulateDescr accDescr = new AccumulateDescr();
-        final PatternDescr inputPattern = new PatternDescr( "org.com.agfa.hap.drools.Cheese",
+        final PatternDescr inputPattern = new PatternDescr( "org.drools.Cheese",
                                                             "$cheese" );
         accDescr.setInputPattern( inputPattern );
         accDescr.setInitCode( "total = 0;" );

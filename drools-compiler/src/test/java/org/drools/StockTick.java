@@ -56,49 +56,49 @@ public class StockTick implements Serializable, StockTickInterface {
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.StockTickInterface#getCompany()
+     * @see org.drools.StockTickInterface#getCompany()
      */
     public String getCompany() {
         return company;
     }
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.StockTickInterface#setCompany(java.lang.String)
+     * @see org.drools.StockTickInterface#setCompany(java.lang.String)
      */
     public void setCompany(String company) {
         this.company = company;
     }
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.StockTickInterface#getPrice()
+     * @see org.drools.StockTickInterface#getPrice()
      */
     public double getPrice() {
         return price;
     }
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.StockTickInterface#setPrice(double)
+     * @see org.drools.StockTickInterface#setPrice(double)
      */
     public void setPrice(double price) {
         this.price = price;
     }
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.StockTickInterface#getSeq()
+     * @see org.drools.StockTickInterface#getSeq()
      */
     public long getSeq() {
         return seq;
     }
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.StockTickInterface#setSeq(long)
+     * @see org.drools.StockTickInterface#setSeq(long)
      */
     public void setSeq(long seq) {
         this.seq = seq;
     }
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.StockTickInterface#getTime()
+     * @see org.drools.StockTickInterface#getTime()
      */
     public long getTime() {
         return time;
     }
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.StockTickInterface#setTime(long)
+     * @see org.drools.StockTickInterface#setTime(long)
      */
     public void setTime(long time) {
         this.time = time;
@@ -109,21 +109,21 @@ public class StockTick implements Serializable, StockTickInterface {
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.StockTickInterface#getDuration()
+     * @see org.drools.StockTickInterface#getDuration()
      */
     public long getDuration() {
         return duration;
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.StockTickInterface#setDuration(long)
+     * @see org.drools.StockTickInterface#setDuration(long)
      */
     public void setDuration(long duration) {
         this.duration = duration;
     }
     
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.StockTickInterface#getDateTimestamp()
+     * @see org.drools.StockTickInterface#getDateTimestamp()
      */
     public Date getDateTimestamp() {
         return new Date( this.time );

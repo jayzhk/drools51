@@ -10,7 +10,7 @@ import org.mvel2.MVEL;
 public class FactPopulatorTest extends TestCase {
 
 	public void testMVELPopulate() throws Exception {
-		Object q = MVEL.eval("new org.com.agfa.hap.drools.testframework.DumbFact()");
+		Object q = MVEL.eval("new org.drools.testframework.DumbFact()");
 
 		Map m = new HashMap();
 		m.put("obj", q);

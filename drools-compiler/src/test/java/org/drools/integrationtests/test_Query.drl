@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools.integrationtests;
+package org.drools.integrationtests;
 
 import org.drools.InsertedObject;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.agfa.hap.drools;
+package drools;
 
 import org.drools.KnowledgeBase;
 import org.drools.KnowledgeBaseFactory;

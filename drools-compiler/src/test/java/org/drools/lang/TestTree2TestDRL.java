@@ -163,8 +163,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit15() throws Exception {
-		// test input: "package org.com.agfa.hap.drools.test;\n \nimport org.com.agfa.hap.drools.Cheese;\n \nrule \"simple rule\"\n    when\n        Cheese( )\n    then\nend "
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools.test;\n \nimport org.com.agfa.hap.drools.Cheese;\n \nrule \"simple rule\"\n    when\n        Cheese( )\n    then\nend ", false);
+		// test input: "package org.drools.test;\n \nimport org.drools.Cheese;\n \nrule \"simple rule\"\n    when\n        Cheese( )\n    then\nend "
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools.test;\n \nimport org.drools.Cheese;\n \nrule \"simple rule\"\n    when\n        Cheese( )\n    then\nend ", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -307,8 +307,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit31() throws Exception {
-		// test input: "package org.com.agfa.hap.drools.test;\n\nimport org.com.agfa.hap.drools.integrationtests.Cheese;\n\nrule \"Like Stilton\"\n    when\n        Cheese( t:type == \"stilton\" )\n    then\n        System.out.println(\"I like \" + t);\nend    \n\nrule \"Like Cheddar\"\n    when\n        Cheese( t:type == \"cheddar\" )\n    then\n        System.out.println(\"I like \" + t );\nend    "
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools.test;\n\nimport org.com.agfa.hap.drools.integrationtests.Cheese;\n\nrule \"Like Stilton\"\n    when\n        Cheese( t:type == \"stilton\" )\n    then\n        System.out.println(\"I like \" + t);\nend    \n\nrule \"Like Cheddar\"\n    when\n        Cheese( t:type == \"cheddar\" )\n    then\n        System.out.println(\"I like \" + t );\nend    ", false);
+		// test input: "package org.drools.test;\n\nimport org.drools.integrationtests.Cheese;\n\nrule \"Like Stilton\"\n    when\n        Cheese( t:type == \"stilton\" )\n    then\n        System.out.println(\"I like \" + t);\nend    \n\nrule \"Like Cheddar\"\n    when\n        Cheese( t:type == \"cheddar\" )\n    then\n        System.out.println(\"I like \" + t );\nend    "
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools.test;\n\nimport org.drools.integrationtests.Cheese;\n\nrule \"Like Stilton\"\n    when\n        Cheese( t:type == \"stilton\" )\n    then\n        System.out.println(\"I like \" + t);\nend    \n\nrule \"Like Cheddar\"\n    when\n        Cheese( t:type == \"cheddar\" )\n    then\n        System.out.println(\"I like \" + t );\nend    ", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -316,8 +316,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit32() throws Exception {
-		// test input: "package org.com.agfa.hap.drools.test;\n\nimport org.com.agfa.hap.drools.Cheese;\n\nrule \"like cheddar\"\n    when\n        Cheese( $type:type )\n    then\n        System.out.println(\"I like \" + $type);\nend    "
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools.test;\n\nimport org.com.agfa.hap.drools.Cheese;\n\nrule \"like cheddar\"\n    when\n        Cheese( $type:type )\n    then\n        System.out.println(\"I like \" + $type);\nend    ", false);
+		// test input: "package org.drools.test;\n\nimport org.drools.Cheese;\n\nrule \"like cheddar\"\n    when\n        Cheese( $type:type )\n    then\n        System.out.println(\"I like \" + $type);\nend    "
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools.test;\n\nimport org.drools.Cheese;\n\nrule \"like cheddar\"\n    when\n        Cheese( $type:type )\n    then\n        System.out.println(\"I like \" + $type);\nend    ", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -325,8 +325,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit33() throws Exception {
-		// test input: "package org.com.agfa.hap.drools.test;\n\nimport org.com.agfa.hap.drools.Cheese;\nimport org.com.agfa.hap.drools.Person;\n\nrule \"Who likes Stilton\"\n    when\n        Cheese($type : type == \"stilton\")\n        $person : Person($name : name == \"bob\", likes == $type)        \n    then\n        System.out.println( $name + \" likes \" + $type);\nend    "
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools.test;\n\nimport org.com.agfa.hap.drools.Cheese;\nimport org.com.agfa.hap.drools.Person;\n\nrule \"Who likes Stilton\"\n    when\n        Cheese($type : type == \"stilton\")\n        $person : Person($name : name == \"bob\", likes == $type)        \n    then\n        System.out.println( $name + \" likes \" + $type);\nend    ", false);
+		// test input: "package org.drools.test;\n\nimport org.drools.Cheese;\nimport org.drools.Person;\n\nrule \"Who likes Stilton\"\n    when\n        Cheese($type : type == \"stilton\")\n        $person : Person($name : name == \"bob\", likes == $type)        \n    then\n        System.out.println( $name + \" likes \" + $type);\nend    "
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools.test;\n\nimport org.drools.Cheese;\nimport org.drools.Person;\n\nrule \"Who likes Stilton\"\n    when\n        Cheese($type : type == \"stilton\")\n        $person : Person($name : name == \"bob\", likes == $type)        \n    then\n        System.out.println( $name + \" likes \" + $type);\nend    ", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -334,8 +334,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit34() throws Exception {
-		// test input: "import org.com.agfa.hap.drools.Person\n\nrule simple_rule \n  when\n\tPerson(name == \"mark\") or \n\t( Person(type == \"fan\") and Cheese(type == \"green\") )\n  then\n\tSystem.out.println( \"Mark and Michael\" + bar );\nend"
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "import org.com.agfa.hap.drools.Person\n\nrule simple_rule \n  when\n\tPerson(name == \"mark\") or \n\t( Person(type == \"fan\") and Cheese(type == \"green\") )\n  then\n\tSystem.out.println( \"Mark and Michael\" + bar );\nend", false);
+		// test input: "import org.drools.Person\n\nrule simple_rule \n  when\n\tPerson(name == \"mark\") or \n\t( Person(type == \"fan\") and Cheese(type == \"green\") )\n  then\n\tSystem.out.println( \"Mark and Michael\" + bar );\nend"
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "import org.drools.Person\n\nrule simple_rule \n  when\n\tPerson(name == \"mark\") or \n\t( Person(type == \"fan\") and Cheese(type == \"green\") )\n  then\n\tSystem.out.println( \"Mark and Michael\" + bar );\nend", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -343,8 +343,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit35() throws Exception {
-		// test input: "import org.com.agfa.hap.drools.Person\n\nrule simple_rule \n  when\n    Person(name == \"mark\") && Cheese(type == \"stilton\")\n    Person(name == \"mark\") || Cheese(type == \"stilton\")\n  then\n\tSystem.out.println( \"Mark and Michael\" );\nend"
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "import org.com.agfa.hap.drools.Person\n\nrule simple_rule \n  when\n    Person(name == \"mark\") && Cheese(type == \"stilton\")\n    Person(name == \"mark\") || Cheese(type == \"stilton\")\n  then\n\tSystem.out.println( \"Mark and Michael\" );\nend", false);
+		// test input: "import org.drools.Person\n\nrule simple_rule \n  when\n    Person(name == \"mark\") && Cheese(type == \"stilton\")\n    Person(name == \"mark\") || Cheese(type == \"stilton\")\n  then\n\tSystem.out.println( \"Mark and Michael\" );\nend"
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "import org.drools.Person\n\nrule simple_rule \n  when\n    Person(name == \"mark\") && Cheese(type == \"stilton\")\n    Person(name == \"mark\") || Cheese(type == \"stilton\")\n  then\n\tSystem.out.println( \"Mark and Michael\" );\nend", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -352,8 +352,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit36() throws Exception {
-		// test input: "import org.com.agfa.hap.drools.Person\n\nrule simple_rule \n  when\n\tfoo :  ( Person(name == \"mark\") or Person(type == \"fan\") ) \n\tCheese(type == \"green\")\n  then\n\tSystem.out.println( \"Mark and Michael\" + bar );\nend"
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "import org.com.agfa.hap.drools.Person\n\nrule simple_rule \n  when\n\tfoo :  ( Person(name == \"mark\") or Person(type == \"fan\") ) \n\tCheese(type == \"green\")\n  then\n\tSystem.out.println( \"Mark and Michael\" + bar );\nend", false);
+		// test input: "import org.drools.Person\n\nrule simple_rule \n  when\n\tfoo :  ( Person(name == \"mark\") or Person(type == \"fan\") ) \n\tCheese(type == \"green\")\n  then\n\tSystem.out.println( \"Mark and Michael\" + bar );\nend"
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "import org.drools.Person\n\nrule simple_rule \n  when\n\tfoo :  ( Person(name == \"mark\") or Person(type == \"fan\") ) \n\tCheese(type == \"green\")\n  then\n\tSystem.out.println( \"Mark and Michael\" + bar );\nend", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -424,8 +424,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit44() throws Exception {
-		// test input: "package org.com.agfa.hap.drools.test;\n\nimport org.com.agfa.hap.drools.Cheese;\n\nglobal java.util.List list;\nglobal java.lang.Integer five;\n\nrule \"not rule test\"\n    when\n        $person : Person( $likes:like )\n        not Cheese( type == $likes )\n    then\n\t\tlist.add( $person );\nend    "
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools.test;\n\nimport org.com.agfa.hap.drools.Cheese;\n\nglobal java.util.List list;\nglobal java.lang.Integer five;\n\nrule \"not rule test\"\n    when\n        $person : Person( $likes:like )\n        not Cheese( type == $likes )\n    then\n\t\tlist.add( $person );\nend    ", false);
+		// test input: "package org.drools.test;\n\nimport org.drools.Cheese;\n\nglobal java.util.List list;\nglobal java.lang.Integer five;\n\nrule \"not rule test\"\n    when\n        $person : Person( $likes:like )\n        not Cheese( type == $likes )\n    then\n\t\tlist.add( $person );\nend    "
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools.test;\n\nimport org.drools.Cheese;\n\nglobal java.util.List list;\nglobal java.lang.Integer five;\n\nrule \"not rule test\"\n    when\n        $person : Person( $likes:like )\n        not Cheese( type == $likes )\n    then\n\t\tlist.add( $person );\nend    ", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -433,8 +433,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit45() throws Exception {
-		// test input: "package org.com.agfa.hap.drools.test;\n\nimport org.com.agfa.hap.drools.Cheese;\n\nglobal java.lang.String foo\nglobal java.lang.Integer bar;\n\nrule baz\n    when\n        Cheese( )\n    then\n\nend    "
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools.test;\n\nimport org.com.agfa.hap.drools.Cheese;\n\nglobal java.lang.String foo\nglobal java.lang.Integer bar;\n\nrule baz\n    when\n        Cheese( )\n    then\n\nend    ", false);
+		// test input: "package org.drools.test;\n\nimport org.drools.Cheese;\n\nglobal java.lang.String foo\nglobal java.lang.Integer bar;\n\nrule baz\n    when\n        Cheese( )\n    then\n\nend    "
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools.test;\n\nimport org.drools.Cheese;\n\nglobal java.lang.String foo\nglobal java.lang.Integer bar;\n\nrule baz\n    when\n        Cheese( )\n    then\n\nend    ", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -568,8 +568,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit60() throws Exception {
-		// test input: "package org.com.agfa.hap.drools.test;\n\nrule \"Who likes Stilton\"\n    when\n        com.cheeseco.Cheese($type : type == \"stilton\")\n    then\n        System.out.println( $name + \" likes \" + $type);\nend    "
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools.test;\n\nrule \"Who likes Stilton\"\n    when\n        com.cheeseco.Cheese($type : type == \"stilton\")\n    then\n        System.out.println( $name + \" likes \" + $type);\nend    ", false);
+		// test input: "package org.drools.test;\n\nrule \"Who likes Stilton\"\n    when\n        com.cheeseco.Cheese($type : type == \"stilton\")\n    then\n        System.out.println( $name + \" likes \" + $type);\nend    "
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools.test;\n\nrule \"Who likes Stilton\"\n    when\n        com.cheeseco.Cheese($type : type == \"stilton\")\n    then\n        System.out.println( $name + \" likes \" + $type);\nend    ", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -649,8 +649,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit69() throws Exception {
-		// test input: "package org.com.agfa.hap.drools;\n\nglobal java.util.List list;\n\nrule \"rule1\"\nwhen\n    Pattern1();\n    Pattern2() from x.y.z;\nthen\n    System.out.println(\"Test\");\nend;\n\nquery \"query1\"\n\tPattern5();\n\tPattern6();\n\tPattern7();\nend;\n\nrule \"rule2\"\nwhen\n    Pattern3();\n    Pattern4() from collect( Pattern5() );\nthen\n    System.out.println(\"Test\");\nend;\n\n\t"
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools;\n\nglobal java.util.List list;\n\nrule \"rule1\"\nwhen\n    Pattern1();\n    Pattern2() from x.y.z;\nthen\n    System.out.println(\"Test\");\nend;\n\nquery \"query1\"\n\tPattern5();\n\tPattern6();\n\tPattern7();\nend;\n\nrule \"rule2\"\nwhen\n    Pattern3();\n    Pattern4() from collect( Pattern5() );\nthen\n    System.out.println(\"Test\");\nend;\n\n\t", false);
+		// test input: "package org.drools;\n\nglobal java.util.List list;\n\nrule \"rule1\"\nwhen\n    Pattern1();\n    Pattern2() from x.y.z;\nthen\n    System.out.println(\"Test\");\nend;\n\nquery \"query1\"\n\tPattern5();\n\tPattern6();\n\tPattern7();\nend;\n\nrule \"rule2\"\nwhen\n    Pattern3();\n    Pattern4() from collect( Pattern5() );\nthen\n    System.out.println(\"Test\");\nend;\n\n\t"
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools;\n\nglobal java.util.List list;\n\nrule \"rule1\"\nwhen\n    Pattern1();\n    Pattern2() from x.y.z;\nthen\n    System.out.println(\"Test\");\nend;\n\nquery \"query1\"\n\tPattern5();\n\tPattern6();\n\tPattern7();\nend;\n\nrule \"rule2\"\nwhen\n    Pattern3();\n    Pattern4() from collect( Pattern5() );\nthen\n    System.out.println(\"Test\");\nend;\n\n\t", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -658,8 +658,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit70() throws Exception {
-		// test input: "package org.com.agfa.hap.drools\n\nrule \"Test Parse\"\n\nwhen\n    eval( 3==3 )\nthen\n    System.out.println(\"OK\");\nend "
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools\n\nrule \"Test Parse\"\n\nwhen\n    eval( 3==3 )\nthen\n    System.out.println(\"OK\");\nend ", false);
+		// test input: "package org.drools\n\nrule \"Test Parse\"\n\nwhen\n    eval( 3==3 )\nthen\n    System.out.println(\"OK\");\nend "
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools\n\nrule \"Test Parse\"\n\nwhen\n    eval( 3==3 )\nthen\n    System.out.println(\"OK\");\nend ", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -703,8 +703,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit75() throws Exception {
-		// test input: "package org.com.agfa.hap.drools;\n\nrule \"testing OR CE\"\nwhen\n    $p : Person( name == \"bob\" )\n    $c : Cheese( type == $p.likes ) || Cheese( price == 10 )\nthen\n    // do something\nend "
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools;\n\nrule \"testing OR CE\"\nwhen\n    $p : Person( name == \"bob\" )\n    $c : Cheese( type == $p.likes ) || Cheese( price == 10 )\nthen\n    // do something\nend ", false);
+		// test input: "package org.drools;\n\nrule \"testing OR CE\"\nwhen\n    $p : Person( name == \"bob\" )\n    $c : Cheese( type == $p.likes ) || Cheese( price == 10 )\nthen\n    // do something\nend "
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools;\n\nrule \"testing OR CE\"\nwhen\n    $p : Person( name == \"bob\" )\n    $c : Cheese( type == $p.likes ) || Cheese( price == 10 )\nthen\n    // do something\nend ", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -739,8 +739,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit79() throws Exception {
-		// test input: "package org.com.agfa.hap.drools;\n\nrule \"test rule\"\n\tsalience 10\n\twhen\n\t\t$c: WorkerPerformanceContext(eval)$c.getBalanceMonth() != null))\n\tthen\n\t\tretract($p);\nend\n\t"
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools;\n\nrule \"test rule\"\n\tsalience 10\n\twhen\n\t\t$c: WorkerPerformanceContext(eval)$c.getBalanceMonth() != null))\n\tthen\n\t\tretract($p);\nend\n\t", false);
+		// test input: "package org.drools;\n\nrule \"test rule\"\n\tsalience 10\n\twhen\n\t\t$c: WorkerPerformanceContext(eval)$c.getBalanceMonth() != null))\n\tthen\n\t\tretract($p);\nend\n\t"
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools;\n\nrule \"test rule\"\n\tsalience 10\n\twhen\n\t\t$c: WorkerPerformanceContext(eval)$c.getBalanceMonth() != null))\n\tthen\n\t\tretract($p);\nend\n\t", false);
 		Object actual = examineParserExecResult(28, retval);
 		Object expecting = "FAIL";
 		
@@ -748,8 +748,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit80() throws Exception {
-		// test input: "package org.com.agfa.hap.drools;\n\nrule \"Avoid NPE on wrong syntax\"\nwhen\n    not( Cheese( ( type == \"stilton\", price == 10 ) || ( type == \"brie\", price == 15 ) ) from $cheeseList )\nthen\n    System.out.println(\"OK\");\nend"
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools;\n\nrule \"Avoid NPE on wrong syntax\"\nwhen\n    not( Cheese( ( type == \"stilton\", price == 10 ) || ( type == \"brie\", price == 15 ) ) from $cheeseList )\nthen\n    System.out.println(\"OK\");\nend", false);
+		// test input: "package org.drools;\n\nrule \"Avoid NPE on wrong syntax\"\nwhen\n    not( Cheese( ( type == \"stilton\", price == 10 ) || ( type == \"brie\", price == 15 ) ) from $cheeseList )\nthen\n    System.out.println(\"OK\");\nend"
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools;\n\nrule \"Avoid NPE on wrong syntax\"\nwhen\n    not( Cheese( ( type == \"stilton\", price == 10 ) || ( type == \"brie\", price == 15 ) ) from $cheeseList )\nthen\n    System.out.println(\"OK\");\nend", false);
 		Object actual = examineParserExecResult(28, retval);
 		Object expecting = "FAIL";
 		
@@ -757,8 +757,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testCompilation_unit_walks_Compilation_unit81() throws Exception {
-		// test input: "package org.com.agfa.hap.drools;\n\nrule \"test pluggable operators\"\nwhen\n    $a : EventA()\n    $b : EventB( this after[1,10] $a )\n    $c : EventC( this finishes $b )\n    $d : EventD( this not starts $a )\n    $e : EventE( this not before [1, 10] $b )\nthen\nend"
-		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.com.agfa.hap.drools;\n\nrule \"test pluggable operators\"\nwhen\n    $a : EventA()\n    $b : EventB( this after[1,10] $a )\n    $c : EventC( this finishes $b )\n    $d : EventD( this not starts $a )\n    $e : EventE( this not before [1, 10] $b )\nthen\nend", false);
+		// test input: "package org.drools;\n\nrule \"test pluggable operators\"\nwhen\n    $a : EventA()\n    $b : EventB( this after[1,10] $a )\n    $c : EventC( this finishes $b )\n    $d : EventD( this not starts $a )\n    $e : EventE( this not before [1, 10] $b )\nthen\nend"
+		Object retval = execTreeParser("compilation_unit", "compilation_unit", "package org.drools;\n\nrule \"test pluggable operators\"\nwhen\n    $a : EventA()\n    $b : EventB( this after[1,10] $a )\n    $c : EventC( this finishes $b )\n    $d : EventD( this not starts $a )\n    $e : EventE( this not before [1, 10] $b )\nthen\nend", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -919,8 +919,8 @@ public class TestTree2TestDRL extends TestCase {
 	}
 
 	public void testLhs_block_walks_Normal_lhs_block15() throws Exception {
-		// test input: "org   .   com.agfa.hap.drools/*comment*/\t  .Message( text not matches $c#comment\n. property )"
-		Object retval = execTreeParser("lhs_block", "normal_lhs_block", "org   .   com.agfa.hap.drools/*comment*/\t  .Message( text not matches $c#comment\n. property )", false);
+		// test input: "org   .   drools/*comment*/\t  .Message( text not matches $c#comment\n. property )"
+		Object retval = execTreeParser("lhs_block", "normal_lhs_block", "org   .   drools/*comment*/\t  .Message( text not matches $c#comment\n. property )", false);
 		Object actual = examineParserExecResult(27, retval);
 		Object expecting = "OK";
 		
@@ -1481,7 +1481,7 @@ public class TestTree2TestDRL extends TestCase {
 			/** Invoke grammar rule, and get the return value */
 			Object ruleReturn = ruleName.invoke(parser);
 			
-			Class _return = Class.forName("org.com.agfa.hap.drools.lang.DRLParser"+"$"+testRuleName+"_return");
+			Class _return = Class.forName("org.drools.lang.DRLParser"+"$"+testRuleName+"_return");
         	Method returnName = _return.getMethod("getTree");
         	CommonTree tree = (CommonTree) returnName.invoke(ruleReturn);
 			
@@ -1501,7 +1501,7 @@ public class TestTree2TestDRL extends TestCase {
             	/** If return object is instanceof AST, get the toStringTree */
                 if ( treeRuleReturn.toString().indexOf(testTreeRuleName+"_return")>0 ) {
                 	try {	// NullPointerException may happen here...
-                		Class _treeReturn = Class.forName("org.com.agfa.hap.drools.lang.Tree2TestDRL"+"$"+testTreeRuleName+"_return");
+                		Class _treeReturn = Class.forName("org.drools.lang.Tree2TestDRL"+"$"+testTreeRuleName+"_return");
                 		Method[] methods = _treeReturn.getDeclaredMethods();
 			            for(Method method : methods) {
 			                if ( method.getName().equals("getTree") ) {

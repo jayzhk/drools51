@@ -101,8 +101,8 @@ public class StatelessSessionTest extends TestCase {
     
     public void testInsertObject() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
-        str += "import org.com.agfa.hap.drools.Cheese \n";
+        str += "package org.drools \n";
+        str += "import org.drools.Cheese \n";
         str += "rule rule1 \n";
         str += "  when \n";
         str += "    $c : Cheese() \n";
@@ -125,8 +125,8 @@ public class StatelessSessionTest extends TestCase {
     
     public void testSetGlobal() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
-        str += "import org.com.agfa.hap.drools.Cheese \n";
+        str += "package org.drools \n";
+        str += "import org.drools.Cheese \n";
         str += "global java.util.List list1 \n";
         str += "global java.util.List list2 \n";
         str += "global java.util.List list3 \n";
@@ -178,8 +178,8 @@ public class StatelessSessionTest extends TestCase {
     
     public void testQuery() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools.test  \n";
-        str += "import org.com.agfa.hap.drools.Cheese \n";
+        str += "package org.drools.test  \n";
+        str += "import org.drools.Cheese \n";
         str += "query cheeses \n";
         str += "    stilton : Cheese(type == 'stilton') \n";
         str += "    cheddar : Cheese(type == 'cheddar', price == stilton.price) \n";

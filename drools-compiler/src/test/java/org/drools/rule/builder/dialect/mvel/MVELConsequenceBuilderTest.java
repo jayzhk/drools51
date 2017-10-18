@@ -134,7 +134,7 @@ public class MVELConsequenceBuilderTest extends TestCase {
         ruleDescr.setConsequence( "if (cheese.price == 10) { cheese.price = 5; }" );
 
         Properties properties = new Properties();
-        properties.setProperty( "com.agfa.hap.drools.dialect.default",
+        properties.setProperty( "drools.dialect.default",
                                 "mvel" );
         PackageBuilderConfiguration cfg1 = new PackageBuilderConfiguration( properties );
 
@@ -255,7 +255,7 @@ public class MVELConsequenceBuilderTest extends TestCase {
             Assert.assertFalse( parser.getErrors().toString(),
                                 parser.hasErrors() );
 
-            final Package pkg = new Package( "org.com.agfa.hap.drools" );
+            final Package pkg = new Package( "org.drools" );
 
             final RuleDescr ruleDescr = (RuleDescr) pkgDescr.getRules().get( 0 );
 
@@ -335,8 +335,8 @@ public class MVELConsequenceBuilderTest extends TestCase {
     private void setupTest(String consequence, Map<String, Object> namedConsequences) {
         builder = new MVELConsequenceBuilder();
 
-        Package pkg = new Package( "org.com.agfa.hap.drools" );
-        pkg.addImport( new ImportDeclaration( "org.com.agfa.hap.drools.Cheese" ) );
+        Package pkg = new Package( "org.drools" );
+        pkg.addImport( new ImportDeclaration( "org.drools.Cheese" ) );
 
         PackageBuilderConfiguration conf = new PackageBuilderConfiguration();
         PackageBuilder pkgBuilder = new PackageBuilder( pkg,

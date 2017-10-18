@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools.test;
+package org.drools.test;
 
 import function org.drools.StaticMethods.*;
 import function org.drools.StaticMethods2.getString3;

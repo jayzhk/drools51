@@ -328,7 +328,7 @@ public class ExecutionFlowControlTest extends TestCase {
     
     public void testLockOnActiveForMain() {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
+        str += "package org.drools \n";
         str += "global java.util.List list \n";
         str += "rule rule1 \n";
         str += "    lock-on-active true \n";
@@ -365,7 +365,7 @@ public class ExecutionFlowControlTest extends TestCase {
     
     public void testLockOnActiveForMainWithHalt() {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
+        str += "package org.drools \n";
         str += "global java.util.List list \n";
         str += "rule rule1 \n";
         str += "    lock-on-active true \n";
@@ -373,7 +373,7 @@ public class ExecutionFlowControlTest extends TestCase {
         str += "    $str : String() \n";
         str += "then \n";
         str += "    list.add( $str ); \n";
-        str += "    if ( list.size() == 2 ) com.agfa.hap.drools.halt();\n";
+        str += "    if ( list.size() == 2 ) drools.halt();\n";
         str += "end \n";
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
         kbuilder.add( ResourceFactory.newByteArrayResource( str.getBytes() ), ResourceType.DRL );
@@ -952,7 +952,7 @@ public class ExecutionFlowControlTest extends TestCase {
     public void testRuleFlowUpgrade() throws Exception {
         final PackageBuilder builder = new PackageBuilder();
         // Set the system property so that automatic conversion can happen
-        System.setProperty( "com.agfa.hap.drools.ruleflow.port",
+        System.setProperty( "drools.ruleflow.port",
                             "true" );
 
         builder.addPackageFromDrl( new InputStreamReader( getClass().getResourceAsStream( "ruleflow.drl" ) ) );
@@ -988,7 +988,7 @@ public class ExecutionFlowControlTest extends TestCase {
         assertEquals( ProcessInstance.STATE_COMPLETED,
                       processInstance.getState() );
         // Reset the system property so that automatic conversion should not happen
-        System.setProperty( "com.agfa.hap.drools.ruleflow.port",
+        System.setProperty( "drools.ruleflow.port",
                             "false" );
     }
 

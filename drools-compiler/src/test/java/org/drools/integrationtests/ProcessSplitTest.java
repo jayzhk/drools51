@@ -35,22 +35,22 @@ public class ProcessSplitTest extends TestCase {
     public void testSplitWithProcessInstanceConstraint() {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"" +
-            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.com.agfa.hap.drools.process-split\" package-name=\"org.com.agfa.hap.drools\" >" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"" +
+            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.drools.process-split\" package-name=\"org.drools\" >" +
             "" +
             "  <header>" +
             "    <imports>" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />" +
-            "      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
+            "      <import name=\"org.drools.Person\" />" +
+            "      <import name=\"org.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
             "    </imports>" +
             "    <globals>" +
             "      <global identifier=\"list\" type=\"java.util.List\" />" +
             "    </globals>" +
             "    <variables>\n" +
             "      <variable name=\"name\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "      </variable>\n" +
             "    </variables>\n" +
             "  </header>" +
@@ -62,7 +62,7 @@ public class ProcessSplitTest extends TestCase {
             "    <split id=\"4\" name=\"Split\" type=\"2\" >" +
             "      <constraints>" +
             "        <constraint toNodeId=\"8\" toType=\"DROOLS_DEFAULT\" priority=\"2\" type=\"rule\" dialect=\"mvel\" >eval(true)</constraint>" +
-            "        <constraint toNodeId=\"6\" toType=\"DROOLS_DEFAULT\" name=\"constraint\" priority=\"1\" type=\"rule\" dialect=\"mvel\" >processInstance: org.com.agfa.hap.drools.ruleflow.instance.RuleFlowProcessInstance()" +
+            "        <constraint toNodeId=\"6\" toType=\"DROOLS_DEFAULT\" name=\"constraint\" priority=\"1\" type=\"rule\" dialect=\"mvel\" >processInstance: org.drools.ruleflow.instance.RuleFlowProcessInstance()" +
             "Person( name == (ProcessUtils.getValue(processInstance, \"name\")) )</constraint>" +
             "      </constraints>" +
             "    </split>" +
@@ -99,17 +99,17 @@ public class ProcessSplitTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("name", john.getName());
         ProcessInstance processInstance1 = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.process-split", params);
+            workingMemory.startProcess("org.drools.process-split", params);
         
         params = new HashMap<String, Object>();
         params.put("name", jane.getName());
         ProcessInstance processInstance2 = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.process-split", params);
+            workingMemory.startProcess("org.drools.process-split", params);
         
         params = new HashMap<String, Object>();
         params.put("name", julie.getName());
         ProcessInstance processInstance3 = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.process-split", params);
+            workingMemory.startProcess("org.drools.process-split", params);
         
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance1.getState());
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance2.getState());
@@ -120,22 +120,22 @@ public class ProcessSplitTest extends TestCase {
     public void testSplitWithProcessInstanceConstraint2() {
     	KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
         Reader source = new StringReader(
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"" +
-            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.com.agfa.hap.drools.process-split\" package-name=\"org.com.agfa.hap.drools\" >" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"" +
+            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.drools.process-split\" package-name=\"org.drools\" >" +
             "" +
             "  <header>" +
             "    <imports>" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />" +
-            "      <import name=\"org.com.agfa.hap.drools.runtime.process.WorkflowProcessInstance\" />" +
+            "      <import name=\"org.drools.Person\" />" +
+            "      <import name=\"org.drools.runtime.process.WorkflowProcessInstance\" />" +
             "    </imports>" +
             "    <globals>" +
             "      <global identifier=\"list\" type=\"java.util.List\" />" +
             "    </globals>" +
             "    <variables>\n" +
             "      <variable name=\"name\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "      </variable>\n" +
             "    </variables>\n" +
             "  </header>" +
@@ -188,17 +188,17 @@ public class ProcessSplitTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("name", john.getName());
         org.drools.runtime.process.ProcessInstance processInstance1 =
-            ksession.startProcess("org.com.agfa.hap.drools.process-split", params);
+            ksession.startProcess("org.drools.process-split", params);
         
         params = new HashMap<String, Object>();
         params.put("name", jane.getName());
         org.drools.runtime.process.ProcessInstance processInstance2 =
-        	ksession.startProcess("org.com.agfa.hap.drools.process-split", params);
+        	ksession.startProcess("org.drools.process-split", params);
         
         params = new HashMap<String, Object>();
         params.put("name", julie.getName());
         org.drools.runtime.process.ProcessInstance processInstance3 =
-            ksession.startProcess("org.com.agfa.hap.drools.process-split", params);
+            ksession.startProcess("org.drools.process-split", params);
         
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance1.getState());
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance2.getState());
@@ -209,22 +209,22 @@ public class ProcessSplitTest extends TestCase {
     public void testSplitWithMVELContextConstraint() {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"" +
-            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.com.agfa.hap.drools.process-split\" package-name=\"org.com.agfa.hap.drools\" >" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"" +
+            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.drools.process-split\" package-name=\"org.drools\" >" +
             "" +
             "  <header>" +
             "    <imports>" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />" +
-            "      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
+            "      <import name=\"org.drools.Person\" />" +
+            "      <import name=\"org.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
             "    </imports>" +
             "    <globals>" +
             "      <global identifier=\"list\" type=\"java.util.List\" />" +
             "    </globals>" +
             "    <variables>\n" +
             "      <variable name=\"person\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"org.com.agfa.hap.drools.Person\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"org.drools.Person\" />\n" +
             "      </variable>\n" +
             "    </variables>\n" +
             "  </header>" +
@@ -266,7 +266,7 @@ public class ProcessSplitTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("person", new Person("John Doe"));
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.process-split", params);
+            workingMemory.startProcess("org.drools.process-split", params);
         
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals(1, list.size());
@@ -275,22 +275,22 @@ public class ProcessSplitTest extends TestCase {
     public void testSplitWithJavaContextConstraint() {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"" +
-            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.com.agfa.hap.drools.process-split\" package-name=\"org.com.agfa.hap.drools\" >" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"" +
+            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.drools.process-split\" package-name=\"org.drools\" >" +
             "" +
             "  <header>" +
             "    <imports>" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />" +
-            "      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
+            "      <import name=\"org.drools.Person\" />" +
+            "      <import name=\"org.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
             "    </imports>" +
             "    <globals>" +
             "      <global identifier=\"list\" type=\"java.util.List\" />" +
             "    </globals>" +
             "    <variables>\n" +
             "      <variable name=\"name\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "      </variable>\n" +
             "    </variables>\n" +
             "  </header>" +
@@ -332,7 +332,7 @@ public class ProcessSplitTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("name", "John Doe");
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.process-split", params);
+            workingMemory.startProcess("org.drools.process-split", params);
         
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals(1, list.size());
@@ -341,22 +341,22 @@ public class ProcessSplitTest extends TestCase {
     public void testSplitWithMVELkContextConstraint() {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"" +
-            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.com.agfa.hap.drools.process-split\" package-name=\"org.com.agfa.hap.drools\" >" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"" +
+            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.drools.process-split\" package-name=\"org.drools\" >" +
             "" +
             "  <header>" +
             "    <imports>" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />" +
-            "      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
+            "      <import name=\"org.drools.Person\" />" +
+            "      <import name=\"org.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
             "    </imports>" +
             "    <globals>" +
             "      <global identifier=\"list\" type=\"java.util.List\" />" +
             "    </globals>" +
             "    <variables>\n" +
             "      <variable name=\"person\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"org.com.agfa.hap.drools.Person\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"org.drools.Person\" />\n" +
             "      </variable>\n" +
             "    </variables>\n" +
             "  </header>" +
@@ -368,7 +368,7 @@ public class ProcessSplitTest extends TestCase {
             "    <split id=\"4\" name=\"Split\" type=\"2\" >" +
             "      <constraints>" +
             "        <constraint toNodeId=\"8\" toType=\"DROOLS_DEFAULT\" priority=\"2\" type=\"code\" dialect=\"mvel\" >return true;</constraint>" +
-            "        <constraint toNodeId=\"6\" toType=\"DROOLS_DEFAULT\" priority=\"1\" type=\"code\" dialect=\"mvel\" >return context.getVariable(\"person\") != null &amp;&amp; ((org.com.agfa.hap.drools.Person) context.getVariable(\"person\")).name != null;</constraint>" +
+            "        <constraint toNodeId=\"6\" toType=\"DROOLS_DEFAULT\" priority=\"1\" type=\"code\" dialect=\"mvel\" >return context.getVariable(\"person\") != null &amp;&amp; ((org.drools.Person) context.getVariable(\"person\")).name != null;</constraint>" +
             "      </constraints>" +
             "    </split>" +
             "    <end id=\"8\" name=\"End\" />" +
@@ -398,7 +398,7 @@ public class ProcessSplitTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("person", new Person("John Doe"));
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.process-split", params);
+            workingMemory.startProcess("org.drools.process-split", params);
         
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals(1, list.size());
@@ -407,22 +407,22 @@ public class ProcessSplitTest extends TestCase {
     public void testSplitWithJavakContextConstraint() {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"" +
-            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.com.agfa.hap.drools.process-split\" package-name=\"org.com.agfa.hap.drools\" >" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"" +
+            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.drools.process-split\" package-name=\"org.drools\" >" +
             "" +
             "  <header>" +
             "    <imports>" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />" +
-            "      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
+            "      <import name=\"org.drools.Person\" />" +
+            "      <import name=\"org.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
             "    </imports>" +
             "    <globals>" +
             "      <global identifier=\"list\" type=\"java.util.List\" />" +
             "    </globals>" +
             "    <variables>\n" +
             "      <variable name=\"name\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "      </variable>\n" +
             "    </variables>\n" +
             "  </header>" +
@@ -464,7 +464,7 @@ public class ProcessSplitTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("name", "John Doe");
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.process-split", params);
+            workingMemory.startProcess("org.drools.process-split", params);
         
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals(1, list.size());
@@ -473,22 +473,22 @@ public class ProcessSplitTest extends TestCase {
     public void testSplitWithMVELVariableConstraint() {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"" +
-            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.com.agfa.hap.drools.process-split\" package-name=\"org.com.agfa.hap.drools\" >" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"" +
+            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.drools.process-split\" package-name=\"org.drools\" >" +
             "" +
             "  <header>" +
             "    <imports>" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />" +
-            "      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
+            "      <import name=\"org.drools.Person\" />" +
+            "      <import name=\"org.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
             "    </imports>" +
             "    <globals>" +
             "      <global identifier=\"list\" type=\"java.util.List\" />" +
             "    </globals>" +
             "    <variables>\n" +
             "      <variable name=\"name\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "      </variable>\n" +
             "    </variables>\n" +
             "  </header>" +
@@ -530,7 +530,7 @@ public class ProcessSplitTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("name", "John Doe");
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.process-split", params);
+            workingMemory.startProcess("org.drools.process-split", params);
         
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals(1, list.size());
@@ -539,22 +539,22 @@ public class ProcessSplitTest extends TestCase {
     public void testSplitWithJavaVariableConstraint() {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"" +
-            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.com.agfa.hap.drools.process-split\" package-name=\"org.com.agfa.hap.drools\" >" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"" +
+            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.drools.process-split\" package-name=\"org.drools\" >" +
             "" +
             "  <header>" +
             "    <imports>" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />" +
-            "      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
+            "      <import name=\"org.drools.Person\" />" +
+            "      <import name=\"org.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
             "    </imports>" +
             "    <globals>" +
             "      <global identifier=\"list\" type=\"java.util.List\" />" +
             "    </globals>" +
             "    <variables>\n" +
             "      <variable name=\"name\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "      </variable>\n" +
             "    </variables>\n" +
             "  </header>" +
@@ -596,7 +596,7 @@ public class ProcessSplitTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("name", "John Doe");
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.process-split", params);
+            workingMemory.startProcess("org.drools.process-split", params);
         
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals(1, list.size());
@@ -605,22 +605,22 @@ public class ProcessSplitTest extends TestCase {
     public void testSplitWithMVELGlobalConstraint() {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"" +
-            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.com.agfa.hap.drools.process-split\" package-name=\"org.com.agfa.hap.drools\" >" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"" +
+            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.drools.process-split\" package-name=\"org.drools\" >" +
             "" +
             "  <header>" +
             "    <imports>" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />" +
-            "      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
+            "      <import name=\"org.drools.Person\" />" +
+            "      <import name=\"org.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
             "    </imports>" +
             "    <globals>" +
             "      <global identifier=\"list\" type=\"java.util.List\" />" +
             "    </globals>" +
             "    <variables>\n" +
             "      <variable name=\"name\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "      </variable>\n" +
             "    </variables>\n" +
             "  </header>" +
@@ -662,7 +662,7 @@ public class ProcessSplitTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("name", "John Doe");
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.process-split", params);
+            workingMemory.startProcess("org.drools.process-split", params);
         
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals(1, list.size());
@@ -671,15 +671,15 @@ public class ProcessSplitTest extends TestCase {
     public void testSplitWithJavaGlobalConstraint() {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"" +
-            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.com.agfa.hap.drools.process-split\" package-name=\"org.com.agfa.hap.drools\" >" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"" +
+            "         type=\"RuleFlow\" name=\"ruleflow\" id=\"org.drools.process-split\" package-name=\"org.drools\" >" +
             "" +
             "  <header>" +
             "    <imports>" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />" +
-            "      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
+            "      <import name=\"org.drools.Person\" />" +
+            "      <import name=\"org.drools.integrationtests.ProcessSplitTest.ProcessUtils\" />" +
             "    </imports>" +
             "    <globals>" +
             "      <global identifier=\"list\" type=\"java.util.List\" />" +
@@ -723,7 +723,7 @@ public class ProcessSplitTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("name", "John Doe");
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.process-split", params);
+            workingMemory.startProcess("org.drools.process-split", params);
         
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals(1, list.size());

@@ -29,7 +29,7 @@ public class ProcessUpgradeTest extends TestCase {
     
     public void testDefaultUpgrade() throws Exception {
         String rule = "package org.test;\n";
-        rule += "import org.com.agfa.hap.drools.Person\n";
+        rule += "import org.drools.Person\n";
         rule += "global java.util.List list\n";
         rule += "rule \"Rule 1\"\n";
         rule += "  ruleflow-group \"hello\"\n";
@@ -44,9 +44,9 @@ public class ProcessUpgradeTest extends TestCase {
         
         String process = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "    xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "    xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "    xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "    type=\"RuleFlow\" name=\"ruleflow\" id=\"org.test.ruleflow\" package-name=\"org.test\" >\n" +
             "  <header>\n" +
             "  </header>\n" +
@@ -81,9 +81,9 @@ public class ProcessUpgradeTest extends TestCase {
         
         String process2 = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "    xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "    xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "    xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "    type=\"RuleFlow\" name=\"ruleflow\" id=\"org.test.ruleflow2\" package-name=\"org.test\" >\n" +
             "  <header>\n" +
             "    <globals>\n" +
@@ -122,7 +122,7 @@ public class ProcessUpgradeTest extends TestCase {
 
     public void testMappingUpgrade() throws Exception {
         String rule = "package org.test;\n";
-        rule += "import org.com.agfa.hap.drools.Person\n";
+        rule += "import org.drools.Person\n";
         rule += "global java.util.List list\n";
         rule += "rule \"Rule 1\"\n";
         rule += "  ruleflow-group \"hello\"\n";
@@ -137,9 +137,9 @@ public class ProcessUpgradeTest extends TestCase {
         
         String process = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "    xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "    xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "    xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "    type=\"RuleFlow\" name=\"ruleflow\" id=\"org.test.ruleflow\" package-name=\"org.test\" >\n" +
             "  <header>\n" +
             "  </header>\n" +
@@ -174,9 +174,9 @@ public class ProcessUpgradeTest extends TestCase {
         
         String process2 = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "    xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "    xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "    xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "    type=\"RuleFlow\" name=\"ruleflow\" id=\"org.test.ruleflow2\" package-name=\"org.test\" >\n" +
             "  <header>\n" +
             "    <globals>\n" +
@@ -218,7 +218,7 @@ public class ProcessUpgradeTest extends TestCase {
     
     public void testCompositeMappingUpgrade() throws Exception {
         String rule = "package org.test;\n";
-        rule += "import org.com.agfa.hap.drools.Person\n";
+        rule += "import org.drools.Person\n";
         rule += "global java.util.List list\n";
         rule += "rule \"Rule 1\"\n";
         rule += "  ruleflow-group \"hello\"\n";
@@ -233,9 +233,9 @@ public class ProcessUpgradeTest extends TestCase {
         
         String process = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "    xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "    xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "    xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "    type=\"RuleFlow\" name=\"ruleflow\" id=\"org.test.ruleflow\" package-name=\"org.test\" >\n" +
             "  <header>\n" +
             "  </header>\n" +
@@ -282,9 +282,9 @@ public class ProcessUpgradeTest extends TestCase {
         
         String process2 = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "    xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "    xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "    xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "    type=\"RuleFlow\" name=\"ruleflow\" id=\"org.test.ruleflow2\" package-name=\"org.test\" >\n" +
             "  <header>\n" +
             "    <globals>\n" +
@@ -338,7 +338,7 @@ public class ProcessUpgradeTest extends TestCase {
     
     public void testDefaultUpgrade2() throws Exception {
         String rule = "package org.test;\n";
-        rule += "import org.com.agfa.hap.drools.Person\n";
+        rule += "import org.drools.Person\n";
         rule += "global java.util.List list\n";
         rule += "rule \"Rule 1\"\n";
         rule += "  ruleflow-group \"hello\"\n";
@@ -353,9 +353,9 @@ public class ProcessUpgradeTest extends TestCase {
         
         String process = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "    xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "    xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "    xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "    type=\"RuleFlow\" name=\"ruleflow\" id=\"org.test.ruleflow\" package-name=\"org.test\" >\n" +
             "  <header>\n" +
             "  </header>\n" +
@@ -386,9 +386,9 @@ public class ProcessUpgradeTest extends TestCase {
         
         String process2 = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "    xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "    xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "    xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "    type=\"RuleFlow\" name=\"ruleflow\" id=\"org.test.ruleflow2\" package-name=\"org.test\" >\n" +
             "  <header>\n" +
             "    <globals>\n" +

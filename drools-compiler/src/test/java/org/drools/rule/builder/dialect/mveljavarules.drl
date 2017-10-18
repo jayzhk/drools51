@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools;
+package org.drools;
 
 rule "Hello World"
 	dialect "java"

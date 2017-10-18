@@ -63,7 +63,7 @@ public class AccumulateTemplateTest extends TestCase {
                  className );
 
         map.put( "package",
-                 "org.com.agfa.hap.drools" );
+                 "org.drools" );
 
         map.put( "ruleClassName",
                  "Rule0" );
@@ -149,7 +149,7 @@ public class AccumulateTemplateTest extends TestCase {
                  className );
 
         map.put( "package",
-                 "org.com.agfa.hap.drools" );
+                 "org.drools" );
 
         map.put( "ruleClassName",
                  "Rule0" );
@@ -234,7 +234,7 @@ public class AccumulateTemplateTest extends TestCase {
                  className );
 
         map.put( "package",
-                 "org.com.agfa.hap.drools" );
+                 "org.drools" );
 
         map.put( "ruleClassName",
                  "Rule0" );

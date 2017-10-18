@@ -233,15 +233,15 @@ public class DynamicRulesTest extends TestCase {
         assertEquals( 15,
                       workingMemory.getAgenda().getActivations().length );
 
-        reteooRuleBase.removeRule( "org.com.agfa.hap.drools.test",
+        reteooRuleBase.removeRule( "org.drools.test",
                                    "Who likes Stilton" );
         assertEquals( 12,
                       workingMemory.getAgenda().getActivations().length );
 
-        reteooRuleBase.removeRule( "org.com.agfa.hap.drools.test",
+        reteooRuleBase.removeRule( "org.drools.test",
                                    "like cheese" );
 
-        //        reteooRuleBase.removeRule( "org.com.agfa.hap.drools.test",
+        //        reteooRuleBase.removeRule( "org.drools.test",
         //                                   "like cheese2" );
 
         final Cheese muzzarela = new Cheese( "muzzarela",
@@ -254,7 +254,7 @@ public class DynamicRulesTest extends TestCase {
         assertEquals( 9,
                       workingMemory.getAgenda().getActivations().length );
 
-        reteooRuleBase.removePackage( "org.com.agfa.hap.drools.test" );
+        reteooRuleBase.removePackage( "org.drools.test" );
         reteooRuleBase = SerializationHelper.serializeObject( reteooRuleBase );
 
         assertEquals( 0,
@@ -286,17 +286,17 @@ public class DynamicRulesTest extends TestCase {
             assertEquals( 5,
                           reteooRuleBase.getPackages()[0].getRules().length );
 
-            reteooRuleBase.removeRule( "org.com.agfa.hap.drools.test",
+            reteooRuleBase.removeRule( "org.drools.test",
                                        "Who likes Stilton" );
             assertEquals( 4,
                           reteooRuleBase.getPackages()[0].getRules().length );
 
-            reteooRuleBase.removeRule( "org.com.agfa.hap.drools.test",
+            reteooRuleBase.removeRule( "org.drools.test",
                                        "like cheese" );
             assertEquals( 3,
                           reteooRuleBase.getPackages()[0].getRules().length );
 
-            reteooRuleBase.removePackage( "org.com.agfa.hap.drools.test" );
+            reteooRuleBase.removePackage( "org.drools.test" );
             assertEquals( 0,
                           reteooRuleBase.getPackages().length );
         }
@@ -330,7 +330,7 @@ public class DynamicRulesTest extends TestCase {
 
         // Check a function can be removed from a package.
         // Once removed any efforts to use it should throw an Exception
-        ruleBase.removeFunction( "org.com.agfa.hap.drools.test",
+        ruleBase.removeFunction( "org.drools.test",
                                  "addFive" );
 
         final Cheese cheddar = new Cheese( "cheddar",
@@ -652,7 +652,7 @@ public class DynamicRulesTest extends TestCase {
         assertEquals( 0,
                       results.size() );
 
-        kbase.removeKnowledgePackage( "org.com.agfa.hap.drools" );
+        kbase.removeKnowledgePackage( "org.drools" );
 
         ksession.retract( ksession.getFactHandle( b ) );
 
@@ -819,12 +819,12 @@ public class DynamicRulesTest extends TestCase {
         assertEquals( 11,
                       session.getAgenda().getActivations().length );
 
-        reteooRuleBase.removeRule( "org.com.agfa.hap.drools",
+        reteooRuleBase.removeRule( "org.drools",
                                    "Apply Discount on all books" );
         assertEquals( 10,
                       session.getAgenda().getActivations().length );
 
-        reteooRuleBase.removeRule( "org.com.agfa.hap.drools",
+        reteooRuleBase.removeRule( "org.drools",
                                    "like book" );
 
         final OrderItem item5 = new OrderItem( order,
@@ -840,7 +840,7 @@ public class DynamicRulesTest extends TestCase {
         assertEquals( 10,
                       session.getAgenda().getActivations().length );
 
-        reteooRuleBase.removePackage( "org.com.agfa.hap.drools" );
+        reteooRuleBase.removePackage( "org.drools" );
 
         assertEquals( 0,
                       session.getAgenda().getActivations().length );
@@ -869,17 +869,17 @@ public class DynamicRulesTest extends TestCase {
             assertEquals( 4,
                           reteooRuleBase.getPackages()[0].getRules().length );
 
-            reteooRuleBase.removeRule( "org.com.agfa.hap.drools",
+            reteooRuleBase.removeRule( "org.drools",
                                        "Apply Discount on all books" );
             assertEquals( 3,
                           reteooRuleBase.getPackages()[0].getRules().length );
 
-            reteooRuleBase.removeRule( "org.com.agfa.hap.drools",
+            reteooRuleBase.removeRule( "org.drools",
                                        "like book" );
             assertEquals( 2,
                           reteooRuleBase.getPackages()[0].getRules().length );
 
-            reteooRuleBase.removePackage( "org.com.agfa.hap.drools" );
+            reteooRuleBase.removePackage( "org.drools" );
             assertEquals( 0,
                           reteooRuleBase.getPackages().length );
         }
@@ -1088,8 +1088,8 @@ public class DynamicRulesTest extends TestCase {
             // Creates first class loader and use it to load fact classes
             ClassLoader loader1 = new SubvertedClassLoader( new URL[]{getClass().getResource( "/testEnum.jar" )},
                                                             this.getClass().getClassLoader() );
-            //loader1.loadClass( "org.com.agfa.hap.drools.Primitives" );
-            //loader1.loadClass( "org.com.agfa.hap.drools.TestEnum" );
+            //loader1.loadClass( "org.drools.Primitives" );
+            //loader1.loadClass( "org.drools.TestEnum" );
 
             // create a builder with the given classloader
             KnowledgeBuilderConfiguration conf = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration( null,
@@ -1112,8 +1112,8 @@ public class DynamicRulesTest extends TestCase {
             // now, create another classloader and make sure it has access to the classes
             ClassLoader loader2 = new SubvertedClassLoader( new URL[]{getClass().getResource( "/testEnum.jar" )},
                                                             this.getClass().getClassLoader() );
-            //loader2.loadClass( "org.com.agfa.hap.drools.Primitives" );
-            //loader2.loadClass( "org.com.agfa.hap.drools.TestEnum" );
+            //loader2.loadClass( "org.drools.Primitives" );
+            //loader2.loadClass( "org.drools.TestEnum" );
 
             // set context classloader and use it
             ClassLoader ccl = Thread.currentThread().getContextClassLoader();
@@ -1165,7 +1165,7 @@ public class DynamicRulesTest extends TestCase {
         verify( alistener,
                 times( 1 ) ).activationCreated( any( ActivationCreatedEvent.class ) );
 
-        kbase.removeKnowledgePackage( "org.com.agfa.hap.drools" );
+        kbase.removeKnowledgePackage( "org.drools" );
 
         assertEquals( 0,
                       kbase.getKnowledgePackages().size() );

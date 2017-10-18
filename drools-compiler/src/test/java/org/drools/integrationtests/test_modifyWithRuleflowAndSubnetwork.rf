@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<process xmlns="http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process"
+<process xmlns="http://drools.org/drools-5.0/process"
          xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
-         xs:schemaLocation="http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd"
-         type="RuleFlow" name="Simple flow" id="ruleflow" package-name="org.com.agfa.hap.drools" >
+         xs:schemaLocation="http://drools.org/drools-5.0/process drools-processes-5.0.xsd"
+         type="RuleFlow" name="Simple flow" id="ruleflow" package-name="org.drools" >
 
   <header>
   </header>

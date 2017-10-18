@@ -956,7 +956,7 @@ public class MarshallingTest extends TestCase {
                            results );
 
         // CASE 1: remove rule
-        ruleBase.removeRule( "org.com.agfa.hap.drools.test",
+        ruleBase.removeRule( "org.drools.test",
                              "like stilton" );
 
         InternalFactHandle stilton3 = (InternalFactHandle) session.insert( new Cheese( "stilton",
@@ -988,7 +988,7 @@ public class MarshallingTest extends TestCase {
                            results );
 
         // CASE 2: remove pkg
-        ruleBase.removePackage( "org.com.agfa.hap.drools.test" );
+        ruleBase.removePackage( "org.drools.test" );
 
         InternalFactHandle stilton4 = (InternalFactHandle) session.insert( new Cheese( "stilton",
                                                                                        20 ) );
@@ -1209,7 +1209,7 @@ public class MarshallingTest extends TestCase {
 
     public void testSinglePattern() throws Exception {
         String rule = "package org.test;\n";
-        rule += "import org.com.agfa.hap.drools.Person\n";
+        rule += "import org.drools.Person\n";
         rule += "global java.util.List list\n";
         rule += "rule \"Rule 1\"\n";
         rule += "when\n";
@@ -1255,8 +1255,8 @@ public class MarshallingTest extends TestCase {
 
     public void testSingleRuleSingleJoinNodePattern() throws Exception {
         String rule = "package org.test;\n";
-        rule += "import org.com.agfa.hap.drools.Person\n";
-        rule += "import org.com.agfa.hap.drools.Cheese\n";
+        rule += "import org.drools.Person\n";
+        rule += "import org.drools.Cheese\n";
         rule += "global java.util.List list\n";
         rule += "rule \"Rule 1\"\n";
         rule += "when\n";
@@ -1348,8 +1348,8 @@ public class MarshallingTest extends TestCase {
 
     public void testMultiRuleMultiJoinNodePatternsWithHalt() throws Exception {
         String rule1 = "package org.test;\n";
-        rule1 += "import org.com.agfa.hap.drools.Person\n";
-        rule1 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule1 += "import org.drools.Person\n";
+        rule1 += "import org.drools.Cheese\n";
         rule1 += "global java.util.List list\n";
         rule1 += "rule \"Rule 1\"\n";
         rule1 += "when\n";
@@ -1360,9 +1360,9 @@ public class MarshallingTest extends TestCase {
         rule1 += "end";
 
         String rule2 = "package org.test;\n";
-        rule2 += "import org.com.agfa.hap.drools.Person\n";
-        rule2 += "import org.com.agfa.hap.drools.Cheese\n";
-        rule2 += "import org.com.agfa.hap.drools.Cell\n";
+        rule2 += "import org.drools.Person\n";
+        rule2 += "import org.drools.Cheese\n";
+        rule2 += "import org.drools.Cell\n";
         rule2 += "global java.util.List list\n";
         rule2 += "rule \"Rule 2\"\n";
         rule2 += "when\n";
@@ -1374,10 +1374,10 @@ public class MarshallingTest extends TestCase {
         rule2 += "end";
 
         String rule3 = "package org.test;\n";
-        rule3 += "import org.com.agfa.hap.drools.FactA\n";
-        rule3 += "import org.com.agfa.hap.drools.FactB\n";
-        rule3 += "import org.com.agfa.hap.drools.FactC\n";
-        rule3 += "import org.com.agfa.hap.drools.Person\n";
+        rule3 += "import org.drools.FactA\n";
+        rule3 += "import org.drools.FactB\n";
+        rule3 += "import org.drools.FactC\n";
+        rule3 += "import org.drools.Person\n";
         rule3 += "global java.util.List list\n";
         rule3 += "rule \"Rule 3\"\n";
         rule3 += "when\n";
@@ -1387,7 +1387,7 @@ public class MarshallingTest extends TestCase {
         rule3 += "    $c : FactC( f2 >= $b.f2 ) \n";
         rule3 += "then\n";
         rule3 += "    list.add( $c );\n";
-        rule3 += "    com.agfa.hap.drools.halt();\n";
+        rule3 += "    drools.halt();\n";
         rule3 += "end";
 
         final PackageBuilder builder = new PackageBuilder();
@@ -1483,10 +1483,10 @@ public class MarshallingTest extends TestCase {
     }
 
     public void testNot() throws Exception {
-        String header = "package org.com.agfa.hap.drools.test;\n";
+        String header = "package org.drools.test;\n";
         header += "import java.util.List;\n";
-        header += "import org.com.agfa.hap.drools.Person\n";
-        header += "import org.com.agfa.hap.drools.Cheese\n";
+        header += "import org.drools.Person\n";
+        header += "import org.drools.Cheese\n";
         header += "global java.util.List list;\n";
 
         String rule1 = "rule \"not rule test\"\n";
@@ -1612,10 +1612,10 @@ public class MarshallingTest extends TestCase {
     }
 
     public void testExists() throws Exception {
-        String header = "package org.com.agfa.hap.drools.test;\n";
+        String header = "package org.drools.test;\n";
         header += "import java.util.List;\n";
-        header += "import org.com.agfa.hap.drools.Person\n";
-        header += "import org.com.agfa.hap.drools.Cheese\n";
+        header += "import org.drools.Person\n";
+        header += "import org.drools.Cheese\n";
         header += "global java.util.List list;\n";
 
         String rule1 = "rule \"not rule test\"\n";
@@ -1750,10 +1750,10 @@ public class MarshallingTest extends TestCase {
     }
 
     public void testTruthMaintenance() throws Exception {
-        String header = "package org.com.agfa.hap.drools.test;\n";
+        String header = "package org.drools.test;\n";
         header += "import java.util.List;\n";
-        header += "import org.com.agfa.hap.drools.Person\n";
-        header += "import org.com.agfa.hap.drools.Cheese\n";
+        header += "import org.drools.Person\n";
+        header += "import org.drools.Cheese\n";
         header += "global Cheese cheese;\n";
         header += "global Person person;\n";
         header += "global java.util.List list;\n";
@@ -1765,7 +1765,7 @@ public class MarshallingTest extends TestCase {
         rule1 += "    if (list.size() < 3) { \n";
         rule1 += "        list.add(new Integer(0)); \n";
         rule1 += "        insertLogical( cheese ); \n" + "    }\n";
-        rule1 += "    com.agfa.hap.drools.halt();\n" + "end\n";
+        rule1 += "    drools.halt();\n" + "end\n";
 
         String rule2 = "rule \"if cheese then person\"\n";
         rule2 += "when\n";
@@ -1774,7 +1774,7 @@ public class MarshallingTest extends TestCase {
         rule2 += "    if (list.size() < 3) {\n";
         rule2 += "        list.add(new Integer(0));\n";
         rule2 += "        insertLogical( person );\n";
-        rule2 += "    }\n" + "    com.agfa.hap.drools.halt();\n";
+        rule2 += "    }\n" + "    drools.halt();\n";
         rule2 += "end\n";
 
         final PackageBuilder builder = new PackageBuilder();
@@ -1821,7 +1821,7 @@ public class MarshallingTest extends TestCase {
 
     public void testActivationGroups() throws Exception {
         String rule1 = "package org.test;\n";
-        rule1 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule1 += "import org.drools.Cheese\n";
         rule1 += "global java.util.List list\n";
         rule1 += "rule \"Rule 1\"\n";
         rule1 += "    activation-group \"activation-group-1\"\n";
@@ -1829,11 +1829,11 @@ public class MarshallingTest extends TestCase {
         rule1 += "    $c : Cheese( ) \n";
         rule1 += "then\n";
         rule1 += "    list.add( \"rule1\" );\n";
-        rule1 += "    com.agfa.hap.drools.halt();\n";
+        rule1 += "    drools.halt();\n";
         rule1 += "end";
 
         String rule2 = "package org.test;\n";
-        rule2 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule2 += "import org.drools.Cheese\n";
         rule2 += "global java.util.List list\n";
         rule2 += "rule \"Rule 2\"\n";
         rule2 += "    salience 10\n";
@@ -1842,11 +1842,11 @@ public class MarshallingTest extends TestCase {
         rule2 += "    $c : Cheese( ) \n";
         rule2 += "then\n";
         rule2 += "    list.add( \"rule2\" );\n";
-        rule2 += "    com.agfa.hap.drools.halt();\n";
+        rule2 += "    drools.halt();\n";
         rule2 += "end";
 
         String rule3 = "package org.test;\n";
-        rule3 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule3 += "import org.drools.Cheese\n";
         rule3 += "global java.util.List list\n";
         rule3 += "rule \"Rule 3\"\n";
         rule3 += "    activation-group \"activation-group-1\"\n";
@@ -1854,11 +1854,11 @@ public class MarshallingTest extends TestCase {
         rule3 += "    $c : Cheese( ) \n";
         rule3 += "then\n";
         rule3 += "    list.add( \"rule3\" );\n";
-        rule3 += "    com.agfa.hap.drools.halt();\n";
+        rule3 += "    drools.halt();\n";
         rule3 += "end";
 
         String rule4 = "package org.test;\n";
-        rule4 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule4 += "import org.drools.Cheese\n";
         rule4 += "global java.util.List list\n";
         rule4 += "rule \"Rule 4\"\n";
         rule4 += "    activation-group \"activation-group-2\"\n";
@@ -1866,7 +1866,7 @@ public class MarshallingTest extends TestCase {
         rule4 += "    $c : Cheese( ) \n";
         rule4 += "then\n";
         rule4 += "    list.add( \"rule4\" );\n";
-        rule4 += "    com.agfa.hap.drools.halt();\n";
+        rule4 += "    drools.halt();\n";
         rule4 += "end";
 
         final PackageBuilder builder = new PackageBuilder();
@@ -1907,7 +1907,7 @@ public class MarshallingTest extends TestCase {
 
     public void testAgendaGroups() throws Exception {
         String rule1 = "package org.test;\n";
-        rule1 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule1 += "import org.drools.Cheese\n";
         rule1 += "global java.util.List list\n";
         rule1 += "rule \"Rule 1\"\n";
         rule1 += "    agenda-group \"agenda-group-1\"\n";
@@ -1915,11 +1915,11 @@ public class MarshallingTest extends TestCase {
         rule1 += "    $c : Cheese( ) \n";
         rule1 += "then\n";
         rule1 += "    list.add( \"rule1\" );\n";
-        rule1 += "    com.agfa.hap.drools.halt();\n";
+        rule1 += "    drools.halt();\n";
         rule1 += "end";
 
         String rule2 = "package org.test;\n";
-        rule2 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule2 += "import org.drools.Cheese\n";
         rule2 += "global java.util.List list\n";
         rule2 += "rule \"Rule 2\"\n";
         rule2 += "    salience 10\n";
@@ -1928,11 +1928,11 @@ public class MarshallingTest extends TestCase {
         rule2 += "    $c : Cheese( ) \n";
         rule2 += "then\n";
         rule2 += "    list.add( \"rule2\" );\n";
-        rule2 += "    com.agfa.hap.drools.halt();\n";
+        rule2 += "    drools.halt();\n";
         rule2 += "end";
 
         String rule3 = "package org.test;\n";
-        rule3 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule3 += "import org.drools.Cheese\n";
         rule3 += "global java.util.List list\n";
         rule3 += "rule \"Rule 3\"\n";
         rule3 += "    salience 10\n";
@@ -1942,11 +1942,11 @@ public class MarshallingTest extends TestCase {
         rule3 += "    $c : Cheese( ) \n";
         rule3 += "then\n";
         rule3 += "    list.add( \"rule3\" );\n";
-        rule3 += "    com.agfa.hap.drools.halt();\n";
+        rule3 += "    drools.halt();\n";
         rule3 += "end";
 
         String rule4 = "package org.test;\n";
-        rule4 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule4 += "import org.drools.Cheese\n";
         rule4 += "global java.util.List list\n";
         rule4 += "rule \"Rule 4\"\n";
         rule4 += "    agenda-group \"agenda-group-2\"\n";
@@ -1955,7 +1955,7 @@ public class MarshallingTest extends TestCase {
         rule4 += "    $c : Cheese( ) \n";
         rule4 += "then\n";
         rule4 += "    list.add( \"rule4\" );\n";
-        rule4 += "    com.agfa.hap.drools.halt();\n";
+        rule4 += "    drools.halt();\n";
         rule4 += "end";
 
         final PackageBuilder builder = new PackageBuilder();
@@ -2003,7 +2003,7 @@ public class MarshallingTest extends TestCase {
 
     public void testRuleFlowGroups() throws Exception {
         String rule1 = "package org.test;\n";
-        rule1 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule1 += "import org.drools.Cheese\n";
         rule1 += "global java.util.List list\n";
         rule1 += "rule \"Rule 1\"\n";
         rule1 += "    ruleflow-group \"ruleflow-group-1\"\n";
@@ -2011,11 +2011,11 @@ public class MarshallingTest extends TestCase {
         rule1 += "    $c : Cheese( ) \n";
         rule1 += "then\n";
         rule1 += "    list.add( \"rule1\" );\n";
-        rule1 += "    com.agfa.hap.drools.halt();\n";
+        rule1 += "    drools.halt();\n";
         rule1 += "end";
 
         String rule2 = "package org.test;\n";
-        rule2 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule2 += "import org.drools.Cheese\n";
         rule2 += "global java.util.List list\n";
         rule2 += "rule \"Rule 2\"\n";
         rule2 += "    salience 10\n";
@@ -2024,11 +2024,11 @@ public class MarshallingTest extends TestCase {
         rule2 += "    $c : Cheese( ) \n";
         rule2 += "then\n";
         rule2 += "    list.add( \"rule2\" );\n";
-        rule2 += "    com.agfa.hap.drools.halt();\n";
+        rule2 += "    drools.halt();\n";
         rule2 += "end";
 
         String rule3 = "package org.test;\n";
-        rule3 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule3 += "import org.drools.Cheese\n";
         rule3 += "global java.util.List list\n";
         rule3 += "rule \"Rule 3\"\n";
         rule3 += "    salience 10\n";
@@ -2038,11 +2038,11 @@ public class MarshallingTest extends TestCase {
         rule3 += "    $c : Cheese( ) \n";
         rule3 += "then\n";
         rule3 += "    list.add( \"rule3\" );\n";
-        rule3 += "    com.agfa.hap.drools.halt();\n";
+        rule3 += "    drools.halt();\n";
         rule3 += "end";
 
         String rule4 = "package org.test;\n";
-        rule4 += "import org.com.agfa.hap.drools.Cheese\n";
+        rule4 += "import org.drools.Cheese\n";
         rule4 += "global java.util.List list\n";
         rule4 += "rule \"Rule 4\"\n";
         rule4 += "    ruleflow-group \"ruleflow-group-2\"\n";
@@ -2051,7 +2051,7 @@ public class MarshallingTest extends TestCase {
         rule4 += "    $c : Cheese( ) \n";
         rule4 += "then\n";
         rule4 += "    list.add( \"rule4\" );\n";
-        rule4 += "    com.agfa.hap.drools.halt();\n";
+        rule4 += "    drools.halt();\n";
         rule4 += "end";
 
         final PackageBuilder builder = new PackageBuilder();
@@ -2099,7 +2099,7 @@ public class MarshallingTest extends TestCase {
 
     public void testAccumulate() throws Exception {
         PackageBuilder builder = new PackageBuilder();
-        Reader source = new StringReader( "package org.com.agfa.hap.drools\n" + "\n" + "import org.com.agfa.hap.drools.Message\n" + "global java.util.List results\n" + "\n" + "rule MyRule\n" + "  when\n"
+        Reader source = new StringReader( "package org.drools\n" + "\n" + "import org.drools.Message\n" + "global java.util.List results\n" + "\n" + "rule MyRule\n" + "  when\n"
                                           + "    $n : Number( intValue >= 2 ) from accumulate ( m: Message( ), count( m ) )\n" + "  then\n" + "    results.add($n);\n" + "end" );
         builder.addPackageFromDrl( source );
         Package pkg = builder.getPackage();
@@ -2135,7 +2135,7 @@ public class MarshallingTest extends TestCase {
 
     public void testAccumulate2() throws Exception {
         PackageBuilder builder = new PackageBuilder();
-        Reader source = new StringReader( "package org.com.agfa.hap.drools\n" + "\n" + "import org.com.agfa.hap.drools.Message\n" + "\n" + "rule MyRule\n" + "  when\n" + "    Number( intValue >= 5 ) from accumulate ( m: Message( ), count( m ) )\n" + "  then\n"
+        Reader source = new StringReader( "package org.drools\n" + "\n" + "import org.drools.Message\n" + "\n" + "rule MyRule\n" + "  when\n" + "    Number( intValue >= 5 ) from accumulate ( m: Message( ), count( m ) )\n" + "  then\n"
                                           + "    System.out.println(\"Found messages\");\n" + "end" );
         builder.addPackageFromDrl( source );
         Package pkg = builder.getPackage();

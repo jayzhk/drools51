@@ -40,8 +40,8 @@ public class JavaConsequenceBuilderTest extends TestCase {
     private void setupTest(String consequence, Map<String, Object> namedConsequences) {
         builder = new JavaConsequenceBuilder();
 
-        Package pkg = new Package( "org.com.agfa.hap.drools" );
-        pkg.addImport( new ImportDeclaration( "org.com.agfa.hap.drools.Cheese" ) );
+        Package pkg = new Package( "org.drools" );
+        pkg.addImport( new ImportDeclaration( "org.drools.Cheese" ) );
 
         PackageBuilderConfiguration conf = new PackageBuilderConfiguration();
         PackageBuilder pkgBuilder = new PackageBuilder( pkg,
@@ -92,7 +92,7 @@ public class JavaConsequenceBuilderTest extends TestCase {
                                                   (String) ruleDescr.getConsequence() );
 
             String expected = " System.out.println(\"this is a test\");\n " + 
-                              " com.agfa.hap.drools.getExitPoint(\"foo\").insert( new Cheese() );\n " +
+                              " drools.getExitPoint(\"foo\").insert( new Cheese() );\n " +
                               " System.out.println(\"we are done with exitPoints\");\n ";
 
 //            System.out.println( "=============================" );
@@ -123,7 +123,7 @@ public class JavaConsequenceBuilderTest extends TestCase {
                                                   (String) ruleDescr.getConsequence() );
 
             String expected = " System.out.println(\"this is a test\");\n " + 
-                              " com.agfa.hap.drools.getEntryPoint(\"foo\").insert( new Cheese() );\n " +
+                              " drools.getEntryPoint(\"foo\").insert( new Cheese() );\n " +
                               " System.out.println(\"we are done with entryPoints\");\n ";
 
 //            System.out.println( "=============================" );
@@ -154,7 +154,7 @@ public class JavaConsequenceBuilderTest extends TestCase {
                                                   (String) ruleDescr.getConsequence() );
 
             String expected = " System.out.println(\"this is a test\");\n" + 
-                              "{ org.com.agfa.hap.drools.Cheese __obj__ = (org.com.agfa.hap.drools.Cheese) ( $cheese );\n" +
+                              "{ org.drools.Cheese __obj__ = (org.drools.Cheese) ( $cheese );\n" +
                               "__obj__.setPrice( 10 );\n" + 
                               "__obj__.setAge( age );\n" + 
                               "update( __obj__ );}\n" + 
@@ -198,14 +198,14 @@ public class JavaConsequenceBuilderTest extends TestCase {
             fixed = new KnowledgeHelperFixer().fix( fixed );
 
             String expected = " System.out.println(\"this is a test\");\n " + 
-                              " com.agfa.hap.drools.insert( $cheese );\n " +
+                              " drools.insert( $cheese );\n " +
                               " if( true ) { \n " +
-                              "     com.agfa.hap.drools.insert($another); \n" +
+                              "     drools.insert($another); \n" +
                               " } else { \n"+
-                              "     com.agfa.hap.drools.retract($oneMore); \n" +
+                              "     drools.retract($oneMore); \n" +
                               " } \n" +
                               " // just in case, one more call: \n" +
-                              " com.agfa.hap.drools.insert( $abc );\n"
+                              " drools.insert( $abc );\n"
             ;
 
 //                        System.out.println( "=============================" );

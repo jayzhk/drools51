@@ -1,6 +1,6 @@
 #### a comment
 // another comment
-package org.com.agfa.hap.drools
+package org.drools
 
 // another comment
 # ### one more

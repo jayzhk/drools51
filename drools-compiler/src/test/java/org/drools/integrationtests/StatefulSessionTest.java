@@ -68,8 +68,8 @@ public class StatefulSessionTest extends TestCase {
     
     public void testInsertObject() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
-        str += "import org.com.agfa.hap.drools.Cheese \n";
+        str += "package org.drools \n";
+        str += "import org.drools.Cheese \n";
         str += "rule rule1 \n";
         str += "  when \n";
         str += "    $c : Cheese() \n";

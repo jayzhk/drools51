@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools.test
+package org.drools.test
 
 global java.util.List list
 

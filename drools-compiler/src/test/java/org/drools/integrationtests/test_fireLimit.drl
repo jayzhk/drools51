@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools;
+package org.drools;
 
 global java.util.List results;
 
@@ -17,5 +17,5 @@ when
 	$old : Number( intValue == 20 )
 then
     retract( $old );
-    com.agfa.hap.drools.halt();
+    drools.halt();
 end

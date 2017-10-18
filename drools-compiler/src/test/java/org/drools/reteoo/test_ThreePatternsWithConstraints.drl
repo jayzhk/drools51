@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools.compiler;
+package org.drools.compiler;
 
 import org.drools.Cheese;
 import org.drools.Person;

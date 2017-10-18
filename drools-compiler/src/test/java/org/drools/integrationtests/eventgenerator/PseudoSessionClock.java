@@ -14,7 +14,7 @@ public class PseudoSessionClock
  	    }
  	    
  	    /* (non-Javadoc)
- 	     * @see org.com.agfa.hap.drools.temporal.SessionClock#getCurrentTime()
+ 	     * @see org.drools.temporal.SessionClock#getCurrentTime()
  	     */
  	    public long getCurrentTime() {
  	        return this.timer;

@@ -1,5 +1,5 @@
 package droolsbook
-import com.agfa.hap.drools.Account
+import drools.Account
 
 //dialect "mvel"
 

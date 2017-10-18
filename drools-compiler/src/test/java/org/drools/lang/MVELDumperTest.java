@@ -79,7 +79,7 @@ public class MVELDumperTest extends TestCase {
 
     public void testDumpWithDateAttr() throws Exception {
         String input = "Person( son.birthDate == \"01-jan-2000\" )";
-        String expected = "son.birthDate == org.com.agfa.hap.drools.util.DateUtils.parseDate( \"01-jan-2000\" )" ;
+        String expected = "son.birthDate == org.drools.util.DateUtils.parseDate( \"01-jan-2000\" )" ;
         PatternDescr pattern = (PatternDescr) parse("lhs_pattern", "lhs_pattern", input);
         
         FieldConstraintDescr fieldDescr = (FieldConstraintDescr) pattern.getConstraint().getDescrs().get( 0 );
@@ -118,7 +118,7 @@ public class MVELDumperTest extends TestCase {
 			Object ruleReturn = ruleName.invoke(parser);
 			
 			if (!parser.hasErrors()){
-				Class _return = Class.forName("org.com.agfa.hap.drools.lang.DRLParser" + "$"
+				Class _return = Class.forName("org.drools.lang.DRLParser" + "$"
 						+ testRuleName + "_return");
 				Method returnName = _return.getMethod("getTree");
 				DroolsTree tree = (DroolsTree) returnName.invoke(ruleReturn);
@@ -142,12 +142,12 @@ public class MVELDumperTest extends TestCase {
 						testTreeRuleName + "_return") > 0) {
 					try { // NullPointerException may happen here...
 						Class _treeReturn = Class
-								.forName("org.com.agfa.hap.drools.lang.DescrBuilderTree"
+								.forName("org.drools.lang.DescrBuilderTree"
 										+ "$" + testTreeRuleName + "_return");
 						Field[] fields = _treeReturn.getDeclaredFields();
 						for (Field field : fields) {
 							if (field.getType().getName().contains(
-									"org.com.agfa.hap.drools.lang.descr.")) {
+									"org.drools.lang.descr.")) {
 								return field.get(treeRuleReturn);
 							}
 						}

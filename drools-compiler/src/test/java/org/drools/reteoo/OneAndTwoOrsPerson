@@ -1,12 +1,12 @@
-<org.com.agfa.hap.drools.reteoo.ReteooRuleBase>
+<org.drools.reteoo.ReteooRuleBase>
   <map>
     <entry>
-      <string>org.com.agfa.hap.drools.reteoo</string>
-      <org.com.agfa.hap.drools.rule.Package>
-        <org.com.agfa.hap.drools.rule.PackageCompilationData>
+      <string>org.drools.reteoo</string>
+      <org.drools.rule.Package>
+        <org.drools.rule.PackageCompilationData>
           <map>
             <entry>
-              <string>org/com.agfa.hap.drools/reteoo/Rule_Hello_World_2_0.class</string>
+              <string>org/drools/reteoo/Rule_Hello_World_2_0.class</string>
               <byte-array>yv66vgAAADAAKgcAAgEAJm9yZy9kcm9vbHMvcmV0ZW9vL1J1bGVfSGVsbG9fV29ybGRfMl8wBwAE
 AQAQamF2YS9sYW5nL09iamVjdAEAEHNlcmlhbFZlcnNpb25VSUQBAAFKAQANQ29uc3RhbnRWYWx1
 ZQUAAAAAAAABQAEABjxpbml0PgEAAygpVgEABENvZGUKAAMADgwACgALAQAPTGluZU51bWJlclRh
@@ -23,7 +23,7 @@ sgAYEh62ACCxAAAAAgAPAAAACgACAAAACgAIAAsAEAAAAAwAAQAAAAkAJgAnAAAAAQAoAAAAAgAp
 </byte-array>
             </entry>
             <entry>
-              <string>org/com.agfa.hap.drools/reteoo/Rule_Hello_World_1_0.class</string>
+              <string>org/drools/reteoo/Rule_Hello_World_1_0.class</string>
               <byte-array>yv66vgAAADAAKgcAAgEAJm9yZy9kcm9vbHMvcmV0ZW9vL1J1bGVfSGVsbG9fV29ybGRfMV8wBwAE
 AQAQamF2YS9sYW5nL09iamVjdAEAEHNlcmlhbFZlcnNpb25VSUQBAAFKAQANQ29uc3RhbnRWYWx1
 ZQUAAAAAAAABQAEABjxpbml0PgEAAygpVgEABENvZGUKAAMADgwACgALAQAPTGluZU51bWJlclRh
@@ -40,7 +40,7 @@ sgAYEh62ACCxAAAAAgAPAAAACgACAAAACgAIAAsAEAAAAAwAAQAAAAkAJgAnAAAAAQAoAAAAAgAp
 </byte-array>
             </entry>
             <entry>
-              <string>org/com.agfa.hap.drools/reteoo/Rule_Hello_World_2_0ConsequenceInvoker.class</string>
+              <string>org/drools/reteoo/Rule_Hello_World_2_0ConsequenceInvoker.class</string>
               <byte-array>yv66vgAAADAAOAcAAgEAOG9yZy9kcm9vbHMvcmV0ZW9vL1J1bGVfSGVsbG9fV29ybGRfMl8wQ29u
 c2VxdWVuY2VJbnZva2VyBwAEAQAQamF2YS9sYW5nL09iamVjdAcABgEAGm9yZy9kcm9vbHMvc3Bp
 L0NvbnNlcXVlbmNlAQAQc2VyaWFsVmVyc2lvblVJRAEAAUoBAA1Db25zdGFudFZhbHVlBQAAAAAA
@@ -64,7 +64,7 @@ K7gAKrEAAAACABEAAAAaAAYAAAAKAAcACwAOAAwAEwATABQAEgAXABYAEgAAACoABAAAABgAEwAU
 AAAAAAAYADAAMQABAAAAGAAyADMAAgAOAAoANAA1AAMAAQA2AAAAAgA3</byte-array>
             </entry>
             <entry>
-              <string>org/com.agfa.hap.drools/reteoo/Rule_Hello_World_1_0ConsequenceInvoker.class</string>
+              <string>org/drools/reteoo/Rule_Hello_World_1_0ConsequenceInvoker.class</string>
               <byte-array>yv66vgAAADAAOAcAAgEAOG9yZy9kcm9vbHMvcmV0ZW9vL1J1bGVfSGVsbG9fV29ybGRfMV8wQ29u
 c2VxdWVuY2VJbnZva2VyBwAEAQAQamF2YS9sYW5nL09iamVjdAcABgEAGm9yZy9kcm9vbHMvc3Bp
 L0NvbnNlcXVlbmNlAQAQc2VyaWFsVmVyc2lvblVJRAEAAUoBAA1Db25zdGFudFZhbHVlBQAAAAAA
@@ -217,13 +217,13 @@ YXR1c0lzU2V0WgAHaXNBbGl2ZVoADGlzQWxpdmVJc1NldEwACGRlbGVnYXRlcQB+AP9MAA1nZXRC
 aWdEZWNpbWFscQB+APVMAA1nZXRCaWdJbnRlZ2VycQB+APZMAAdnZXRIYWlycQB+AARMAAhnZXRM
 aWtlc3EAfgAETAAHZ2V0TmFtZXEAfgAETAAJZ2V0U3RhdHVzcQB+AAR4cQB+APRxAH4ASXh4dAAN
 SGVsbG8gV29ybGQgMnB4</byte-array>
-        </org.com.agfa.hap.drools.rule.PackageCompilationData>
-        <string>org.com.agfa.hap.drools.reteoo</string>
+        </org.drools.rule.PackageCompilationData>
+        <string>org.drools.reteoo</string>
         <list>
-          <string>org.com.agfa.hap.drools.Message</string>
-          <string>org.com.agfa.hap.drools.Cheese</string>
-          <string>org.com.agfa.hap.drools.Person</string>
-          <string>org.com.agfa.hap.drools.reteoo.*</string>
+          <string>org.drools.Message</string>
+          <string>org.drools.Cheese</string>
+          <string>org.drools.Person</string>
+          <string>org.drools.reteoo.*</string>
           <string>java.lang.*</string>
         </list>
         <java.util.Collections-EmptyList/>
@@ -355,7 +355,7 @@ c1NldFoADmdldFN0YXR1c0lzU2V0WgAHaXNBbGl2ZVoADGlzQWxpdmVJc1NldEwACGRlbGVnYXRl
 cQB+AP9MAA1nZXRCaWdEZWNpbWFscQB+APVMAA1nZXRCaWdJbnRlZ2VycQB+APZMAAdnZXRIYWly
 cQB+AAVMAAhnZXRMaWtlc3EAfgAFTAAHZ2V0TmFtZXEAfgAFTAAJZ2V0U3RhdHVzcQB+AAV4cQB+
 APRxAH4ASnh4cQB+AJpweAA=</byte-array>
-      </org.com.agfa.hap.drools.rule.Package>
+      </org.drools.rule.Package>
     </entry>
   </map>
   <byte-array>rO0ABXQAJDNmMTc5YWQyLWFjZjUtNGU2Zi1iYmY5LTdmOTk1MjcyYmZkNnNyAClvcmcuZHJvb2xz
@@ -654,4 +654,4 @@ Y2Vzc09yZGVyeHEAfgANP0AAAAAAAAx3CAAAABAAAAAAeABzcQB+AA0/QAAAAAAADHcIAAAAEAAA
 AAJxAH4BLXVyAB1bTG9yZy5kcm9vbHMuY29tbW9uLkJhc2VOb2RlO3gP5nV9Cv4lAgAAeHAAAAAE
 cQB+AHRxAH4BLHEAfgGEcQB+AY5xAH4AfnVxAH4B0QAAAAhxAH4Ad3EAfgGmcQB+AShxAH4BeHEA
 fgGHcQB+AX9xAH4BinEAfgGReHEAfgGP</byte-array>
-</org.com.agfa.hap.drools.reteoo.ReteooRuleBase>
+</org.drools.reteoo.ReteooRuleBase>

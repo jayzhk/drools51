@@ -82,11 +82,11 @@ public class KnowledgeAgentCustomClassLoaderTest extends TestCase {
 
     private void testCustomKnowledgeBuilderConfiguration(boolean newInstance) throws Exception {
 
-        //A simple rule using a class (org.com.agfa.hap.drools.agent.test.KnowledgeAgentInstance)
+        //A simple rule using a class (org.drools.agent.test.KnowledgeAgentInstance)
         //that is not present in the classloader.
         String rule1 = "";
-        rule1 += "package org.com.agfa.hap.drools.test\n";
-        rule1 += "import org.com.agfa.hap.drools.agent.test.KnowledgeAgentInstance\n";
+        rule1 += "package org.drools.test\n";
+        rule1 += "import org.drools.agent.test.KnowledgeAgentInstance\n";
         rule1 += "global java.util.List list\n";
         rule1 += "rule rule1\n";
         rule1 += "when\n";
@@ -101,9 +101,9 @@ public class KnowledgeAgentCustomClassLoaderTest extends TestCase {
 
         //The change set to process the created resource
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule1.drl' type='DRL' />";
         xml += "    </add> ";
@@ -182,11 +182,11 @@ public class KnowledgeAgentCustomClassLoaderTest extends TestCase {
 
     private void testUseKBaseClassLoaderForCompilingProperty(boolean newInstance) throws Exception {
 
-        //A simple rule using a class (org.com.agfa.hap.drools.agent.test.KnowledgeAgentInstance)
+        //A simple rule using a class (org.drools.agent.test.KnowledgeAgentInstance)
         //that is not present in the classloader.
         String rule1 = "";
-        rule1 += "package org.com.agfa.hap.drools.test\n";
-        rule1 += "import org.com.agfa.hap.drools.agent.test.KnowledgeAgentInstance\n";
+        rule1 += "package org.drools.test\n";
+        rule1 += "import org.drools.agent.test.KnowledgeAgentInstance\n";
         rule1 += "global java.util.List list\n";
         rule1 += "rule rule1\n";
         rule1 += "when\n";
@@ -201,9 +201,9 @@ public class KnowledgeAgentCustomClassLoaderTest extends TestCase {
 
         //The change set to process the created resource
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule1.drl' type='DRL' />";
         xml += "    </add> ";
@@ -285,16 +285,16 @@ public class KnowledgeAgentCustomClassLoaderTest extends TestCase {
 
     private KnowledgeAgent createKAgent(KnowledgeBase kbase, boolean newInstance, boolean useKBaseClassLoaderForCompiling, KnowledgeBuilderConfiguration builderConf) {
         ResourceChangeScannerConfiguration sconf = ResourceFactory.getResourceChangeScannerService().newResourceChangeScannerConfiguration();
-        sconf.setProperty("com.agfa.hap.drools.resource.scanner.interval", "2");
+        sconf.setProperty("drools.resource.scanner.interval", "2");
         ResourceFactory.getResourceChangeScannerService().configure(sconf);
 
-        //System.setProperty(KnowledgeAgentFactory.PROVIDER_CLASS_NAME_PROPERTY_NAME, "org.com.agfa.hap.drools.agent.impl.KnowledgeAgentProviderImpl");
+        //System.setProperty(KnowledgeAgentFactory.PROVIDER_CLASS_NAME_PROPERTY_NAME, "org.drools.agent.impl.KnowledgeAgentProviderImpl");
 
         KnowledgeAgentConfiguration aconf = KnowledgeAgentFactory.newKnowledgeAgentConfiguration();
-        aconf.setProperty("com.agfa.hap.drools.agent.scanDirectories", "true");
-        aconf.setProperty("com.agfa.hap.drools.agent.scanResources", "true");
-        aconf.setProperty("com.agfa.hap.drools.agent.newInstance", ""+newInstance);
-        aconf.setProperty("com.agfa.hap.drools.agent.useKBaseClassLoaderForCompiling", ""+useKBaseClassLoaderForCompiling);
+        aconf.setProperty("drools.agent.scanDirectories", "true");
+        aconf.setProperty("drools.agent.scanResources", "true");
+        aconf.setProperty("drools.agent.newInstance", ""+newInstance);
+        aconf.setProperty("drools.agent.useKBaseClassLoaderForCompiling", ""+useKBaseClassLoaderForCompiling);
 
 
         KnowledgeAgent kagent = KnowledgeAgentFactory.newKnowledgeAgent(

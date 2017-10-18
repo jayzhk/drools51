@@ -1,4 +1,4 @@
-// $ANTLR 3.1.1 src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g 2010-05-27 17:19:50
+// $ANTLR 3.1.1 src/main/resources/org/drools/lang/Tree2TestDRL.g 2010-05-27 17:19:50
 
 	package org.drools.lang;
 
@@ -153,22 +153,22 @@ public class Tree2TestDRL extends TreeParser {
         
 
     public String[] getTokenNames() { return Tree2TestDRL.tokenNames; }
-    public String getGrammarFileName() { return "src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g"; }
+    public String getGrammarFileName() { return "src/main/resources/org/drools/lang/Tree2TestDRL.g"; }
 
 
 
     // $ANTLR start "compilation_unit"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:13:1: compilation_unit : ^( VT_COMPILATION_UNIT ( package_statement )? ( statement )* ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:13:1: compilation_unit : ^( VT_COMPILATION_UNIT ( package_statement )? ( statement )* ) ;
     public final void compilation_unit() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:14:2: ( ^( VT_COMPILATION_UNIT ( package_statement )? ( statement )* ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:14:4: ^( VT_COMPILATION_UNIT ( package_statement )? ( statement )* )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:14:2: ( ^( VT_COMPILATION_UNIT ( package_statement )? ( statement )* ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:14:4: ^( VT_COMPILATION_UNIT ( package_statement )? ( statement )* )
             {
             match(input,VT_COMPILATION_UNIT,FOLLOW_VT_COMPILATION_UNIT_in_compilation_unit43); 
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:14:26: ( package_statement )?
+                // src/main/resources/org/drools/lang/Tree2TestDRL.g:14:26: ( package_statement )?
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
@@ -177,7 +177,7 @@ public class Tree2TestDRL extends TreeParser {
                 }
                 switch (alt1) {
                     case 1 :
-                        // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:14:26: package_statement
+                        // src/main/resources/org/drools/lang/Tree2TestDRL.g:14:26: package_statement
                         {
                         pushFollow(FOLLOW_package_statement_in_compilation_unit45);
                         package_statement();
@@ -190,7 +190,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 }
 
-                // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:14:45: ( statement )*
+                // src/main/resources/org/drools/lang/Tree2TestDRL.g:14:45: ( statement )*
                 loop2:
                 do {
                     int alt2=2;
@@ -203,7 +203,7 @@ public class Tree2TestDRL extends TreeParser {
 
                     switch (alt2) {
                 	case 1 :
-                	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:14:45: statement
+                	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:14:45: statement
                 	    {
                 	    pushFollow(FOLLOW_statement_in_compilation_unit48);
                 	    statement();
@@ -238,11 +238,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "package_statement"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:17:1: package_statement : ^( VK_PACKAGE package_id ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:17:1: package_statement : ^( VK_PACKAGE package_id ) ;
     public final void package_statement() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:18:2: ( ^( VK_PACKAGE package_id ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:18:4: ^( VK_PACKAGE package_id )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:18:2: ( ^( VK_PACKAGE package_id ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:18:4: ^( VK_PACKAGE package_id )
             {
             match(input,VK_PACKAGE,FOLLOW_VK_PACKAGE_in_package_statement63); 
 
@@ -270,16 +270,16 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "package_id"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:21:1: package_id : ^( VT_PACKAGE_ID ( ID )+ ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:21:1: package_id : ^( VT_PACKAGE_ID ( ID )+ ) ;
     public final void package_id() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:22:2: ( ^( VT_PACKAGE_ID ( ID )+ ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:22:4: ^( VT_PACKAGE_ID ( ID )+ )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:22:2: ( ^( VT_PACKAGE_ID ( ID )+ ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:22:4: ^( VT_PACKAGE_ID ( ID )+ )
             {
             match(input,VT_PACKAGE_ID,FOLLOW_VT_PACKAGE_ID_in_package_id78); 
 
             match(input, Token.DOWN, null); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:22:20: ( ID )+
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:22:20: ( ID )+
             int cnt3=0;
             loop3:
             do {
@@ -293,7 +293,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt3) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:22:20: ID
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:22:20: ID
             	    {
             	    match(input,ID,FOLLOW_ID_in_package_id80); 
 
@@ -327,10 +327,10 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "statement"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:25:1: statement : ( rule_attribute | function_import_statement | import_statement | global | function | template | rule | query | type_declaration );
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:25:1: statement : ( rule_attribute | function_import_statement | import_statement | global | function | template | rule | query | type_declaration );
     public final void statement() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:26:2: ( rule_attribute | function_import_statement | import_statement | global | function | template | rule | query | type_declaration )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:26:2: ( rule_attribute | function_import_statement | import_statement | global | function | template | rule | query | type_declaration )
             int alt4=9;
             switch ( input.LA(1) ) {
             case VK_DATE_EFFECTIVE:
@@ -398,7 +398,7 @@ public class Tree2TestDRL extends TreeParser {
 
             switch (alt4) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:26:4: rule_attribute
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:26:4: rule_attribute
                     {
                     pushFollow(FOLLOW_rule_attribute_in_statement93);
                     rule_attribute();
@@ -409,7 +409,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:27:4: function_import_statement
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:27:4: function_import_statement
                     {
                     pushFollow(FOLLOW_function_import_statement_in_statement98);
                     function_import_statement();
@@ -420,7 +420,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:28:4: import_statement
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:28:4: import_statement
                     {
                     pushFollow(FOLLOW_import_statement_in_statement104);
                     import_statement();
@@ -431,7 +431,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:29:4: global
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:29:4: global
                     {
                     pushFollow(FOLLOW_global_in_statement110);
                     global();
@@ -442,7 +442,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 5 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:30:4: function
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:30:4: function
                     {
                     pushFollow(FOLLOW_function_in_statement116);
                     function();
@@ -453,7 +453,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 6 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:31:4: template
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:31:4: template
                     {
                     pushFollow(FOLLOW_template_in_statement121);
                     template();
@@ -464,7 +464,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 7 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:32:4: rule
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:32:4: rule
                     {
                     pushFollow(FOLLOW_rule_in_statement126);
                     rule();
@@ -475,7 +475,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 8 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:33:4: query
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:33:4: query
                     {
                     pushFollow(FOLLOW_query_in_statement131);
                     query();
@@ -486,7 +486,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 9 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:34:4: type_declaration
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:34:4: type_declaration
                     {
                     pushFollow(FOLLOW_type_declaration_in_statement136);
                     type_declaration();
@@ -511,11 +511,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "import_statement"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:37:1: import_statement : ^( VK_IMPORT import_name ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:37:1: import_statement : ^( VK_IMPORT import_name ) ;
     public final void import_statement() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:38:2: ( ^( VK_IMPORT import_name ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:38:4: ^( VK_IMPORT import_name )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:38:2: ( ^( VK_IMPORT import_name ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:38:4: ^( VK_IMPORT import_name )
             {
             match(input,VK_IMPORT,FOLLOW_VK_IMPORT_in_import_statement148); 
 
@@ -543,11 +543,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "function_import_statement"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:41:1: function_import_statement : ^( VT_FUNCTION_IMPORT VK_FUNCTION import_name ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:41:1: function_import_statement : ^( VT_FUNCTION_IMPORT VK_FUNCTION import_name ) ;
     public final void function_import_statement() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:42:2: ( ^( VT_FUNCTION_IMPORT VK_FUNCTION import_name ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:42:4: ^( VT_FUNCTION_IMPORT VK_FUNCTION import_name )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:42:2: ( ^( VT_FUNCTION_IMPORT VK_FUNCTION import_name ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:42:4: ^( VT_FUNCTION_IMPORT VK_FUNCTION import_name )
             {
             match(input,VT_FUNCTION_IMPORT,FOLLOW_VT_FUNCTION_IMPORT_in_function_import_statement163); 
 
@@ -576,16 +576,16 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "import_name"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:45:1: import_name : ^( VT_IMPORT_ID ( ID )+ ( DOT_STAR )? ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:45:1: import_name : ^( VT_IMPORT_ID ( ID )+ ( DOT_STAR )? ) ;
     public final void import_name() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:46:2: ( ^( VT_IMPORT_ID ( ID )+ ( DOT_STAR )? ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:46:4: ^( VT_IMPORT_ID ( ID )+ ( DOT_STAR )? )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:46:2: ( ^( VT_IMPORT_ID ( ID )+ ( DOT_STAR )? ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:46:4: ^( VT_IMPORT_ID ( ID )+ ( DOT_STAR )? )
             {
             match(input,VT_IMPORT_ID,FOLLOW_VT_IMPORT_ID_in_import_name180); 
 
             match(input, Token.DOWN, null); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:46:19: ( ID )+
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:46:19: ( ID )+
             int cnt5=0;
             loop5:
             do {
@@ -599,7 +599,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt5) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:46:19: ID
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:46:19: ID
             	    {
             	    match(input,ID,FOLLOW_ID_in_import_name182); 
 
@@ -615,7 +615,7 @@ public class Tree2TestDRL extends TreeParser {
                 cnt5++;
             } while (true);
 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:46:23: ( DOT_STAR )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:46:23: ( DOT_STAR )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -624,7 +624,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt6) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:46:23: DOT_STAR
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:46:23: DOT_STAR
                     {
                     match(input,DOT_STAR,FOLLOW_DOT_STAR_in_import_name185); 
 
@@ -651,11 +651,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "global"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:49:1: global : ^( VK_GLOBAL data_type VT_GLOBAL_ID ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:49:1: global : ^( VK_GLOBAL data_type VT_GLOBAL_ID ) ;
     public final void global() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:50:2: ( ^( VK_GLOBAL data_type VT_GLOBAL_ID ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:50:4: ^( VK_GLOBAL data_type VT_GLOBAL_ID )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:50:2: ( ^( VK_GLOBAL data_type VT_GLOBAL_ID ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:50:4: ^( VK_GLOBAL data_type VT_GLOBAL_ID )
             {
             match(input,VK_GLOBAL,FOLLOW_VK_GLOBAL_in_global199); 
 
@@ -684,16 +684,16 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "function"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:53:1: function : ^( VK_FUNCTION ( data_type )? VT_FUNCTION_ID parameters curly_chunk ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:53:1: function : ^( VK_FUNCTION ( data_type )? VT_FUNCTION_ID parameters curly_chunk ) ;
     public final void function() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:54:2: ( ^( VK_FUNCTION ( data_type )? VT_FUNCTION_ID parameters curly_chunk ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:54:4: ^( VK_FUNCTION ( data_type )? VT_FUNCTION_ID parameters curly_chunk )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:54:2: ( ^( VK_FUNCTION ( data_type )? VT_FUNCTION_ID parameters curly_chunk ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:54:4: ^( VK_FUNCTION ( data_type )? VT_FUNCTION_ID parameters curly_chunk )
             {
             match(input,VK_FUNCTION,FOLLOW_VK_FUNCTION_in_function216); 
 
             match(input, Token.DOWN, null); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:54:18: ( data_type )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:54:18: ( data_type )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -702,7 +702,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt7) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:54:18: data_type
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:54:18: data_type
                     {
                     pushFollow(FOLLOW_data_type_in_function218);
                     data_type();
@@ -744,17 +744,17 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "query"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:57:1: query : ^( VK_QUERY VT_QUERY_ID ( parameters )? lhs_block VK_END ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:57:1: query : ^( VK_QUERY VT_QUERY_ID ( parameters )? lhs_block VK_END ) ;
     public final void query() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:58:2: ( ^( VK_QUERY VT_QUERY_ID ( parameters )? lhs_block VK_END ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:58:4: ^( VK_QUERY VT_QUERY_ID ( parameters )? lhs_block VK_END )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:58:2: ( ^( VK_QUERY VT_QUERY_ID ( parameters )? lhs_block VK_END ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:58:4: ^( VK_QUERY VT_QUERY_ID ( parameters )? lhs_block VK_END )
             {
             match(input,VK_QUERY,FOLLOW_VK_QUERY_in_query238); 
 
             match(input, Token.DOWN, null); 
             match(input,VT_QUERY_ID,FOLLOW_VT_QUERY_ID_in_query240); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:58:27: ( parameters )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:58:27: ( parameters )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -763,7 +763,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt8) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:58:27: parameters
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:58:27: parameters
                     {
                     pushFollow(FOLLOW_parameters_in_query242);
                     parameters();
@@ -800,17 +800,17 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "parameters"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:61:1: parameters : ^( VT_PARAM_LIST ( param_definition )* ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:61:1: parameters : ^( VT_PARAM_LIST ( param_definition )* ) ;
     public final void parameters() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:62:2: ( ^( VT_PARAM_LIST ( param_definition )* ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:62:4: ^( VT_PARAM_LIST ( param_definition )* )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:62:2: ( ^( VT_PARAM_LIST ( param_definition )* ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:62:4: ^( VT_PARAM_LIST ( param_definition )* )
             {
             match(input,VT_PARAM_LIST,FOLLOW_VT_PARAM_LIST_in_parameters260); 
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:62:20: ( param_definition )*
+                // src/main/resources/org/drools/lang/Tree2TestDRL.g:62:20: ( param_definition )*
                 loop9:
                 do {
                     int alt9=2;
@@ -823,7 +823,7 @@ public class Tree2TestDRL extends TreeParser {
 
                     switch (alt9) {
                 	case 1 :
-                	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:62:20: param_definition
+                	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:62:20: param_definition
                 	    {
                 	    pushFollow(FOLLOW_param_definition_in_parameters262);
                 	    param_definition();
@@ -858,13 +858,13 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "param_definition"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:65:1: param_definition : ( data_type )? argument ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:65:1: param_definition : ( data_type )? argument ;
     public final void param_definition() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:66:2: ( ( data_type )? argument )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:66:4: ( data_type )? argument
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:66:2: ( ( data_type )? argument )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:66:4: ( data_type )? argument
             {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:66:4: ( data_type )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:66:4: ( data_type )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -873,7 +873,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt10) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:66:4: data_type
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:66:4: data_type
                     {
                     pushFollow(FOLLOW_data_type_in_param_definition275);
                     data_type();
@@ -907,14 +907,14 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "argument"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:69:1: argument : ID ( dimension_definition )* ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:69:1: argument : ID ( dimension_definition )* ;
     public final void argument() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:70:2: ( ID ( dimension_definition )* )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:70:4: ID ( dimension_definition )*
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:70:2: ( ID ( dimension_definition )* )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:70:4: ID ( dimension_definition )*
             {
             match(input,ID,FOLLOW_ID_in_argument289); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:70:7: ( dimension_definition )*
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:70:7: ( dimension_definition )*
             loop11:
             do {
                 int alt11=2;
@@ -927,7 +927,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt11) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:70:7: dimension_definition
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:70:7: dimension_definition
             	    {
             	    pushFollow(FOLLOW_dimension_definition_in_argument291);
             	    dimension_definition();
@@ -959,17 +959,17 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "type_declaration"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:73:1: type_declaration : ^( VK_DECLARE VT_TYPE_DECLARE_ID ( decl_metadata )* ( decl_field )* VK_END ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:73:1: type_declaration : ^( VK_DECLARE VT_TYPE_DECLARE_ID ( decl_metadata )* ( decl_field )* VK_END ) ;
     public final void type_declaration() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:74:2: ( ^( VK_DECLARE VT_TYPE_DECLARE_ID ( decl_metadata )* ( decl_field )* VK_END ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:74:4: ^( VK_DECLARE VT_TYPE_DECLARE_ID ( decl_metadata )* ( decl_field )* VK_END )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:74:2: ( ^( VK_DECLARE VT_TYPE_DECLARE_ID ( decl_metadata )* ( decl_field )* VK_END ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:74:4: ^( VK_DECLARE VT_TYPE_DECLARE_ID ( decl_metadata )* ( decl_field )* VK_END )
             {
             match(input,VK_DECLARE,FOLLOW_VK_DECLARE_in_type_declaration304); 
 
             match(input, Token.DOWN, null); 
             match(input,VT_TYPE_DECLARE_ID,FOLLOW_VT_TYPE_DECLARE_ID_in_type_declaration306); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:74:36: ( decl_metadata )*
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:74:36: ( decl_metadata )*
             loop12:
             do {
                 int alt12=2;
@@ -982,7 +982,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt12) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:74:36: decl_metadata
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:74:36: decl_metadata
             	    {
             	    pushFollow(FOLLOW_decl_metadata_in_type_declaration308);
             	    decl_metadata();
@@ -998,7 +998,7 @@ public class Tree2TestDRL extends TreeParser {
                 }
             } while (true);
 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:74:51: ( decl_field )*
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:74:51: ( decl_field )*
             loop13:
             do {
                 int alt13=2;
@@ -1011,7 +1011,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt13) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:74:51: decl_field
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:74:51: decl_field
             	    {
             	    pushFollow(FOLLOW_decl_field_in_type_declaration311);
             	    decl_field();
@@ -1046,17 +1046,17 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "decl_metadata"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:77:1: decl_metadata : ^( AT ID ( VT_PAREN_CHUNK )? ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:77:1: decl_metadata : ^( AT ID ( VT_PAREN_CHUNK )? ) ;
     public final void decl_metadata() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:78:2: ( ^( AT ID ( VT_PAREN_CHUNK )? ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:78:4: ^( AT ID ( VT_PAREN_CHUNK )? )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:78:2: ( ^( AT ID ( VT_PAREN_CHUNK )? ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:78:4: ^( AT ID ( VT_PAREN_CHUNK )? )
             {
             match(input,AT,FOLLOW_AT_in_decl_metadata327); 
 
             match(input, Token.DOWN, null); 
             match(input,ID,FOLLOW_ID_in_decl_metadata329); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:78:12: ( VT_PAREN_CHUNK )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:78:12: ( VT_PAREN_CHUNK )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1065,7 +1065,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt14) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:78:12: VT_PAREN_CHUNK
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:78:12: VT_PAREN_CHUNK
                     {
                     match(input,VT_PAREN_CHUNK,FOLLOW_VT_PAREN_CHUNK_in_decl_metadata331); 
 
@@ -1092,16 +1092,16 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "decl_field"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:81:1: decl_field : ^( ID ( decl_field_initialization )? data_type ( decl_metadata )* ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:81:1: decl_field : ^( ID ( decl_field_initialization )? data_type ( decl_metadata )* ) ;
     public final void decl_field() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:82:2: ( ^( ID ( decl_field_initialization )? data_type ( decl_metadata )* ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:82:4: ^( ID ( decl_field_initialization )? data_type ( decl_metadata )* )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:82:2: ( ^( ID ( decl_field_initialization )? data_type ( decl_metadata )* ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:82:4: ^( ID ( decl_field_initialization )? data_type ( decl_metadata )* )
             {
             match(input,ID,FOLLOW_ID_in_decl_field345); 
 
             match(input, Token.DOWN, null); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:82:9: ( decl_field_initialization )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:82:9: ( decl_field_initialization )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1110,7 +1110,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt15) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:82:9: decl_field_initialization
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:82:9: decl_field_initialization
                     {
                     pushFollow(FOLLOW_decl_field_initialization_in_decl_field347);
                     decl_field_initialization();
@@ -1128,7 +1128,7 @@ public class Tree2TestDRL extends TreeParser {
 
             state._fsp--;
 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:82:46: ( decl_metadata )*
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:82:46: ( decl_metadata )*
             loop16:
             do {
                 int alt16=2;
@@ -1141,7 +1141,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt16) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:82:46: decl_metadata
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:82:46: decl_metadata
             	    {
             	    pushFollow(FOLLOW_decl_metadata_in_decl_field352);
             	    decl_metadata();
@@ -1175,11 +1175,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "decl_field_initialization"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:85:1: decl_field_initialization : ^( EQUALS VT_PAREN_CHUNK ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:85:1: decl_field_initialization : ^( EQUALS VT_PAREN_CHUNK ) ;
     public final void decl_field_initialization() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:86:2: ( ^( EQUALS VT_PAREN_CHUNK ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:86:4: ^( EQUALS VT_PAREN_CHUNK )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:86:2: ( ^( EQUALS VT_PAREN_CHUNK ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:86:4: ^( EQUALS VT_PAREN_CHUNK )
             {
             match(input,EQUALS,FOLLOW_EQUALS_in_decl_field_initialization366); 
 
@@ -1203,17 +1203,17 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "template"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:89:1: template : ^( VK_TEMPLATE VT_TEMPLATE_ID ( template_slot )+ VK_END ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:89:1: template : ^( VK_TEMPLATE VT_TEMPLATE_ID ( template_slot )+ VK_END ) ;
     public final void template() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:90:2: ( ^( VK_TEMPLATE VT_TEMPLATE_ID ( template_slot )+ VK_END ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:90:4: ^( VK_TEMPLATE VT_TEMPLATE_ID ( template_slot )+ VK_END )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:90:2: ( ^( VK_TEMPLATE VT_TEMPLATE_ID ( template_slot )+ VK_END ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:90:4: ^( VK_TEMPLATE VT_TEMPLATE_ID ( template_slot )+ VK_END )
             {
             match(input,VK_TEMPLATE,FOLLOW_VK_TEMPLATE_in_template381); 
 
             match(input, Token.DOWN, null); 
             match(input,VT_TEMPLATE_ID,FOLLOW_VT_TEMPLATE_ID_in_template383); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:90:33: ( template_slot )+
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:90:33: ( template_slot )+
             int cnt17=0;
             loop17:
             do {
@@ -1227,7 +1227,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt17) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:90:33: template_slot
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:90:33: template_slot
             	    {
             	    pushFollow(FOLLOW_template_slot_in_template385);
             	    template_slot();
@@ -1266,11 +1266,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "template_slot"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:93:1: template_slot : ^( VT_SLOT data_type VT_SLOT_ID ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:93:1: template_slot : ^( VT_SLOT data_type VT_SLOT_ID ) ;
     public final void template_slot() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:94:2: ( ^( VT_SLOT data_type VT_SLOT_ID ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:94:4: ^( VT_SLOT data_type VT_SLOT_ID )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:94:2: ( ^( VT_SLOT data_type VT_SLOT_ID ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:94:4: ^( VT_SLOT data_type VT_SLOT_ID )
             {
             match(input,VT_SLOT,FOLLOW_VT_SLOT_in_template_slot401); 
 
@@ -1299,17 +1299,17 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "rule"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:97:1: rule : ^( VK_RULE VT_RULE_ID ( rule_attributes )? ( when_part )? VT_RHS_CHUNK ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:97:1: rule : ^( VK_RULE VT_RULE_ID ( rule_attributes )? ( when_part )? VT_RHS_CHUNK ) ;
     public final void rule() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:98:2: ( ^( VK_RULE VT_RULE_ID ( rule_attributes )? ( when_part )? VT_RHS_CHUNK ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:98:4: ^( VK_RULE VT_RULE_ID ( rule_attributes )? ( when_part )? VT_RHS_CHUNK )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:98:2: ( ^( VK_RULE VT_RULE_ID ( rule_attributes )? ( when_part )? VT_RHS_CHUNK ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:98:4: ^( VK_RULE VT_RULE_ID ( rule_attributes )? ( when_part )? VT_RHS_CHUNK )
             {
             match(input,VK_RULE,FOLLOW_VK_RULE_in_rule418); 
 
             match(input, Token.DOWN, null); 
             match(input,VT_RULE_ID,FOLLOW_VT_RULE_ID_in_rule420); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:98:25: ( rule_attributes )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:98:25: ( rule_attributes )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -1318,7 +1318,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt18) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:98:25: rule_attributes
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:98:25: rule_attributes
                     {
                     pushFollow(FOLLOW_rule_attributes_in_rule422);
                     rule_attributes();
@@ -1331,7 +1331,7 @@ public class Tree2TestDRL extends TreeParser {
 
             }
 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:98:42: ( when_part )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:98:42: ( when_part )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -1340,7 +1340,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt19) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:98:42: when_part
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:98:42: when_part
                     {
                     pushFollow(FOLLOW_when_part_in_rule425);
                     when_part();
@@ -1372,11 +1372,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "when_part"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:101:1: when_part : WHEN lhs_block ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:101:1: when_part : WHEN lhs_block ;
     public final void when_part() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:102:2: ( WHEN lhs_block )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:102:4: WHEN lhs_block
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:102:2: ( WHEN lhs_block )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:102:4: WHEN lhs_block
             {
             match(input,WHEN,FOLLOW_WHEN_in_when_part440); 
             pushFollow(FOLLOW_lhs_block_in_when_part442);
@@ -1400,16 +1400,16 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "rule_attributes"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:105:1: rule_attributes : ^( VT_RULE_ATTRIBUTES ( VK_ATTRIBUTES )? ( rule_attribute )+ ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:105:1: rule_attributes : ^( VT_RULE_ATTRIBUTES ( VK_ATTRIBUTES )? ( rule_attribute )+ ) ;
     public final void rule_attributes() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:106:2: ( ^( VT_RULE_ATTRIBUTES ( VK_ATTRIBUTES )? ( rule_attribute )+ ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:106:4: ^( VT_RULE_ATTRIBUTES ( VK_ATTRIBUTES )? ( rule_attribute )+ )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:106:2: ( ^( VT_RULE_ATTRIBUTES ( VK_ATTRIBUTES )? ( rule_attribute )+ ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:106:4: ^( VT_RULE_ATTRIBUTES ( VK_ATTRIBUTES )? ( rule_attribute )+ )
             {
             match(input,VT_RULE_ATTRIBUTES,FOLLOW_VT_RULE_ATTRIBUTES_in_rule_attributes454); 
 
             match(input, Token.DOWN, null); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:106:25: ( VK_ATTRIBUTES )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:106:25: ( VK_ATTRIBUTES )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -1418,7 +1418,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt20) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:106:25: VK_ATTRIBUTES
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:106:25: VK_ATTRIBUTES
                     {
                     match(input,VK_ATTRIBUTES,FOLLOW_VK_ATTRIBUTES_in_rule_attributes456); 
 
@@ -1427,7 +1427,7 @@ public class Tree2TestDRL extends TreeParser {
 
             }
 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:106:40: ( rule_attribute )+
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:106:40: ( rule_attribute )+
             int cnt21=0;
             loop21:
             do {
@@ -1441,7 +1441,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt21) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:106:40: rule_attribute
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:106:40: rule_attribute
             	    {
             	    pushFollow(FOLLOW_rule_attribute_in_rule_attributes459);
             	    rule_attribute();
@@ -1479,10 +1479,10 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "rule_attribute"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:109:1: rule_attribute : ( ^( VK_SALIENCE ( INT | VT_PAREN_CHUNK ) ) | ^( VK_NO_LOOP ( BOOL )? ) | ^( VK_AGENDA_GROUP STRING ) | ^( VK_DURATION INT ) | ^( VK_ACTIVATION_GROUP STRING ) | ^( VK_AUTO_FOCUS ( BOOL )? ) | ^( VK_DATE_EFFECTIVE STRING ) | ^( VK_DATE_EXPIRES STRING ) | ^( VK_ENABLED BOOL ) | ^( VK_RULEFLOW_GROUP STRING ) | ^( VK_LOCK_ON_ACTIVE ( BOOL )? ) | ^( VK_DIALECT STRING ) );
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:109:1: rule_attribute : ( ^( VK_SALIENCE ( INT | VT_PAREN_CHUNK ) ) | ^( VK_NO_LOOP ( BOOL )? ) | ^( VK_AGENDA_GROUP STRING ) | ^( VK_DURATION INT ) | ^( VK_ACTIVATION_GROUP STRING ) | ^( VK_AUTO_FOCUS ( BOOL )? ) | ^( VK_DATE_EFFECTIVE STRING ) | ^( VK_DATE_EXPIRES STRING ) | ^( VK_ENABLED BOOL ) | ^( VK_RULEFLOW_GROUP STRING ) | ^( VK_LOCK_ON_ACTIVE ( BOOL )? ) | ^( VK_DIALECT STRING ) );
     public final void rule_attribute() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:110:2: ( ^( VK_SALIENCE ( INT | VT_PAREN_CHUNK ) ) | ^( VK_NO_LOOP ( BOOL )? ) | ^( VK_AGENDA_GROUP STRING ) | ^( VK_DURATION INT ) | ^( VK_ACTIVATION_GROUP STRING ) | ^( VK_AUTO_FOCUS ( BOOL )? ) | ^( VK_DATE_EFFECTIVE STRING ) | ^( VK_DATE_EXPIRES STRING ) | ^( VK_ENABLED BOOL ) | ^( VK_RULEFLOW_GROUP STRING ) | ^( VK_LOCK_ON_ACTIVE ( BOOL )? ) | ^( VK_DIALECT STRING ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:110:2: ( ^( VK_SALIENCE ( INT | VT_PAREN_CHUNK ) ) | ^( VK_NO_LOOP ( BOOL )? ) | ^( VK_AGENDA_GROUP STRING ) | ^( VK_DURATION INT ) | ^( VK_ACTIVATION_GROUP STRING ) | ^( VK_AUTO_FOCUS ( BOOL )? ) | ^( VK_DATE_EFFECTIVE STRING ) | ^( VK_DATE_EXPIRES STRING ) | ^( VK_ENABLED BOOL ) | ^( VK_RULEFLOW_GROUP STRING ) | ^( VK_LOCK_ON_ACTIVE ( BOOL )? ) | ^( VK_DIALECT STRING ) )
             int alt25=12;
             switch ( input.LA(1) ) {
             case VK_SALIENCE:
@@ -1554,7 +1554,7 @@ public class Tree2TestDRL extends TreeParser {
 
             switch (alt25) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:110:4: ^( VK_SALIENCE ( INT | VT_PAREN_CHUNK ) )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:110:4: ^( VK_SALIENCE ( INT | VT_PAREN_CHUNK ) )
                     {
                     match(input,VK_SALIENCE,FOLLOW_VK_SALIENCE_in_rule_attribute473); 
 
@@ -1574,13 +1574,13 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:111:4: ^( VK_NO_LOOP ( BOOL )? )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:111:4: ^( VK_NO_LOOP ( BOOL )? )
                     {
                     match(input,VK_NO_LOOP,FOLLOW_VK_NO_LOOP_in_rule_attribute487); 
 
                     if ( input.LA(1)==Token.DOWN ) {
                         match(input, Token.DOWN, null); 
-                        // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:111:17: ( BOOL )?
+                        // src/main/resources/org/drools/lang/Tree2TestDRL.g:111:17: ( BOOL )?
                         int alt22=2;
                         int LA22_0 = input.LA(1);
 
@@ -1589,7 +1589,7 @@ public class Tree2TestDRL extends TreeParser {
                         }
                         switch (alt22) {
                             case 1 :
-                                // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:111:17: BOOL
+                                // src/main/resources/org/drools/lang/Tree2TestDRL.g:111:17: BOOL
                                 {
                                 match(input,BOOL,FOLLOW_BOOL_in_rule_attribute489); 
 
@@ -1605,7 +1605,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:112:4: ^( VK_AGENDA_GROUP STRING )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:112:4: ^( VK_AGENDA_GROUP STRING )
                     {
                     match(input,VK_AGENDA_GROUP,FOLLOW_VK_AGENDA_GROUP_in_rule_attribute499); 
 
@@ -1617,7 +1617,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:113:4: ^( VK_DURATION INT )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:113:4: ^( VK_DURATION INT )
                     {
                     match(input,VK_DURATION,FOLLOW_VK_DURATION_in_rule_attribute510); 
 
@@ -1629,7 +1629,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 5 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:114:4: ^( VK_ACTIVATION_GROUP STRING )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:114:4: ^( VK_ACTIVATION_GROUP STRING )
                     {
                     match(input,VK_ACTIVATION_GROUP,FOLLOW_VK_ACTIVATION_GROUP_in_rule_attribute522); 
 
@@ -1641,13 +1641,13 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 6 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:115:4: ^( VK_AUTO_FOCUS ( BOOL )? )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:115:4: ^( VK_AUTO_FOCUS ( BOOL )? )
                     {
                     match(input,VK_AUTO_FOCUS,FOLLOW_VK_AUTO_FOCUS_in_rule_attribute532); 
 
                     if ( input.LA(1)==Token.DOWN ) {
                         match(input, Token.DOWN, null); 
-                        // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:115:20: ( BOOL )?
+                        // src/main/resources/org/drools/lang/Tree2TestDRL.g:115:20: ( BOOL )?
                         int alt23=2;
                         int LA23_0 = input.LA(1);
 
@@ -1656,7 +1656,7 @@ public class Tree2TestDRL extends TreeParser {
                         }
                         switch (alt23) {
                             case 1 :
-                                // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:115:20: BOOL
+                                // src/main/resources/org/drools/lang/Tree2TestDRL.g:115:20: BOOL
                                 {
                                 match(input,BOOL,FOLLOW_BOOL_in_rule_attribute534); 
 
@@ -1672,7 +1672,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 7 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:116:4: ^( VK_DATE_EFFECTIVE STRING )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:116:4: ^( VK_DATE_EFFECTIVE STRING )
                     {
                     match(input,VK_DATE_EFFECTIVE,FOLLOW_VK_DATE_EFFECTIVE_in_rule_attribute543); 
 
@@ -1684,7 +1684,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 8 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:117:4: ^( VK_DATE_EXPIRES STRING )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:117:4: ^( VK_DATE_EXPIRES STRING )
                     {
                     match(input,VK_DATE_EXPIRES,FOLLOW_VK_DATE_EXPIRES_in_rule_attribute553); 
 
@@ -1696,7 +1696,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 9 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:118:4: ^( VK_ENABLED BOOL )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:118:4: ^( VK_ENABLED BOOL )
                     {
                     match(input,VK_ENABLED,FOLLOW_VK_ENABLED_in_rule_attribute563); 
 
@@ -1708,7 +1708,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 10 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:119:4: ^( VK_RULEFLOW_GROUP STRING )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:119:4: ^( VK_RULEFLOW_GROUP STRING )
                     {
                     match(input,VK_RULEFLOW_GROUP,FOLLOW_VK_RULEFLOW_GROUP_in_rule_attribute573); 
 
@@ -1720,13 +1720,13 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 11 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:120:4: ^( VK_LOCK_ON_ACTIVE ( BOOL )? )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:120:4: ^( VK_LOCK_ON_ACTIVE ( BOOL )? )
                     {
                     match(input,VK_LOCK_ON_ACTIVE,FOLLOW_VK_LOCK_ON_ACTIVE_in_rule_attribute583); 
 
                     if ( input.LA(1)==Token.DOWN ) {
                         match(input, Token.DOWN, null); 
-                        // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:120:24: ( BOOL )?
+                        // src/main/resources/org/drools/lang/Tree2TestDRL.g:120:24: ( BOOL )?
                         int alt24=2;
                         int LA24_0 = input.LA(1);
 
@@ -1735,7 +1735,7 @@ public class Tree2TestDRL extends TreeParser {
                         }
                         switch (alt24) {
                             case 1 :
-                                // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:120:24: BOOL
+                                // src/main/resources/org/drools/lang/Tree2TestDRL.g:120:24: BOOL
                                 {
                                 match(input,BOOL,FOLLOW_BOOL_in_rule_attribute585); 
 
@@ -1751,7 +1751,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 12 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:121:4: ^( VK_DIALECT STRING )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:121:4: ^( VK_DIALECT STRING )
                     {
                     match(input,VK_DIALECT,FOLLOW_VK_DIALECT_in_rule_attribute593); 
 
@@ -1777,17 +1777,17 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "lhs_block"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:124:1: lhs_block : ^( VT_AND_IMPLICIT ( lhs )* ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:124:1: lhs_block : ^( VT_AND_IMPLICIT ( lhs )* ) ;
     public final void lhs_block() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:125:2: ( ^( VT_AND_IMPLICIT ( lhs )* ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:125:4: ^( VT_AND_IMPLICIT ( lhs )* )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:125:2: ( ^( VT_AND_IMPLICIT ( lhs )* ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:125:4: ^( VT_AND_IMPLICIT ( lhs )* )
             {
             match(input,VT_AND_IMPLICIT,FOLLOW_VT_AND_IMPLICIT_in_lhs_block609); 
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:125:22: ( lhs )*
+                // src/main/resources/org/drools/lang/Tree2TestDRL.g:125:22: ( lhs )*
                 loop26:
                 do {
                     int alt26=2;
@@ -1800,7 +1800,7 @@ public class Tree2TestDRL extends TreeParser {
 
                     switch (alt26) {
                 	case 1 :
-                	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:125:22: lhs
+                	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:125:22: lhs
                 	    {
                 	    pushFollow(FOLLOW_lhs_in_lhs_block611);
                 	    lhs();
@@ -1835,10 +1835,10 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "lhs"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:128:1: lhs : ( ^( VT_OR_PREFIX ( lhs )+ ) | ^( VT_OR_INFIX lhs lhs ) | ^( VT_AND_PREFIX ( lhs )+ ) | ^( VT_AND_INFIX lhs lhs ) | ^( VK_EXISTS lhs ) | ^( VK_NOT lhs ) | ^( VK_EVAL VT_PAREN_CHUNK ) | ^( VK_FORALL ( lhs )+ ) | ^( FROM lhs_pattern from_elements ) | lhs_pattern );
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:128:1: lhs : ( ^( VT_OR_PREFIX ( lhs )+ ) | ^( VT_OR_INFIX lhs lhs ) | ^( VT_AND_PREFIX ( lhs )+ ) | ^( VT_AND_INFIX lhs lhs ) | ^( VK_EXISTS lhs ) | ^( VK_NOT lhs ) | ^( VK_EVAL VT_PAREN_CHUNK ) | ^( VK_FORALL ( lhs )+ ) | ^( FROM lhs_pattern from_elements ) | lhs_pattern );
     public final void lhs() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:128:5: ( ^( VT_OR_PREFIX ( lhs )+ ) | ^( VT_OR_INFIX lhs lhs ) | ^( VT_AND_PREFIX ( lhs )+ ) | ^( VT_AND_INFIX lhs lhs ) | ^( VK_EXISTS lhs ) | ^( VK_NOT lhs ) | ^( VK_EVAL VT_PAREN_CHUNK ) | ^( VK_FORALL ( lhs )+ ) | ^( FROM lhs_pattern from_elements ) | lhs_pattern )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:128:5: ( ^( VT_OR_PREFIX ( lhs )+ ) | ^( VT_OR_INFIX lhs lhs ) | ^( VT_AND_PREFIX ( lhs )+ ) | ^( VT_AND_INFIX lhs lhs ) | ^( VK_EXISTS lhs ) | ^( VK_NOT lhs ) | ^( VK_EVAL VT_PAREN_CHUNK ) | ^( VK_FORALL ( lhs )+ ) | ^( FROM lhs_pattern from_elements ) | lhs_pattern )
             int alt30=10;
             switch ( input.LA(1) ) {
             case VT_OR_PREFIX:
@@ -1900,12 +1900,12 @@ public class Tree2TestDRL extends TreeParser {
 
             switch (alt30) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:128:7: ^( VT_OR_PREFIX ( lhs )+ )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:128:7: ^( VT_OR_PREFIX ( lhs )+ )
                     {
                     match(input,VT_OR_PREFIX,FOLLOW_VT_OR_PREFIX_in_lhs624); 
 
                     match(input, Token.DOWN, null); 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:128:22: ( lhs )+
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:128:22: ( lhs )+
                     int cnt27=0;
                     loop27:
                     do {
@@ -1919,7 +1919,7 @@ public class Tree2TestDRL extends TreeParser {
 
                         switch (alt27) {
                     	case 1 :
-                    	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:128:22: lhs
+                    	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:128:22: lhs
                     	    {
                     	    pushFollow(FOLLOW_lhs_in_lhs626);
                     	    lhs();
@@ -1945,7 +1945,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:129:4: ^( VT_OR_INFIX lhs lhs )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:129:4: ^( VT_OR_INFIX lhs lhs )
                     {
                     match(input,VT_OR_INFIX,FOLLOW_VT_OR_INFIX_in_lhs634); 
 
@@ -1966,12 +1966,12 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:130:4: ^( VT_AND_PREFIX ( lhs )+ )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:130:4: ^( VT_AND_PREFIX ( lhs )+ )
                     {
                     match(input,VT_AND_PREFIX,FOLLOW_VT_AND_PREFIX_in_lhs645); 
 
                     match(input, Token.DOWN, null); 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:130:20: ( lhs )+
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:130:20: ( lhs )+
                     int cnt28=0;
                     loop28:
                     do {
@@ -1985,7 +1985,7 @@ public class Tree2TestDRL extends TreeParser {
 
                         switch (alt28) {
                     	case 1 :
-                    	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:130:20: lhs
+                    	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:130:20: lhs
                     	    {
                     	    pushFollow(FOLLOW_lhs_in_lhs647);
                     	    lhs();
@@ -2011,7 +2011,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:131:4: ^( VT_AND_INFIX lhs lhs )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:131:4: ^( VT_AND_INFIX lhs lhs )
                     {
                     match(input,VT_AND_INFIX,FOLLOW_VT_AND_INFIX_in_lhs655); 
 
@@ -2032,7 +2032,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 5 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:132:4: ^( VK_EXISTS lhs )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:132:4: ^( VK_EXISTS lhs )
                     {
                     match(input,VK_EXISTS,FOLLOW_VK_EXISTS_in_lhs666); 
 
@@ -2048,7 +2048,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 6 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:133:4: ^( VK_NOT lhs )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:133:4: ^( VK_NOT lhs )
                     {
                     match(input,VK_NOT,FOLLOW_VK_NOT_in_lhs675); 
 
@@ -2064,7 +2064,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 7 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:134:4: ^( VK_EVAL VT_PAREN_CHUNK )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:134:4: ^( VK_EVAL VT_PAREN_CHUNK )
                     {
                     match(input,VK_EVAL,FOLLOW_VK_EVAL_in_lhs684); 
 
@@ -2076,12 +2076,12 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 8 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:135:4: ^( VK_FORALL ( lhs )+ )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:135:4: ^( VK_FORALL ( lhs )+ )
                     {
                     match(input,VK_FORALL,FOLLOW_VK_FORALL_in_lhs693); 
 
                     match(input, Token.DOWN, null); 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:135:16: ( lhs )+
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:135:16: ( lhs )+
                     int cnt29=0;
                     loop29:
                     do {
@@ -2095,7 +2095,7 @@ public class Tree2TestDRL extends TreeParser {
 
                         switch (alt29) {
                     	case 1 :
-                    	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:135:16: lhs
+                    	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:135:16: lhs
                     	    {
                     	    pushFollow(FOLLOW_lhs_in_lhs695);
                     	    lhs();
@@ -2121,7 +2121,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 9 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:136:4: ^( FROM lhs_pattern from_elements )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:136:4: ^( FROM lhs_pattern from_elements )
                     {
                     match(input,FROM,FOLLOW_FROM_in_lhs703); 
 
@@ -2142,7 +2142,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 10 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:137:4: lhs_pattern
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:137:4: lhs_pattern
                     {
                     pushFollow(FOLLOW_lhs_pattern_in_lhs713);
                     lhs_pattern();
@@ -2167,10 +2167,10 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "from_elements"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:140:1: from_elements : ( ^( ACCUMULATE lhs ( accumulate_init_clause | accumulate_id_clause ) ) | ^( COLLECT lhs ) | ^( VK_ENTRY_POINT VT_ENTRYPOINT_ID ) | ^( VT_FROM_SOURCE ID ( VT_PAREN_CHUNK )? ( expression_chain )? ) );
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:140:1: from_elements : ( ^( ACCUMULATE lhs ( accumulate_init_clause | accumulate_id_clause ) ) | ^( COLLECT lhs ) | ^( VK_ENTRY_POINT VT_ENTRYPOINT_ID ) | ^( VT_FROM_SOURCE ID ( VT_PAREN_CHUNK )? ( expression_chain )? ) );
     public final void from_elements() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:141:2: ( ^( ACCUMULATE lhs ( accumulate_init_clause | accumulate_id_clause ) ) | ^( COLLECT lhs ) | ^( VK_ENTRY_POINT VT_ENTRYPOINT_ID ) | ^( VT_FROM_SOURCE ID ( VT_PAREN_CHUNK )? ( expression_chain )? ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:141:2: ( ^( ACCUMULATE lhs ( accumulate_init_clause | accumulate_id_clause ) ) | ^( COLLECT lhs ) | ^( VK_ENTRY_POINT VT_ENTRYPOINT_ID ) | ^( VT_FROM_SOURCE ID ( VT_PAREN_CHUNK )? ( expression_chain )? ) )
             int alt34=4;
             switch ( input.LA(1) ) {
             case ACCUMULATE:
@@ -2202,7 +2202,7 @@ public class Tree2TestDRL extends TreeParser {
 
             switch (alt34) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:141:4: ^( ACCUMULATE lhs ( accumulate_init_clause | accumulate_id_clause ) )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:141:4: ^( ACCUMULATE lhs ( accumulate_init_clause | accumulate_id_clause ) )
                     {
                     match(input,ACCUMULATE,FOLLOW_ACCUMULATE_in_from_elements725); 
 
@@ -2212,7 +2212,7 @@ public class Tree2TestDRL extends TreeParser {
 
                     state._fsp--;
 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:141:21: ( accumulate_init_clause | accumulate_id_clause )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:141:21: ( accumulate_init_clause | accumulate_id_clause )
                     int alt31=2;
                     int LA31_0 = input.LA(1);
 
@@ -2230,7 +2230,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     switch (alt31) {
                         case 1 :
-                            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:141:22: accumulate_init_clause
+                            // src/main/resources/org/drools/lang/Tree2TestDRL.g:141:22: accumulate_init_clause
                             {
                             pushFollow(FOLLOW_accumulate_init_clause_in_from_elements730);
                             accumulate_init_clause();
@@ -2241,7 +2241,7 @@ public class Tree2TestDRL extends TreeParser {
                             }
                             break;
                         case 2 :
-                            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:141:45: accumulate_id_clause
+                            // src/main/resources/org/drools/lang/Tree2TestDRL.g:141:45: accumulate_id_clause
                             {
                             pushFollow(FOLLOW_accumulate_id_clause_in_from_elements732);
                             accumulate_id_clause();
@@ -2260,7 +2260,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:142:4: ^( COLLECT lhs )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:142:4: ^( COLLECT lhs )
                     {
                     match(input,COLLECT,FOLLOW_COLLECT_in_from_elements740); 
 
@@ -2276,7 +2276,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:143:4: ^( VK_ENTRY_POINT VT_ENTRYPOINT_ID )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:143:4: ^( VK_ENTRY_POINT VT_ENTRYPOINT_ID )
                     {
                     match(input,VK_ENTRY_POINT,FOLLOW_VK_ENTRY_POINT_in_from_elements749); 
 
@@ -2288,13 +2288,13 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:144:4: ^( VT_FROM_SOURCE ID ( VT_PAREN_CHUNK )? ( expression_chain )? )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:144:4: ^( VT_FROM_SOURCE ID ( VT_PAREN_CHUNK )? ( expression_chain )? )
                     {
                     match(input,VT_FROM_SOURCE,FOLLOW_VT_FROM_SOURCE_in_from_elements758); 
 
                     match(input, Token.DOWN, null); 
                     match(input,ID,FOLLOW_ID_in_from_elements760); 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:144:24: ( VT_PAREN_CHUNK )?
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:144:24: ( VT_PAREN_CHUNK )?
                     int alt32=2;
                     int LA32_0 = input.LA(1);
 
@@ -2303,7 +2303,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     switch (alt32) {
                         case 1 :
-                            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:144:24: VT_PAREN_CHUNK
+                            // src/main/resources/org/drools/lang/Tree2TestDRL.g:144:24: VT_PAREN_CHUNK
                             {
                             match(input,VT_PAREN_CHUNK,FOLLOW_VT_PAREN_CHUNK_in_from_elements762); 
 
@@ -2312,7 +2312,7 @@ public class Tree2TestDRL extends TreeParser {
 
                     }
 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:144:40: ( expression_chain )?
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:144:40: ( expression_chain )?
                     int alt33=2;
                     int LA33_0 = input.LA(1);
 
@@ -2321,7 +2321,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     switch (alt33) {
                         case 1 :
-                            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:144:40: expression_chain
+                            // src/main/resources/org/drools/lang/Tree2TestDRL.g:144:40: expression_chain
                             {
                             pushFollow(FOLLOW_expression_chain_in_from_elements765);
                             expression_chain();
@@ -2354,11 +2354,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "accumulate_init_clause"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:147:1: accumulate_init_clause : ^( VT_ACCUMULATE_INIT_CLAUSE ^( VK_INIT VT_PAREN_CHUNK ) ^( VK_ACTION VT_PAREN_CHUNK ) ( accumulate_init_reverse_clause )? ^( VK_RESULT VT_PAREN_CHUNK ) ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:147:1: accumulate_init_clause : ^( VT_ACCUMULATE_INIT_CLAUSE ^( VK_INIT VT_PAREN_CHUNK ) ^( VK_ACTION VT_PAREN_CHUNK ) ( accumulate_init_reverse_clause )? ^( VK_RESULT VT_PAREN_CHUNK ) ) ;
     public final void accumulate_init_clause() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:148:2: ( ^( VT_ACCUMULATE_INIT_CLAUSE ^( VK_INIT VT_PAREN_CHUNK ) ^( VK_ACTION VT_PAREN_CHUNK ) ( accumulate_init_reverse_clause )? ^( VK_RESULT VT_PAREN_CHUNK ) ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:148:4: ^( VT_ACCUMULATE_INIT_CLAUSE ^( VK_INIT VT_PAREN_CHUNK ) ^( VK_ACTION VT_PAREN_CHUNK ) ( accumulate_init_reverse_clause )? ^( VK_RESULT VT_PAREN_CHUNK ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:148:2: ( ^( VT_ACCUMULATE_INIT_CLAUSE ^( VK_INIT VT_PAREN_CHUNK ) ^( VK_ACTION VT_PAREN_CHUNK ) ( accumulate_init_reverse_clause )? ^( VK_RESULT VT_PAREN_CHUNK ) ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:148:4: ^( VT_ACCUMULATE_INIT_CLAUSE ^( VK_INIT VT_PAREN_CHUNK ) ^( VK_ACTION VT_PAREN_CHUNK ) ( accumulate_init_reverse_clause )? ^( VK_RESULT VT_PAREN_CHUNK ) )
             {
             match(input,VT_ACCUMULATE_INIT_CLAUSE,FOLLOW_VT_ACCUMULATE_INIT_CLAUSE_in_accumulate_init_clause779); 
 
@@ -2375,7 +2375,7 @@ public class Tree2TestDRL extends TreeParser {
             match(input,VT_PAREN_CHUNK,FOLLOW_VT_PAREN_CHUNK_in_accumulate_init_clause798); 
 
             match(input, Token.UP, null); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:151:4: ( accumulate_init_reverse_clause )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:151:4: ( accumulate_init_reverse_clause )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -2384,7 +2384,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt35) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:151:4: accumulate_init_reverse_clause
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:151:4: accumulate_init_reverse_clause
                     {
                     pushFollow(FOLLOW_accumulate_init_reverse_clause_in_accumulate_init_clause805);
                     accumulate_init_reverse_clause();
@@ -2421,11 +2421,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "accumulate_init_reverse_clause"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:155:1: accumulate_init_reverse_clause : ^( VK_REVERSE VT_PAREN_CHUNK ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:155:1: accumulate_init_reverse_clause : ^( VK_REVERSE VT_PAREN_CHUNK ) ;
     public final void accumulate_init_reverse_clause() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:156:2: ( ^( VK_REVERSE VT_PAREN_CHUNK ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:156:4: ^( VK_REVERSE VT_PAREN_CHUNK )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:156:2: ( ^( VK_REVERSE VT_PAREN_CHUNK ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:156:4: ^( VK_REVERSE VT_PAREN_CHUNK )
             {
             match(input,VK_REVERSE,FOLLOW_VK_REVERSE_in_accumulate_init_reverse_clause828); 
 
@@ -2449,11 +2449,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "accumulate_id_clause"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:160:1: accumulate_id_clause : ^( VT_ACCUMULATE_ID_CLAUSE ID VT_PAREN_CHUNK ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:160:1: accumulate_id_clause : ^( VT_ACCUMULATE_ID_CLAUSE ID VT_PAREN_CHUNK ) ;
     public final void accumulate_id_clause() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:161:2: ( ^( VT_ACCUMULATE_ID_CLAUSE ID VT_PAREN_CHUNK ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:161:4: ^( VT_ACCUMULATE_ID_CLAUSE ID VT_PAREN_CHUNK )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:161:2: ( ^( VT_ACCUMULATE_ID_CLAUSE ID VT_PAREN_CHUNK ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:161:4: ^( VT_ACCUMULATE_ID_CLAUSE ID VT_PAREN_CHUNK )
             {
             match(input,VT_ACCUMULATE_ID_CLAUSE,FOLLOW_VT_ACCUMULATE_ID_CLAUSE_in_accumulate_id_clause844); 
 
@@ -2478,11 +2478,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "lhs_pattern"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:164:1: lhs_pattern : ^( VT_PATTERN fact_expression ) ( over_clause )? ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:164:1: lhs_pattern : ^( VT_PATTERN fact_expression ) ( over_clause )? ;
     public final void lhs_pattern() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:165:2: ( ^( VT_PATTERN fact_expression ) ( over_clause )? )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:165:4: ^( VT_PATTERN fact_expression ) ( over_clause )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:165:2: ( ^( VT_PATTERN fact_expression ) ( over_clause )? )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:165:4: ^( VT_PATTERN fact_expression ) ( over_clause )?
             {
             match(input,VT_PATTERN,FOLLOW_VT_PATTERN_in_lhs_pattern861); 
 
@@ -2494,7 +2494,7 @@ public class Tree2TestDRL extends TreeParser {
 
 
             match(input, Token.UP, null); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:165:34: ( over_clause )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:165:34: ( over_clause )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -2503,7 +2503,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt36) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:165:34: over_clause
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:165:34: over_clause
                     {
                     pushFollow(FOLLOW_over_clause_in_lhs_pattern866);
                     over_clause();
@@ -2532,16 +2532,16 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "over_clause"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:168:1: over_clause : ^( OVER ( over_element )+ ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:168:1: over_clause : ^( OVER ( over_element )+ ) ;
     public final void over_clause() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:169:2: ( ^( OVER ( over_element )+ ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:169:4: ^( OVER ( over_element )+ )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:169:2: ( ^( OVER ( over_element )+ ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:169:4: ^( OVER ( over_element )+ )
             {
             match(input,OVER,FOLLOW_OVER_in_over_clause879); 
 
             match(input, Token.DOWN, null); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:169:11: ( over_element )+
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:169:11: ( over_element )+
             int cnt37=0;
             loop37:
             do {
@@ -2555,7 +2555,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt37) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:169:11: over_element
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:169:11: over_element
             	    {
             	    pushFollow(FOLLOW_over_element_in_over_clause881);
             	    over_element();
@@ -2593,11 +2593,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "over_element"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:172:1: over_element : ^( VT_BEHAVIOR ID ID VT_PAREN_CHUNK ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:172:1: over_element : ^( VT_BEHAVIOR ID ID VT_PAREN_CHUNK ) ;
     public final void over_element() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:173:2: ( ^( VT_BEHAVIOR ID ID VT_PAREN_CHUNK ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:173:4: ^( VT_BEHAVIOR ID ID VT_PAREN_CHUNK )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:173:2: ( ^( VT_BEHAVIOR ID ID VT_PAREN_CHUNK ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:173:4: ^( VT_BEHAVIOR ID ID VT_PAREN_CHUNK )
             {
             match(input,VT_BEHAVIOR,FOLLOW_VT_BEHAVIOR_in_over_element895); 
 
@@ -2623,10 +2623,10 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "fact_expression"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:176:1: fact_expression : ( ^( DOUBLE_PIPE fact_expression fact_expression ) | ^( DOUBLE_AMPER fact_expression fact_expression ) | ^( VT_FACT_BINDING VT_LABEL fact_expression ) | ^( VT_FACT pattern_type ( fact_expression )* ) | ^( VT_FACT_OR fact_expression fact_expression ) | ^( VK_EVAL VT_PAREN_CHUNK ) | ^( VK_IN ( VK_NOT )? ( fact_expression )+ ) | ^( EQUAL fact_expression ) | ^( GREATER fact_expression ) | ^( GREATER_EQUAL fact_expression ) | ^( LESS fact_expression ) | ^( LESS_EQUAL fact_expression ) | ^( NOT_EQUAL fact_expression ) | ^( VK_OPERATOR ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression ) | ^( ID ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression ) | ^( VT_BIND_FIELD VT_LABEL fact_expression ) | ^( VT_FIELD fact_expression ( fact_expression )? ) | ^( VT_ACCESSOR_PATH ( accessor_element )+ ) | STRING | INT | FLOAT | BOOL | NULL | VT_PAREN_CHUNK );
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:176:1: fact_expression : ( ^( DOUBLE_PIPE fact_expression fact_expression ) | ^( DOUBLE_AMPER fact_expression fact_expression ) | ^( VT_FACT_BINDING VT_LABEL fact_expression ) | ^( VT_FACT pattern_type ( fact_expression )* ) | ^( VT_FACT_OR fact_expression fact_expression ) | ^( VK_EVAL VT_PAREN_CHUNK ) | ^( VK_IN ( VK_NOT )? ( fact_expression )+ ) | ^( EQUAL fact_expression ) | ^( GREATER fact_expression ) | ^( GREATER_EQUAL fact_expression ) | ^( LESS fact_expression ) | ^( LESS_EQUAL fact_expression ) | ^( NOT_EQUAL fact_expression ) | ^( VK_OPERATOR ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression ) | ^( ID ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression ) | ^( VT_BIND_FIELD VT_LABEL fact_expression ) | ^( VT_FIELD fact_expression ( fact_expression )? ) | ^( VT_ACCESSOR_PATH ( accessor_element )+ ) | STRING | INT | FLOAT | BOOL | NULL | VT_PAREN_CHUNK );
     public final void fact_expression() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:177:2: ( ^( DOUBLE_PIPE fact_expression fact_expression ) | ^( DOUBLE_AMPER fact_expression fact_expression ) | ^( VT_FACT_BINDING VT_LABEL fact_expression ) | ^( VT_FACT pattern_type ( fact_expression )* ) | ^( VT_FACT_OR fact_expression fact_expression ) | ^( VK_EVAL VT_PAREN_CHUNK ) | ^( VK_IN ( VK_NOT )? ( fact_expression )+ ) | ^( EQUAL fact_expression ) | ^( GREATER fact_expression ) | ^( GREATER_EQUAL fact_expression ) | ^( LESS fact_expression ) | ^( LESS_EQUAL fact_expression ) | ^( NOT_EQUAL fact_expression ) | ^( VK_OPERATOR ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression ) | ^( ID ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression ) | ^( VT_BIND_FIELD VT_LABEL fact_expression ) | ^( VT_FIELD fact_expression ( fact_expression )? ) | ^( VT_ACCESSOR_PATH ( accessor_element )+ ) | STRING | INT | FLOAT | BOOL | NULL | VT_PAREN_CHUNK )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:177:2: ( ^( DOUBLE_PIPE fact_expression fact_expression ) | ^( DOUBLE_AMPER fact_expression fact_expression ) | ^( VT_FACT_BINDING VT_LABEL fact_expression ) | ^( VT_FACT pattern_type ( fact_expression )* ) | ^( VT_FACT_OR fact_expression fact_expression ) | ^( VK_EVAL VT_PAREN_CHUNK ) | ^( VK_IN ( VK_NOT )? ( fact_expression )+ ) | ^( EQUAL fact_expression ) | ^( GREATER fact_expression ) | ^( GREATER_EQUAL fact_expression ) | ^( LESS fact_expression ) | ^( LESS_EQUAL fact_expression ) | ^( NOT_EQUAL fact_expression ) | ^( VK_OPERATOR ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression ) | ^( ID ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression ) | ^( VT_BIND_FIELD VT_LABEL fact_expression ) | ^( VT_FIELD fact_expression ( fact_expression )? ) | ^( VT_ACCESSOR_PATH ( accessor_element )+ ) | STRING | INT | FLOAT | BOOL | NULL | VT_PAREN_CHUNK )
             int alt47=24;
             switch ( input.LA(1) ) {
             case DOUBLE_PIPE:
@@ -2758,7 +2758,7 @@ public class Tree2TestDRL extends TreeParser {
 
             switch (alt47) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:177:4: ^( DOUBLE_PIPE fact_expression fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:177:4: ^( DOUBLE_PIPE fact_expression fact_expression )
                     {
                     match(input,DOUBLE_PIPE,FOLLOW_DOUBLE_PIPE_in_fact_expression914); 
 
@@ -2779,7 +2779,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:178:4: ^( DOUBLE_AMPER fact_expression fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:178:4: ^( DOUBLE_AMPER fact_expression fact_expression )
                     {
                     match(input,DOUBLE_AMPER,FOLLOW_DOUBLE_AMPER_in_fact_expression925); 
 
@@ -2800,7 +2800,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:179:4: ^( VT_FACT_BINDING VT_LABEL fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:179:4: ^( VT_FACT_BINDING VT_LABEL fact_expression )
                     {
                     match(input,VT_FACT_BINDING,FOLLOW_VT_FACT_BINDING_in_fact_expression936); 
 
@@ -2817,7 +2817,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:180:4: ^( VT_FACT pattern_type ( fact_expression )* )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:180:4: ^( VT_FACT pattern_type ( fact_expression )* )
                     {
                     match(input,VT_FACT,FOLLOW_VT_FACT_in_fact_expression947); 
 
@@ -2827,7 +2827,7 @@ public class Tree2TestDRL extends TreeParser {
 
                     state._fsp--;
 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:180:27: ( fact_expression )*
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:180:27: ( fact_expression )*
                     loop38:
                     do {
                         int alt38=2;
@@ -2840,7 +2840,7 @@ public class Tree2TestDRL extends TreeParser {
 
                         switch (alt38) {
                     	case 1 :
-                    	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:180:27: fact_expression
+                    	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:180:27: fact_expression
                     	    {
                     	    pushFollow(FOLLOW_fact_expression_in_fact_expression951);
                     	    fact_expression();
@@ -2862,7 +2862,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 5 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:181:4: ^( VT_FACT_OR fact_expression fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:181:4: ^( VT_FACT_OR fact_expression fact_expression )
                     {
                     match(input,VT_FACT_OR,FOLLOW_VT_FACT_OR_in_fact_expression959); 
 
@@ -2883,7 +2883,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 6 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:182:4: ^( VK_EVAL VT_PAREN_CHUNK )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:182:4: ^( VK_EVAL VT_PAREN_CHUNK )
                     {
                     match(input,VK_EVAL,FOLLOW_VK_EVAL_in_fact_expression970); 
 
@@ -2895,12 +2895,12 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 7 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:183:4: ^( VK_IN ( VK_NOT )? ( fact_expression )+ )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:183:4: ^( VK_IN ( VK_NOT )? ( fact_expression )+ )
                     {
                     match(input,VK_IN,FOLLOW_VK_IN_in_fact_expression979); 
 
                     match(input, Token.DOWN, null); 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:183:12: ( VK_NOT )?
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:183:12: ( VK_NOT )?
                     int alt39=2;
                     int LA39_0 = input.LA(1);
 
@@ -2909,7 +2909,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     switch (alt39) {
                         case 1 :
-                            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:183:12: VK_NOT
+                            // src/main/resources/org/drools/lang/Tree2TestDRL.g:183:12: VK_NOT
                             {
                             match(input,VK_NOT,FOLLOW_VK_NOT_in_fact_expression981); 
 
@@ -2918,7 +2918,7 @@ public class Tree2TestDRL extends TreeParser {
 
                     }
 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:183:20: ( fact_expression )+
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:183:20: ( fact_expression )+
                     int cnt40=0;
                     loop40:
                     do {
@@ -2932,7 +2932,7 @@ public class Tree2TestDRL extends TreeParser {
 
                         switch (alt40) {
                     	case 1 :
-                    	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:183:20: fact_expression
+                    	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:183:20: fact_expression
                     	    {
                     	    pushFollow(FOLLOW_fact_expression_in_fact_expression984);
                     	    fact_expression();
@@ -2958,7 +2958,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 8 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:184:4: ^( EQUAL fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:184:4: ^( EQUAL fact_expression )
                     {
                     match(input,EQUAL,FOLLOW_EQUAL_in_fact_expression992); 
 
@@ -2974,7 +2974,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 9 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:185:4: ^( GREATER fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:185:4: ^( GREATER fact_expression )
                     {
                     match(input,GREATER,FOLLOW_GREATER_in_fact_expression1001); 
 
@@ -2990,7 +2990,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 10 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:186:4: ^( GREATER_EQUAL fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:186:4: ^( GREATER_EQUAL fact_expression )
                     {
                     match(input,GREATER_EQUAL,FOLLOW_GREATER_EQUAL_in_fact_expression1010); 
 
@@ -3006,7 +3006,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 11 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:187:4: ^( LESS fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:187:4: ^( LESS fact_expression )
                     {
                     match(input,LESS,FOLLOW_LESS_in_fact_expression1019); 
 
@@ -3022,7 +3022,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 12 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:188:4: ^( LESS_EQUAL fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:188:4: ^( LESS_EQUAL fact_expression )
                     {
                     match(input,LESS_EQUAL,FOLLOW_LESS_EQUAL_in_fact_expression1028); 
 
@@ -3038,7 +3038,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 13 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:189:4: ^( NOT_EQUAL fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:189:4: ^( NOT_EQUAL fact_expression )
                     {
                     match(input,NOT_EQUAL,FOLLOW_NOT_EQUAL_in_fact_expression1037); 
 
@@ -3054,12 +3054,12 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 14 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:190:4: ^( VK_OPERATOR ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:190:4: ^( VK_OPERATOR ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression )
                     {
                     match(input,VK_OPERATOR,FOLLOW_VK_OPERATOR_in_fact_expression1046); 
 
                     match(input, Token.DOWN, null); 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:190:18: ( VK_NOT )?
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:190:18: ( VK_NOT )?
                     int alt41=2;
                     int LA41_0 = input.LA(1);
 
@@ -3068,7 +3068,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     switch (alt41) {
                         case 1 :
-                            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:190:18: VK_NOT
+                            // src/main/resources/org/drools/lang/Tree2TestDRL.g:190:18: VK_NOT
                             {
                             match(input,VK_NOT,FOLLOW_VK_NOT_in_fact_expression1048); 
 
@@ -3077,7 +3077,7 @@ public class Tree2TestDRL extends TreeParser {
 
                     }
 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:190:26: ( VT_SQUARE_CHUNK )?
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:190:26: ( VT_SQUARE_CHUNK )?
                     int alt42=2;
                     int LA42_0 = input.LA(1);
 
@@ -3086,7 +3086,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     switch (alt42) {
                         case 1 :
-                            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:190:26: VT_SQUARE_CHUNK
+                            // src/main/resources/org/drools/lang/Tree2TestDRL.g:190:26: VT_SQUARE_CHUNK
                             {
                             match(input,VT_SQUARE_CHUNK,FOLLOW_VT_SQUARE_CHUNK_in_fact_expression1051); 
 
@@ -3106,12 +3106,12 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 15 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:191:4: ^( ID ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:191:4: ^( ID ( VK_NOT )? ( VT_SQUARE_CHUNK )? fact_expression )
                     {
                     match(input,ID,FOLLOW_ID_in_fact_expression1061); 
 
                     match(input, Token.DOWN, null); 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:191:9: ( VK_NOT )?
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:191:9: ( VK_NOT )?
                     int alt43=2;
                     int LA43_0 = input.LA(1);
 
@@ -3120,7 +3120,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     switch (alt43) {
                         case 1 :
-                            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:191:9: VK_NOT
+                            // src/main/resources/org/drools/lang/Tree2TestDRL.g:191:9: VK_NOT
                             {
                             match(input,VK_NOT,FOLLOW_VK_NOT_in_fact_expression1063); 
 
@@ -3129,7 +3129,7 @@ public class Tree2TestDRL extends TreeParser {
 
                     }
 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:191:17: ( VT_SQUARE_CHUNK )?
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:191:17: ( VT_SQUARE_CHUNK )?
                     int alt44=2;
                     int LA44_0 = input.LA(1);
 
@@ -3138,7 +3138,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     switch (alt44) {
                         case 1 :
-                            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:191:17: VT_SQUARE_CHUNK
+                            // src/main/resources/org/drools/lang/Tree2TestDRL.g:191:17: VT_SQUARE_CHUNK
                             {
                             match(input,VT_SQUARE_CHUNK,FOLLOW_VT_SQUARE_CHUNK_in_fact_expression1066); 
 
@@ -3158,7 +3158,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 16 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:192:4: ^( VT_BIND_FIELD VT_LABEL fact_expression )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:192:4: ^( VT_BIND_FIELD VT_LABEL fact_expression )
                     {
                     match(input,VT_BIND_FIELD,FOLLOW_VT_BIND_FIELD_in_fact_expression1076); 
 
@@ -3175,7 +3175,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 17 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:193:4: ^( VT_FIELD fact_expression ( fact_expression )? )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:193:4: ^( VT_FIELD fact_expression ( fact_expression )? )
                     {
                     match(input,VT_FIELD,FOLLOW_VT_FIELD_in_fact_expression1087); 
 
@@ -3185,7 +3185,7 @@ public class Tree2TestDRL extends TreeParser {
 
                     state._fsp--;
 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:193:31: ( fact_expression )?
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:193:31: ( fact_expression )?
                     int alt45=2;
                     int LA45_0 = input.LA(1);
 
@@ -3194,7 +3194,7 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     switch (alt45) {
                         case 1 :
-                            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:193:31: fact_expression
+                            // src/main/resources/org/drools/lang/Tree2TestDRL.g:193:31: fact_expression
                             {
                             pushFollow(FOLLOW_fact_expression_in_fact_expression1091);
                             fact_expression();
@@ -3213,12 +3213,12 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 18 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:194:4: ^( VT_ACCESSOR_PATH ( accessor_element )+ )
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:194:4: ^( VT_ACCESSOR_PATH ( accessor_element )+ )
                     {
                     match(input,VT_ACCESSOR_PATH,FOLLOW_VT_ACCESSOR_PATH_in_fact_expression1099); 
 
                     match(input, Token.DOWN, null); 
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:194:23: ( accessor_element )+
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:194:23: ( accessor_element )+
                     int cnt46=0;
                     loop46:
                     do {
@@ -3232,7 +3232,7 @@ public class Tree2TestDRL extends TreeParser {
 
                         switch (alt46) {
                     	case 1 :
-                    	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:194:23: accessor_element
+                    	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:194:23: accessor_element
                     	    {
                     	    pushFollow(FOLLOW_accessor_element_in_fact_expression1101);
                     	    accessor_element();
@@ -3258,42 +3258,42 @@ public class Tree2TestDRL extends TreeParser {
                     }
                     break;
                 case 19 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:195:4: STRING
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:195:4: STRING
                     {
                     match(input,STRING,FOLLOW_STRING_in_fact_expression1108); 
 
                     }
                     break;
                 case 20 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:196:4: INT
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:196:4: INT
                     {
                     match(input,INT,FOLLOW_INT_in_fact_expression1113); 
 
                     }
                     break;
                 case 21 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:197:4: FLOAT
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:197:4: FLOAT
                     {
                     match(input,FLOAT,FOLLOW_FLOAT_in_fact_expression1118); 
 
                     }
                     break;
                 case 22 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:198:4: BOOL
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:198:4: BOOL
                     {
                     match(input,BOOL,FOLLOW_BOOL_in_fact_expression1123); 
 
                     }
                     break;
                 case 23 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:199:4: NULL
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:199:4: NULL
                     {
                     match(input,NULL,FOLLOW_NULL_in_fact_expression1128); 
 
                     }
                     break;
                 case 24 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:200:4: VT_PAREN_CHUNK
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:200:4: VT_PAREN_CHUNK
                     {
                     match(input,VT_PAREN_CHUNK,FOLLOW_VT_PAREN_CHUNK_in_fact_expression1133); 
 
@@ -3314,16 +3314,16 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "pattern_type"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:203:1: pattern_type : ^( VT_PATTERN_TYPE ( ID )+ ( dimension_definition )* ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:203:1: pattern_type : ^( VT_PATTERN_TYPE ( ID )+ ( dimension_definition )* ) ;
     public final void pattern_type() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:204:2: ( ^( VT_PATTERN_TYPE ( ID )+ ( dimension_definition )* ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:204:4: ^( VT_PATTERN_TYPE ( ID )+ ( dimension_definition )* )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:204:2: ( ^( VT_PATTERN_TYPE ( ID )+ ( dimension_definition )* ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:204:4: ^( VT_PATTERN_TYPE ( ID )+ ( dimension_definition )* )
             {
             match(input,VT_PATTERN_TYPE,FOLLOW_VT_PATTERN_TYPE_in_pattern_type1145); 
 
             match(input, Token.DOWN, null); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:204:22: ( ID )+
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:204:22: ( ID )+
             int cnt48=0;
             loop48:
             do {
@@ -3337,7 +3337,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt48) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:204:22: ID
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:204:22: ID
             	    {
             	    match(input,ID,FOLLOW_ID_in_pattern_type1147); 
 
@@ -3353,7 +3353,7 @@ public class Tree2TestDRL extends TreeParser {
                 cnt48++;
             } while (true);
 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:204:26: ( dimension_definition )*
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:204:26: ( dimension_definition )*
             loop49:
             do {
                 int alt49=2;
@@ -3366,7 +3366,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt49) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:204:26: dimension_definition
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:204:26: dimension_definition
             	    {
             	    pushFollow(FOLLOW_dimension_definition_in_pattern_type1150);
             	    dimension_definition();
@@ -3400,16 +3400,16 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "data_type"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:207:1: data_type : ^( VT_DATA_TYPE ( ID )+ ( dimension_definition )* ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:207:1: data_type : ^( VT_DATA_TYPE ( ID )+ ( dimension_definition )* ) ;
     public final void data_type() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:208:2: ( ^( VT_DATA_TYPE ( ID )+ ( dimension_definition )* ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:208:4: ^( VT_DATA_TYPE ( ID )+ ( dimension_definition )* )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:208:2: ( ^( VT_DATA_TYPE ( ID )+ ( dimension_definition )* ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:208:4: ^( VT_DATA_TYPE ( ID )+ ( dimension_definition )* )
             {
             match(input,VT_DATA_TYPE,FOLLOW_VT_DATA_TYPE_in_data_type1164); 
 
             match(input, Token.DOWN, null); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:208:19: ( ID )+
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:208:19: ( ID )+
             int cnt50=0;
             loop50:
             do {
@@ -3423,7 +3423,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt50) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:208:19: ID
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:208:19: ID
             	    {
             	    match(input,ID,FOLLOW_ID_in_data_type1166); 
 
@@ -3439,7 +3439,7 @@ public class Tree2TestDRL extends TreeParser {
                 cnt50++;
             } while (true);
 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:208:23: ( dimension_definition )*
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:208:23: ( dimension_definition )*
             loop51:
             do {
                 int alt51=2;
@@ -3452,7 +3452,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt51) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:208:23: dimension_definition
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:208:23: dimension_definition
             	    {
             	    pushFollow(FOLLOW_dimension_definition_in_data_type1169);
             	    dimension_definition();
@@ -3486,11 +3486,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "dimension_definition"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:211:1: dimension_definition : LEFT_SQUARE RIGHT_SQUARE ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:211:1: dimension_definition : LEFT_SQUARE RIGHT_SQUARE ;
     public final void dimension_definition() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:212:2: ( LEFT_SQUARE RIGHT_SQUARE )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:212:4: LEFT_SQUARE RIGHT_SQUARE
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:212:2: ( LEFT_SQUARE RIGHT_SQUARE )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:212:4: LEFT_SQUARE RIGHT_SQUARE
             {
             match(input,LEFT_SQUARE,FOLLOW_LEFT_SQUARE_in_dimension_definition1182); 
             match(input,RIGHT_SQUARE,FOLLOW_RIGHT_SQUARE_in_dimension_definition1184); 
@@ -3510,17 +3510,17 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "accessor_element"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:215:1: accessor_element : ^( VT_ACCESSOR_ELEMENT ID ( VT_SQUARE_CHUNK )* ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:215:1: accessor_element : ^( VT_ACCESSOR_ELEMENT ID ( VT_SQUARE_CHUNK )* ) ;
     public final void accessor_element() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:216:2: ( ^( VT_ACCESSOR_ELEMENT ID ( VT_SQUARE_CHUNK )* ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:216:4: ^( VT_ACCESSOR_ELEMENT ID ( VT_SQUARE_CHUNK )* )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:216:2: ( ^( VT_ACCESSOR_ELEMENT ID ( VT_SQUARE_CHUNK )* ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:216:4: ^( VT_ACCESSOR_ELEMENT ID ( VT_SQUARE_CHUNK )* )
             {
             match(input,VT_ACCESSOR_ELEMENT,FOLLOW_VT_ACCESSOR_ELEMENT_in_accessor_element1196); 
 
             match(input, Token.DOWN, null); 
             match(input,ID,FOLLOW_ID_in_accessor_element1198); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:216:29: ( VT_SQUARE_CHUNK )*
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:216:29: ( VT_SQUARE_CHUNK )*
             loop52:
             do {
                 int alt52=2;
@@ -3533,7 +3533,7 @@ public class Tree2TestDRL extends TreeParser {
 
                 switch (alt52) {
             	case 1 :
-            	    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:216:29: VT_SQUARE_CHUNK
+            	    // src/main/resources/org/drools/lang/Tree2TestDRL.g:216:29: VT_SQUARE_CHUNK
             	    {
             	    match(input,VT_SQUARE_CHUNK,FOLLOW_VT_SQUARE_CHUNK_in_accessor_element1200); 
 
@@ -3563,17 +3563,17 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "expression_chain"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:219:1: expression_chain : ^( VT_EXPRESSION_CHAIN ID ( VT_SQUARE_CHUNK )? ( VT_PAREN_CHUNK )? ( expression_chain )? ) ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:219:1: expression_chain : ^( VT_EXPRESSION_CHAIN ID ( VT_SQUARE_CHUNK )? ( VT_PAREN_CHUNK )? ( expression_chain )? ) ;
     public final void expression_chain() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:220:2: ( ^( VT_EXPRESSION_CHAIN ID ( VT_SQUARE_CHUNK )? ( VT_PAREN_CHUNK )? ( expression_chain )? ) )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:220:4: ^( VT_EXPRESSION_CHAIN ID ( VT_SQUARE_CHUNK )? ( VT_PAREN_CHUNK )? ( expression_chain )? )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:220:2: ( ^( VT_EXPRESSION_CHAIN ID ( VT_SQUARE_CHUNK )? ( VT_PAREN_CHUNK )? ( expression_chain )? ) )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:220:4: ^( VT_EXPRESSION_CHAIN ID ( VT_SQUARE_CHUNK )? ( VT_PAREN_CHUNK )? ( expression_chain )? )
             {
             match(input,VT_EXPRESSION_CHAIN,FOLLOW_VT_EXPRESSION_CHAIN_in_expression_chain1214); 
 
             match(input, Token.DOWN, null); 
             match(input,ID,FOLLOW_ID_in_expression_chain1216); 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:220:29: ( VT_SQUARE_CHUNK )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:220:29: ( VT_SQUARE_CHUNK )?
             int alt53=2;
             int LA53_0 = input.LA(1);
 
@@ -3582,7 +3582,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt53) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:220:29: VT_SQUARE_CHUNK
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:220:29: VT_SQUARE_CHUNK
                     {
                     match(input,VT_SQUARE_CHUNK,FOLLOW_VT_SQUARE_CHUNK_in_expression_chain1218); 
 
@@ -3591,7 +3591,7 @@ public class Tree2TestDRL extends TreeParser {
 
             }
 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:220:46: ( VT_PAREN_CHUNK )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:220:46: ( VT_PAREN_CHUNK )?
             int alt54=2;
             int LA54_0 = input.LA(1);
 
@@ -3600,7 +3600,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt54) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:220:46: VT_PAREN_CHUNK
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:220:46: VT_PAREN_CHUNK
                     {
                     match(input,VT_PAREN_CHUNK,FOLLOW_VT_PAREN_CHUNK_in_expression_chain1221); 
 
@@ -3609,7 +3609,7 @@ public class Tree2TestDRL extends TreeParser {
 
             }
 
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:220:62: ( expression_chain )?
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:220:62: ( expression_chain )?
             int alt55=2;
             int LA55_0 = input.LA(1);
 
@@ -3618,7 +3618,7 @@ public class Tree2TestDRL extends TreeParser {
             }
             switch (alt55) {
                 case 1 :
-                    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:220:62: expression_chain
+                    // src/main/resources/org/drools/lang/Tree2TestDRL.g:220:62: expression_chain
                     {
                     pushFollow(FOLLOW_expression_chain_in_expression_chain1224);
                     expression_chain();
@@ -3649,11 +3649,11 @@ public class Tree2TestDRL extends TreeParser {
 
 
     // $ANTLR start "curly_chunk"
-    // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:223:1: curly_chunk : VT_CURLY_CHUNK ;
+    // src/main/resources/org/drools/lang/Tree2TestDRL.g:223:1: curly_chunk : VT_CURLY_CHUNK ;
     public final void curly_chunk() throws RecognitionException {
         try {
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:224:2: ( VT_CURLY_CHUNK )
-            // src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g:224:4: VT_CURLY_CHUNK
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:224:2: ( VT_CURLY_CHUNK )
+            // src/main/resources/org/drools/lang/Tree2TestDRL.g:224:4: VT_CURLY_CHUNK
             {
             match(input,VT_CURLY_CHUNK,FOLLOW_VT_CURLY_CHUNK_in_curly_chunk1238); 
 

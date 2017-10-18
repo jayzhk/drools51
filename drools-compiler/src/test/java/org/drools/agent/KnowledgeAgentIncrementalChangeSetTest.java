@@ -74,7 +74,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
     public void testModifyFileUrlIncremental() throws Exception {
 
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
         
         String rule1 =  this.createCommonRule("rule1");
@@ -94,9 +94,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule1.drl' type='DRL' />";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule2.drl' type='DRL' />";
@@ -155,7 +155,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
     public void testRemoveFileUrlIncremental() throws Exception {
 
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
         
         String rule1 = this.createCommonRule("rule1");
@@ -175,9 +175,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule1.drl' type='DRL' />";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule2.drl' type='DRL' />";
@@ -248,7 +248,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
     public void testModifyFileUrlOverwriteIncremental() throws Exception {
 
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
 
         String rule1 = this.createCommonRule("rule1");
@@ -271,9 +271,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule1.drl' type='DRL' />";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule2.drl' type='DRL' />";
@@ -353,7 +353,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
     public void testMultipleRulesOnFileUrlIncremental() throws Exception {
         
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
         
         String rule1 = this.createCommonRule("rule1");
@@ -368,9 +368,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rules.drl' type='DRL' />";
         xml += "    </add> ";
@@ -429,14 +429,14 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
 
     public void testMultipleRulesOnFilesUrlIncremental() throws Exception {
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
 
         String rule1 = "";
         rule1 += "rule rule1\n";
         rule1 += "when\n";
         rule1 += "then\n";
-        rule1 += "list.add( com.agfa.hap.drools.getRule().getName() );\n";
+        rule1 += "list.add( drools.getRule().getName() );\n";
         rule1 += "end\n\n";
 
 
@@ -444,28 +444,28 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         rule2 += "rule rule2\n";
         rule2 += "when\n";
         rule2 += "then\n";
-        rule2 += "list.add( com.agfa.hap.drools.getRule().getName());\n";
+        rule2 += "list.add( drools.getRule().getName());\n";
         rule2 += "end\n";
 
         String rule3 = "";
         rule3 += "rule rule3\n";
         rule3 += "when\n";
         rule3 += "then\n";
-        rule3 += "list.add( com.agfa.hap.drools.getRule().getName());\n";
+        rule3 += "list.add( drools.getRule().getName());\n";
         rule3 += "end\n";
 
         String rule4 = "";
         rule4 += "rule rule4\n";
         rule4 += "when\n";
         rule4 += "then\n";
-        rule4 += "list.add( com.agfa.hap.drools.getRule().getName());\n";
+        rule4 += "list.add( drools.getRule().getName());\n";
         rule4 += "end\n";
 
         String rule5 = "";
         rule5 += "rule rule5\n";
         rule5 += "when\n";
         rule5 += "then\n";
-        rule5 += "list.add( com.agfa.hap.drools.getRule().getName());\n";
+        rule5 += "list.add( drools.getRule().getName());\n";
         rule5 += "end\n";
 
         File f1 = fileManager.newFile("rules1.drl");
@@ -482,9 +482,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rules1.drl' type='DRL' />";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rules2.drl' type='DRL' />";
@@ -498,14 +498,14 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
 
         ResourceChangeScannerConfiguration sconf = ResourceFactory.getResourceChangeScannerService().newResourceChangeScannerConfiguration();
-        sconf.setProperty("com.agfa.hap.drools.resource.scanner.interval", "2");
+        sconf.setProperty("drools.resource.scanner.interval", "2");
         ResourceFactory.getResourceChangeScannerService().configure(sconf);
 
         KnowledgeAgentConfiguration aconf = KnowledgeAgentFactory.newKnowledgeAgentConfiguration();
-        aconf.setProperty("com.agfa.hap.drools.agent.scanDirectories", "true");
-        aconf.setProperty("com.agfa.hap.drools.agent.scanResources", "true");
+        aconf.setProperty("drools.agent.scanDirectories", "true");
+        aconf.setProperty("drools.agent.scanResources", "true");
         // Testing incremental build here
-        aconf.setProperty("com.agfa.hap.drools.agent.newInstance", "false");
+        aconf.setProperty("drools.agent.newInstance", "false");
         KnowledgeAgent kagent = KnowledgeAgentFactory.newKnowledgeAgent(
                 "test agent", kbase, aconf);
 
@@ -587,7 +587,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
     public void testModifyPackageUrlIncremental() throws Exception {
 
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
         
         String rule1 = header + this.createCommonRule("rule1");
@@ -606,9 +606,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         writePackage(pkg, pkg1);
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/pkg1.pkg' type='PKG' />";
         xml += "    </add> ";
@@ -670,7 +670,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
 
     public void testUpdatePackageUrlIncremental() throws Exception {
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
         
         String rule1 = header + this.createCommonRule("rule1");
@@ -691,9 +691,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         writePackage(pkg, pkg1);
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/pkg1.pkg' type='PKG' />";
         xml += "    </add> ";
@@ -758,7 +758,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
     public void testUpdatePackageUrlOverwriteIncremental() throws Exception {
 
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
         
         String rule1 = header + this.createCommonRule("rule1");
@@ -794,9 +794,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         writePackage(pkg2, pkgF2);
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/pkg1.pkg' type='PKG' />";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/pkg2.pkg' type='PKG' />";
@@ -858,7 +858,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
 
     public void testCompleteRuleScenario() throws Exception {
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
 
         String rule1 = this.createCommonRule("rule1");
@@ -890,9 +890,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule1.drl' type='DRL' />";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule2.drl' type='DRL' />";
@@ -923,9 +923,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         list.clear();
 
         xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule3.drl' type='DRL' />";
         xml += "    </add> ";
@@ -1079,7 +1079,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
 
     public void testAddModifyFunctionIncremental() throws Exception {
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
 
 
@@ -1099,9 +1099,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule1.drl' type='DRL' />";
         xml += "    </add> ";
@@ -1117,7 +1117,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         kagent.applyChangeSet(ResourceFactory.newUrlResource(fxml.toURI().toURL()));
 
 
-        KnowledgePackage knowledgePackage = kbase.getKnowledgePackage("org.com.agfa.hap.drools.test");
+        KnowledgePackage knowledgePackage = kbase.getKnowledgePackage("org.drools.test");
 
         //the resource didn't compile because function1 doesn't exist
         assertNull(knowledgePackage);
@@ -1176,7 +1176,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
 
     public void testAddModifyQueryIncremental() throws Exception {
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
 
 
@@ -1194,9 +1194,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rule1.drl' type='DRL' />";
         xml += "    </add> ";
@@ -1212,7 +1212,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         kagent.applyChangeSet(ResourceFactory.newUrlResource(fxml.toURI().toURL()));
 
 
-        KnowledgePackage knowledgePackage = kbase.getKnowledgePackage("org.com.agfa.hap.drools.test");
+        KnowledgePackage knowledgePackage = kbase.getKnowledgePackage("org.drools.test");
 
         assertNotNull(knowledgePackage);
 
@@ -1292,8 +1292,8 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
     public void testStatefulSessionReuse() throws Exception {
 
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
-        header += "import org.com.agfa.hap.drools.Person\n";
+        header += "package org.drools.test\n";
+        header += "import org.drools.Person\n";
         header += "global java.util.List list\n\n";
 
         Person john = new Person("John");
@@ -1313,9 +1313,9 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
 
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:"+this.getPort()+"/rules.drl' type='DRL' />";
         xml += "    </add> ";
@@ -1391,16 +1391,16 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
 
     private KnowledgeAgent createKAgent(KnowledgeBase kbase) {
         ResourceChangeScannerConfiguration sconf = ResourceFactory.getResourceChangeScannerService().newResourceChangeScannerConfiguration();
-        sconf.setProperty("com.agfa.hap.drools.resource.scanner.interval", "2");
+        sconf.setProperty("drools.resource.scanner.interval", "2");
         ResourceFactory.getResourceChangeScannerService().configure(sconf);
 
-        //System.setProperty(KnowledgeAgentFactory.PROVIDER_CLASS_NAME_PROPERTY_NAME, "org.com.agfa.hap.drools.agent.impl.KnowledgeAgentProviderImpl");
+        //System.setProperty(KnowledgeAgentFactory.PROVIDER_CLASS_NAME_PROPERTY_NAME, "org.drools.agent.impl.KnowledgeAgentProviderImpl");
 
         KnowledgeAgentConfiguration aconf = KnowledgeAgentFactory.newKnowledgeAgentConfiguration();
-        aconf.setProperty("com.agfa.hap.drools.agent.scanDirectories", "true");
-        aconf.setProperty("com.agfa.hap.drools.agent.scanResources", "true");
+        aconf.setProperty("drools.agent.scanDirectories", "true");
+        aconf.setProperty("drools.agent.scanResources", "true");
         // Testing incremental build here
-        aconf.setProperty("com.agfa.hap.drools.agent.newInstance", "false");
+        aconf.setProperty("drools.agent.newInstance", "false");
 
 
 
@@ -1419,7 +1419,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         sb.append("\n");
         sb.append("when\n");
         sb.append("then\n");
-        sb.append("list.add( com.agfa.hap.drools.getRule().getName() );\n");
+        sb.append("list.add( drools.getRule().getName() );\n");
         sb.append("end\n");
 
         return sb.toString();
@@ -1446,7 +1446,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
         sb.append("\n");
         sb.append("when\n");
         sb.append("then\n");
-        sb.append("list.add( com.agfa.hap.drools.getRule().getName()+\"-V" + version + "\");\n");
+        sb.append("list.add( drools.getRule().getName()+\"-V" + version + "\");\n");
         sb.append("end\n");
 
         return sb.toString();
@@ -1462,7 +1462,7 @@ public class KnowledgeAgentIncrementalChangeSetTest extends TestCase {
             sb.append(patterns);
         }
         sb.append("then\n");
-        sb.append("list.add( com.agfa.hap.drools.getRule().getName() );\n");
+        sb.append("list.add( drools.getRule().getName() );\n");
         sb.append("end\n");
 
         return sb.toString();

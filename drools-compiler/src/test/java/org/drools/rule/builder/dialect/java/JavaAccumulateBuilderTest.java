@@ -38,7 +38,7 @@ public class JavaAccumulateBuilderTest extends TestCase {
         AccumulateDescr accumDescr = new DescrFactory().createAccumulate();
         
         FieldBindingDescr price = new FieldBindingDescr( "price", "$price" );
-        PatternDescr cheeseDescr = new PatternDescr( "org.com.agfa.hap.drools.Cheese" );
+        PatternDescr cheeseDescr = new PatternDescr( "org.drools.Cheese" );
         cheeseDescr.addConstraint( price );
         accumDescr.setInputPattern( cheeseDescr );
         
@@ -46,11 +46,11 @@ public class JavaAccumulateBuilderTest extends TestCase {
         accumDescr.setActionCode( "x += $price;" );
         accumDescr.setResultCode( "new Integer( x )" );
         
-        //org.com.agfa.hap.drools.rule.Package pkg = new org.com.agfa.hap.drools.rule.Package( "org.com.agfa.hap.drools" );
+        //org.drools.rule.Package pkg = new org.drools.rule.Package( "org.drools" );
         final PackageBuilder pkgBuilder = new PackageBuilder();
-        pkgBuilder.addPackage( new PackageDescr( "org.com.agfa.hap.drools" ) );
+        pkgBuilder.addPackage( new PackageDescr( "org.drools" ) );
         final PackageBuilderConfiguration conf = pkgBuilder.getPackageBuilderConfiguration();
-        PackageRegistry pkgReg = pkgBuilder.getPackageRegistry( "org.com.agfa.hap.drools" );
+        PackageRegistry pkgReg = pkgBuilder.getPackageRegistry( "org.drools" );
         Package pkg = pkgReg.getPackage();
         DialectCompiletimeRegistry dialectRegistry = pkgReg.getDialectCompiletimeRegistry();
         Dialect dialect = dialectRegistry.getDialect( "java" );

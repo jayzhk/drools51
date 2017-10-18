@@ -30,10 +30,10 @@ public class ProcessActionTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.actions\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.actions\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <globals>\n" +
@@ -46,18 +46,18 @@ public class ProcessActionTest extends TestCase {
             "    <workItem id=\"2\" name=\"HumanTask\" >\n" +
             "      <work name=\"Human Task\" >\n" +
             "        <parameter name=\"ActorId\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>John Doe</value>\n" +
             "        </parameter>\n" +
             "        <parameter name=\"TaskName\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>Do something</value>\n" +
             "        </parameter>\n" +
             "        <parameter name=\"Priority\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "        </parameter>\n" +
             "        <parameter name=\"Comment\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "        </parameter>\n" +
             "      </work>\n" +
             "      <onEntry>\n" +
@@ -87,7 +87,7 @@ public class ProcessActionTest extends TestCase {
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.actions");
+            workingMemory.startProcess("org.drools.actions");
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         WorkItem workItem = handler.getWorkItem();
         assertNotNull(workItem);
@@ -101,21 +101,21 @@ public class ProcessActionTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.actions\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.actions\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <imports>\n" +
-			"      <import name=\"org.com.agfa.hap.drools.Message\" />\n" +
+			"      <import name=\"org.drools.Message\" />\n" +
 			"    </imports>\n" +
 			"    <globals>\n" +
 			"      <global identifier=\"list\" type=\"java.util.List\" />\n" +
 			"    </globals>\n" +
     		"    <variables>\n" +
     		"      <variable name=\"variable\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"        <value>SomeText</value>\n" +
     		"      </variable>\n" +
     		"    </variables>\n" +
@@ -126,7 +126,7 @@ public class ProcessActionTest extends TestCase {
 			"    <actionNode id=\"2\" name=\"MyActionNode\" >\n" +
 			"      <action type=\"expression\" dialect=\"java\" >System.out.println(\"Triggered\");\n" +
 			"String myVariable = (String) context.getVariable(\"variable\");\n" +
-			"System.out.println(com.agfa.hap.drools.getWorkingMemory());\n" +
+			"System.out.println(drools.getWorkingMemory());\n" +
 			"list.add(myVariable);\n" +
 			"String nodeName = context.getNodeInstance().getNodeName();\n" +
 			"list.add(nodeName);\n" +
@@ -159,7 +159,7 @@ public class ProcessActionTest extends TestCase {
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.actions");
+            workingMemory.startProcess("org.drools.actions");
         assertEquals(3, list.size());
         assertEquals("SomeText", list.get(0));
         assertEquals("MyActionNode", list.get(1));
@@ -177,21 +177,21 @@ public class ProcessActionTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.actions\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.actions\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <imports>\n" +
-			"      <import name=\"org.com.agfa.hap.drools.Message\" />\n" +
+			"      <import name=\"org.drools.Message\" />\n" +
 			"    </imports>\n" +
 			"    <globals>\n" +
 			"      <global identifier=\"list\" type=\"java.util.List\" />\n" +
 			"    </globals>\n" +
     		"    <variables>\n" +
     		"      <variable name=\"variable\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"        <value>SomeText</value>\n" +
     		"      </variable>\n" +
     		"    </variables>\n" +
@@ -201,7 +201,7 @@ public class ProcessActionTest extends TestCase {
             "    <start id=\"1\" name=\"Start\" />\n" +
 			"    <actionNode id=\"2\" name=\"MyActionNode\" >\n" +
 			"      <action type=\"expression\" dialect=\"mvel\" >System.out.println(\"Triggered\");\n" +
-			"System.out.println(com.agfa.hap.drools.getWorkingMemory());\n" +
+			"System.out.println(drools.getWorkingMemory());\n" +
 			"String myVariable = (String) context.getVariable(\"variable\");\n" +
 			"list.add(myVariable);\n" +
 			"String nodeName = context.getNodeInstance().getNodeName();\n" +
@@ -235,7 +235,7 @@ public class ProcessActionTest extends TestCase {
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.actions");
+            workingMemory.startProcess("org.drools.actions");
         assertEquals(3, list.size());
         assertEquals("SomeText", list.get(0));
         assertEquals("MyActionNode", list.get(1));
@@ -253,21 +253,21 @@ public class ProcessActionTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.actions\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.actions\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <imports>\n" +
-			"      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessActionTest.TestVariable\" />\n" +
+			"      <import name=\"org.drools.integrationtests.ProcessActionTest.TestVariable\" />\n" +
 			"    </imports>\n" +
 			"    <globals>\n" +
 			"      <global identifier=\"list\" type=\"java.util.List\" />\n" +
 			"    </globals>\n" +
     		"    <variables>\n" +
     		"      <variable name=\"person\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"org.com.agfa.hap.drools.integrationtests.ProcessActionTest.TestVariable\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"org.drools.integrationtests.ProcessActionTest.TestVariable\" />\n" +
     		"      </variable>\n" +
     		"    </variables>\n" +
             "  </header>\n" +
@@ -306,7 +306,7 @@ public class ProcessActionTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("person", person);
         ProcessInstance processInstance =
-            workingMemory.startProcess("org.com.agfa.hap.drools.actions", params);
+            workingMemory.startProcess("org.drools.actions", params);
         assertEquals(1, list.size());
         assertEquals("John Doe", list.get(0));
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
@@ -316,21 +316,21 @@ public class ProcessActionTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.actions\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.actions\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <imports>\n" +
-			"      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessActionTest.TestVariable\" />\n" +
+			"      <import name=\"org.drools.integrationtests.ProcessActionTest.TestVariable\" />\n" +
 			"    </imports>\n" +
 			"    <globals>\n" +
 			"      <global identifier=\"list\" type=\"java.util.List\" />\n" +
 			"    </globals>\n" +
     		"    <variables>\n" +
     		"      <variable name=\"person\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"TestVariable\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"TestVariable\" />\n" +
     		"      </variable>\n" +
     		"    </variables>\n" +
             "  </header>\n" +
@@ -369,7 +369,7 @@ public class ProcessActionTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("person", person);
         ProcessInstance processInstance =
-            workingMemory.startProcess("org.com.agfa.hap.drools.actions", params);
+            workingMemory.startProcess("org.drools.actions", params);
         assertEquals(1, list.size());
         assertEquals("John Doe", list.get(0));
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
@@ -379,10 +379,10 @@ public class ProcessActionTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.actions1\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.actions1\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <globals>\n" +
@@ -407,10 +407,10 @@ public class ProcessActionTest extends TestCase {
         builder.addRuleFlow(source);
         source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.actions2\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.actions2\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <globals>\n" +
@@ -447,12 +447,12 @@ public class ProcessActionTest extends TestCase {
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.actions1");
+            workingMemory.startProcess("org.drools.actions1");
         assertEquals(1, list.size());
         assertEquals("Action1", list.get(0));
         list.clear();
         processInstance = ( ProcessInstance )
-        	workingMemory.startProcess("org.com.agfa.hap.drools.actions2");
+        	workingMemory.startProcess("org.drools.actions2");
         assertEquals(1, list.size());
         assertEquals("Action2", list.get(0));
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());

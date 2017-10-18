@@ -22,8 +22,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: org.com.agfa.hap.drools:com.agfa.hap.drools-core:5.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.com.agfa.hap.drools:com.agfa.hap.drools-api:5.1.0" level="project" />
+    <orderEntry type="module" module-name="drools-core" />
+    <orderEntry type="module" module-name="drools-api" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
     <orderEntry type="library" name="Maven: org.mockito:mockito-all:1.8.2" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse:org.eclipse.jdt.core:3.2.3.v_686_R32x-AP" level="project" />

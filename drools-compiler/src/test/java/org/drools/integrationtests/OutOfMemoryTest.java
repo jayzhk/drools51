@@ -137,7 +137,7 @@ public class OutOfMemoryTest extends TestCase {
 //
 //        SessionInspector inspector = new SessionInspector( ksession );
 //        SessionReporter.addNamedTemplate( "dump_tuples",
-//                                          getClass().getResourceAsStream( "/org/com.agfa.hap.drools/core/util/debug/dump_tuples.mvel" ) );
+//                                          getClass().getResourceAsStream( "/org/drools/core/util/debug/dump_tuples.mvel" ) );
 //        String report = SessionReporter.generateReport( "dump_tuples",
 //                                                        inspector.getSessionInfo(),
 //                                                        new HashMap<String, Object>() );

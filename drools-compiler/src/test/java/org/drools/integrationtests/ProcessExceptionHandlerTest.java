@@ -22,10 +22,10 @@ public class ProcessExceptionHandlerTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.exception\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.exception\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
             "  </header>\n" +
@@ -53,7 +53,7 @@ public class ProcessExceptionHandlerTest extends TestCase {
         ruleBase.addPackage( pkg );
         WorkingMemory workingMemory = ruleBase.newStatefulSession();
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.exception");
+            workingMemory.startProcess("org.drools.exception");
         assertEquals(ProcessInstance.STATE_ABORTED, processInstance.getState());
     }
     
@@ -61,10 +61,10 @@ public class ProcessExceptionHandlerTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.exception\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.exception\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <globals>\n" +
@@ -72,11 +72,11 @@ public class ProcessExceptionHandlerTest extends TestCase {
 			"    </globals>\n" +
             "    <variables>\n" +
             "      <variable name=\"SomeVar\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "        <value>SomeValue</value>\n" +
             "      </variable>\n" +
             "      <variable name=\"faultVar\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "      </variable>\n" +
             "    </variables>\n" +
 			"    <exceptionHandlers>\n" +
@@ -104,7 +104,7 @@ public class ProcessExceptionHandlerTest extends TestCase {
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.exception");
+            workingMemory.startProcess("org.drools.exception");
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         assertEquals(1, list.size());
         assertEquals("SomeValue", list.get(0));
@@ -114,10 +114,10 @@ public class ProcessExceptionHandlerTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.exception\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.exception\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <globals>\n" +
@@ -125,7 +125,7 @@ public class ProcessExceptionHandlerTest extends TestCase {
 			"    </globals>\n" +
 			"    <exceptionHandlers>\n" +
 			"      <exceptionHandler faultName=\"myFault\" type=\"action\"  >\n" +
-			"        <action type=\"expression\" name=\"Complete\" dialect=\"java\" >context.getProcessInstance().setState(org.com.agfa.hap.drools.process.instance.ProcessInstance.STATE_COMPLETED);</action>\n" +
+			"        <action type=\"expression\" name=\"Complete\" dialect=\"java\" >context.getProcessInstance().setState(org.drools.process.instance.ProcessInstance.STATE_COMPLETED);</action>\n" +
 			"      </exceptionHandler>\n" +
 			"    </exceptionHandlers>\n" +
 			"  </header>\n" +
@@ -146,7 +146,7 @@ public class ProcessExceptionHandlerTest extends TestCase {
         ruleBase.addPackage( pkg );
         WorkingMemory workingMemory = ruleBase.newStatefulSession();
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.exception");
+            workingMemory.startProcess("org.drools.exception");
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
     }
     
@@ -154,10 +154,10 @@ public class ProcessExceptionHandlerTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.exception\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.exception\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <globals>\n" +
@@ -170,11 +170,11 @@ public class ProcessExceptionHandlerTest extends TestCase {
             "    <composite id=\"2\" name=\"Composite\" >\n" +
             "      <variables>\n" +
             "        <variable name=\"SomeVar\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>SomeValue</value>\n" +
             "        </variable>\n" +
             "        <variable name=\"FaultVariable\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "        </variable>\n" +
             "      </variables>\n" +
     		"      <exceptionHandlers>\n" +
@@ -221,7 +221,7 @@ public class ProcessExceptionHandlerTest extends TestCase {
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.exception");
+            workingMemory.startProcess("org.drools.exception");
         assertEquals(1, list.size());
         assertEquals("SomeValue", list.get(0));
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
@@ -231,10 +231,10 @@ public class ProcessExceptionHandlerTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.exception\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.exception\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <globals>\n" +
@@ -252,16 +252,16 @@ public class ProcessExceptionHandlerTest extends TestCase {
             "    <composite id=\"2\" name=\"Composite\" >\n" +
             "      <variables>\n" +
             "        <variable name=\"SomeVar\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>SomeValue</value>\n" +
             "        </variable>\n" +
             "        <variable name=\"FaultVariable\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "        </variable>\n" +
             "      </variables>\n" +
     		"      <exceptionHandlers>\n" +
     		"        <exceptionHandler faultName=\"MyFault\" type=\"action\" faultVariable=\"FaultVariable\" >\n" +
-    		"          <action type=\"expression\" name=\"Trigger\" dialect=\"java\" >((org.com.agfa.hap.drools.workflow.instance.node.CompositeNodeInstance) context.getNodeInstance()).signalEvent(\"MyEvent\", null);</action>\n" +
+    		"          <action type=\"expression\" name=\"Trigger\" dialect=\"java\" >((org.drools.workflow.instance.node.CompositeNodeInstance) context.getNodeInstance()).signalEvent(\"MyEvent\", null);</action>\n" +
     		"        </exceptionHandler>\n" +
     		"      </exceptionHandlers>\n" +
             "      <nodes>\n" +
@@ -298,7 +298,7 @@ public class ProcessExceptionHandlerTest extends TestCase {
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.exception");
+            workingMemory.startProcess("org.drools.exception");
         assertEquals(1, list.size());
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
     }

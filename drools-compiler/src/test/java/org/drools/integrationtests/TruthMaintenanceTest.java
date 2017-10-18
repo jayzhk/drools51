@@ -117,9 +117,9 @@ public class TruthMaintenanceTest extends TestCase {
 
         // check the packages are correctly populated
         KnowledgePackage[] pkgs = (KnowledgePackage[]) kbase.getKnowledgePackages().toArray( new KnowledgePackage[]{} );
-        assertEquals( "org.com.agfa.hap.drools.test",
+        assertEquals( "org.drools.test",
                       pkgs[0].getName() );
-        assertEquals( "org.com.agfa.hap.drools.test2",
+        assertEquals( "org.drools.test2",
                       pkgs[1].getName() );
         assertEquals( "rule1",
                       pkgs[0].getRules().iterator().next().getName() );
@@ -136,7 +136,7 @@ public class TruthMaintenanceTest extends TestCase {
                       pkgs[0].getRules().size() );
         assertEquals( 1,
                       pkgs[1].getRules().size() );
-        assertEquals( "org.com.agfa.hap.drools.test2",
+        assertEquals( "org.drools.test2",
                       pkgs[1].getName() );
         assertEquals( "rule2",
                       pkgs[1].getRules().iterator().next().getName() );

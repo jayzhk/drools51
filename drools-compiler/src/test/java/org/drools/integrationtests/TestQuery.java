@@ -25,10 +25,10 @@ public class TestQuery extends TestCase {
      */
     public void setUp() throws Exception {
         String text = "";
-        text += "package org.com.agfa.hap.drools.integrationtests\n";
-        text += "import org.com.agfa.hap.drools.integrationtests.TestQuery.Bar\n";
-        text += "import org.com.agfa.hap.drools.integrationtests.TestQuery.Foo\n";
-        text += "import org.com.agfa.hap.drools.integrationtests.TestQuery.Foo2\n";
+        text += "package org.drools.integrationtests\n";
+        text += "import org.drools.integrationtests.TestQuery.Bar\n";
+        text += "import org.drools.integrationtests.TestQuery.Foo\n";
+        text += "import org.drools.integrationtests.TestQuery.Foo2\n";
         text += "query \"testDifferent\"\n";
         text += "    foo : Foo();\n";
         text += "    bar : Bar(id == foo.id)\n";

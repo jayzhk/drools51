@@ -78,7 +78,7 @@ public class MVELTest extends TestCase {
 
     public void testIncrementOperator() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
+        str += "package org.drools \n";
         str += "global java.util.List list \n";
         str += "rule rule1 \n";
         str += "    dialect \"mvel\" \n";
@@ -116,7 +116,7 @@ public class MVELTest extends TestCase {
 
     public void testEvalWithBigDecimal() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
+        str += "package org.drools \n";
         str += "import java.math.BigDecimal; \n";
         str += "global java.util.List list \n";
         str += "rule rule1 \n";
@@ -218,8 +218,8 @@ public class MVELTest extends TestCase {
 
     public void testArrays() throws Exception {
         String text = "package test_mvel;\n";
-        text += "import org.com.agfa.hap.drools.integrationtests.TestObject;\n";
-        text += "import function org.com.agfa.hap.drools.integrationtests.TestObject.array;\n";;
+        text += "import org.drools.integrationtests.TestObject;\n";
+        text += "import function org.drools.integrationtests.TestObject.array;\n";;
         text += "no-loop true\n";
         text += "dialect \"mvel\"\n";
         text += "rule \"1\"\n";
@@ -255,7 +255,7 @@ public class MVELTest extends TestCase {
     
     public void testPackageImports() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
+        str += "package org.drools \n";
         str += "dialect \"mvel\"\n";
         str += "import org.acme.healthcare.* \n";
         str += "import org.acme.insurance.* \n";

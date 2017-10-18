@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools.integrationtest
+package org.drools.integrationtest
 
 import java.util.List
 

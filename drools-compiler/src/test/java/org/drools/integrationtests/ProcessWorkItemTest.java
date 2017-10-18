@@ -32,25 +32,25 @@ public class ProcessWorkItemTest extends TestCase {
     	KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.actions\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.actions\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
     		"    <variables>\n" +
     		"      <variable name=\"UserName\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"        <value>John Doe</value>\n" +
     		"      </variable>\n" +
      		"      <variable name=\"Person\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"org.com.agfa.hap.drools.Person\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"org.drools.Person\" />\n" +
     		"      </variable>\n" +
     		"      <variable name=\"MyObject\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.ObjectDataType\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.ObjectDataType\" />\n" +
     		"      </variable>\n" +
     		"      <variable name=\"Number\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.IntegerDataType\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.IntegerDataType\" />\n" +
     		"      </variable>\n" +
     		"    </variables>\n" +
             "  </header>\n" +
@@ -60,25 +60,25 @@ public class ProcessWorkItemTest extends TestCase {
             "    <workItem id=\"2\" name=\"HumanTask\" >\n" +
             "      <work name=\"Human Task\" >\n" +
             "        <parameter name=\"ActorId\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>#{UserName}</value>\n" +
             "        </parameter>\n" +
             "        <parameter name=\"Content\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>#{Person.name}</value>\n" +
             "        </parameter>\n" +
             "        <parameter name=\"TaskName\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>Do something</value>\n" +
             "        </parameter>\n" +
             "        <parameter name=\"Priority\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "        </parameter>\n" +
             "        <parameter name=\"Comment\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "        </parameter>\n" +
             "        <parameter name=\"Attachment\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"java.lang.Object\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"java.lang.Object\" />\n" +
             "        </parameter>\n" +
             "      </work>\n" +
             "      <mapping type=\"in\" from=\"MyObject\" to=\"Attachment\" />" +
@@ -110,7 +110,7 @@ public class ProcessWorkItemTest extends TestCase {
         person.setName("John Doe");
         parameters.put("Person", person);
         WorkflowProcessInstance processInstance = (WorkflowProcessInstance)
-        	ksession.startProcess("org.com.agfa.hap.drools.actions", parameters);
+        	ksession.startProcess("org.drools.actions", parameters);
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         WorkItem workItem = handler.getWorkItem();
         assertNotNull(workItem);
@@ -127,7 +127,7 @@ public class ProcessWorkItemTest extends TestCase {
         person.setName("Jane Doe");
         parameters.put("Person", person);
         processInstance = (WorkflowProcessInstance)
-        	ksession.startProcess("org.com.agfa.hap.drools.actions", parameters);
+        	ksession.startProcess("org.drools.actions", parameters);
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         workItem = handler.getWorkItem();
         assertNotNull(workItem);
@@ -147,25 +147,25 @@ public class ProcessWorkItemTest extends TestCase {
     	KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.actions\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.actions\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
     		"    <variables>\n" +
     		"      <variable name=\"UserName\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"        <value>John Doe</value>\n" +
     		"      </variable>\n" +
      		"      <variable name=\"Person\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"org.com.agfa.hap.drools.Person\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"org.drools.Person\" />\n" +
     		"      </variable>\n" +
     		"      <variable name=\"MyObject\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"java.lang.Object\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"java.lang.Object\" />\n" +
     		"      </variable>\n" +
     		"      <variable name=\"Number\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.IntegerDataType\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.IntegerDataType\" />\n" +
     		"      </variable>\n" +
     		"    </variables>\n" +
             "  </header>\n" +
@@ -175,25 +175,25 @@ public class ProcessWorkItemTest extends TestCase {
             "    <workItem id=\"2\" name=\"HumanTask\" >\n" +
             "      <work name=\"Human Task\" >\n" +
             "        <parameter name=\"ActorId\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>#{UserName}</value>\n" +
             "        </parameter>\n" +
             "        <parameter name=\"Content\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>#{Person.name}</value>\n" +
             "        </parameter>\n" +
             "        <parameter name=\"TaskName\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>Do something</value>\n" +
             "        </parameter>\n" +
             "        <parameter name=\"Priority\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "        </parameter>\n" +
             "        <parameter name=\"Comment\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "        </parameter>\n" +
             "        <parameter name=\"Attachment\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"java.lang.Object\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"java.lang.Object\" />\n" +
             "        </parameter>\n" +
             "      </work>\n" +
             "      <mapping type=\"in\" from=\"MyObject\" to=\"Attachment\" />" +
@@ -226,7 +226,7 @@ public class ProcessWorkItemTest extends TestCase {
         person.setName("John Doe");
         parameters.put("Person", person);
         WorkflowProcessInstance processInstance = (WorkflowProcessInstance)
-        	ksession.startProcess("org.com.agfa.hap.drools.actions", parameters);
+        	ksession.startProcess("org.drools.actions", parameters);
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
     }
     

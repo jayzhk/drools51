@@ -982,7 +982,7 @@ public class PackageBuilderTest extends DroolsTestCase {
         typeDescr.addMetaAttribute( TypeDeclaration.Role.ID,
                                     "event" );
         typeDescr.addMetaAttribute( TypeDeclaration.ATTR_CLASS,
-                                    "org.com.agfa.hap.drools.StockTick" );
+                                    "org.drools.StockTick" );
         pkgDescr.addTypeDeclaration( typeDescr );
 
         PackageBuilder builder = new PackageBuilder();
@@ -1045,9 +1045,9 @@ public class PackageBuilderTest extends DroolsTestCase {
     public void testPackageMerge() throws Exception {
         final PackageBuilder builder = new PackageBuilder();
         try {
-            builder.addPackage( new PackageDescr( "org.com.agfa.hap.drools" ) );
+            builder.addPackage( new PackageDescr( "org.drools" ) );
 
-            builder.addPackageFromDrl( new StringReader( "package org.com.agfa.hap.drools\n" + "function boolean testIt() {\n" + "  return true;\n" + "}\n" ) );
+            builder.addPackageFromDrl( new StringReader( "package org.drools\n" + "function boolean testIt() {\n" + "  return true;\n" + "}\n" ) );
         } catch ( RuntimeException e ) {
             fail( "Should not raise any exception: " + e.getMessage() );
         }
@@ -1227,7 +1227,7 @@ public class PackageBuilderTest extends DroolsTestCase {
     public void testRuleFlowUpgrade() throws Exception {
         PackageBuilder builder = new PackageBuilder();
         // Set the system property so that automatic conversion can happen
-        System.setProperty( "com.agfa.hap.drools.ruleflow.port",
+        System.setProperty( "drools.ruleflow.port",
                             "true" );
 
         InputStream in = this.getClass().getResourceAsStream( "/org/drools/integrationtests/ruleflow40.rfm" );
@@ -1261,7 +1261,7 @@ public class PackageBuilderTest extends DroolsTestCase {
         p = (Process) flows.get( "0" );
         assertTrue( p instanceof WorkflowProcessImpl );
         // Reset the system property so that automatic conversion should not happen
-        System.setProperty( "com.agfa.hap.drools.ruleflow.port",
+        System.setProperty( "drools.ruleflow.port",
                             "false" );
     }
 
@@ -1306,12 +1306,12 @@ public class PackageBuilderTest extends DroolsTestCase {
         PackageBuilderConfiguration cfg = new PackageBuilderConfiguration();
         cfg.setAllowMultipleNamespaces( false );
         PackageBuilder bldr = new PackageBuilder( cfg );
-        bldr.addPackageFromDrl( new StringReader( "package whee\n import org.com.agfa.hap.drools.Cheese" ) );
+        bldr.addPackageFromDrl( new StringReader( "package whee\n import org.drools.Cheese" ) );
         assertFalse( bldr.hasErrors() );
-        bldr.addPackageFromDrl( new StringReader( "package whee\n import org.com.agfa.hap.drools.Person" ) );
+        bldr.addPackageFromDrl( new StringReader( "package whee\n import org.drools.Person" ) );
         assertFalse( bldr.hasErrors() );
         // following package will not be added because configuration is set for single namespace builders
-        bldr.addPackageFromDrl( new StringReader( "package whee2\n import org.com.agfa.hap.drools.Person" ) );
+        bldr.addPackageFromDrl( new StringReader( "package whee2\n import org.drools.Person" ) );
         assertFalse( bldr.hasErrors() );
 
         assertEquals( 1,
@@ -1321,12 +1321,12 @@ public class PackageBuilderTest extends DroolsTestCase {
         assertEquals( true,
                       cfg.isAllowMultipleNamespaces() );
         bldr = new PackageBuilder( cfg );
-        bldr.addPackageFromDrl( new StringReader( "package whee\n import org.com.agfa.hap.drools.Cheese" ) );
+        bldr.addPackageFromDrl( new StringReader( "package whee\n import org.drools.Cheese" ) );
         assertFalse( bldr.hasErrors() );
         // following import will be added to the default package name
-        bldr.addPackageFromDrl( new StringReader( "import org.com.agfa.hap.drools.Person" ) );
+        bldr.addPackageFromDrl( new StringReader( "import org.drools.Person" ) );
         assertFalse( bldr.hasErrors() );
-        bldr.addPackageFromDrl( new StringReader( "package whee2\n import org.com.agfa.hap.drools.Person" ) );
+        bldr.addPackageFromDrl( new StringReader( "package whee2\n import org.drools.Person" ) );
         assertFalse( bldr.hasErrors() );
 
         assertEquals( 3,

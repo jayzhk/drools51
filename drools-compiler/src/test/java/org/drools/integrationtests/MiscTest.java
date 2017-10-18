@@ -439,8 +439,8 @@ public class MiscTest extends TestCase {
 
     public void testMissingImport() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
-        str += "import org.com.agfa.hap.drools.Person\n";
+        str += "package org.drools \n";
+        str += "import org.drools.Person\n";
         str += "global java.util.List list \n";
         str += "rule rule1 \n";
         str += "when \n";
@@ -463,8 +463,8 @@ public class MiscTest extends TestCase {
 
     public void testInvalidModify1() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
-        str += "import org.com.agfa.hap.drools.Person\n";
+        str += "package org.drools \n";
+        str += "import org.drools.Person\n";
         str += "global java.util.List list \n";
         str += "rule rule1 \n";
         str += "    no-loop \n";
@@ -488,8 +488,8 @@ public class MiscTest extends TestCase {
 
     public void testInvalidModify2() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
-        str += "import org.com.agfa.hap.drools.Person\n";
+        str += "package org.drools \n";
+        str += "import org.drools.Person\n";
         str += "global java.util.List list \n";
         str += "rule rule1 \n";
         str += "    no-loop \n";
@@ -513,7 +513,7 @@ public class MiscTest extends TestCase {
 
     public void testIncrementOperator() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
+        str += "package org.drools \n";
         str += "global java.util.List list \n";
         str += "rule rule1 \n";
         str += "    dialect \"java\" \n";
@@ -555,12 +555,12 @@ public class MiscTest extends TestCase {
     public void testKnowledgeRuntimeAccess() throws Exception {
         String str = "";
         str += "package org.test\n";
-        str += "import org.com.agfa.hap.drools.Message\n";
+        str += "import org.drools.Message\n";
         str += "rule \"Hello World\"\n";
         str += "when\n";
         str += "    Message( )\n";
         str += "then\n";
-        str += "    System.out.println( com.agfa.hap.drools.getKnowledgeRuntime() );\n";
+        str += "    System.out.println( drools.getKnowledgeRuntime() );\n";
         str += "end\n";
 
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
@@ -584,7 +584,7 @@ public class MiscTest extends TestCase {
 
     public void testEvalWithBigDecimal() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
+        str += "package org.drools \n";
         str += "import java.math.BigDecimal; \n";
         str += "global java.util.List list \n";
         str += "rule rule1 \n";
@@ -811,7 +811,7 @@ public class MiscTest extends TestCase {
         kbase = SerializationHelper.serializeObject( kbase );
 
         // Retrieve the generated fact type
-        FactType cheeseFact = kbase.getFactType( "org.com.agfa.hap.drools.generatedbeans",
+        FactType cheeseFact = kbase.getFactType( "org.drools.generatedbeans",
                                                  "Cheese" );
 
         // Create a new Fact instance
@@ -829,7 +829,7 @@ public class MiscTest extends TestCase {
                       cheeseFact.get( cheese,
                                       "type" ) );
 
-        FactType personType = kbase.getFactType( "org.com.agfa.hap.drools.generatedbeans",
+        FactType personType = kbase.getFactType( "org.drools.generatedbeans",
                                                  "Person" );
 
         Object ps = personType.newInstance();
@@ -881,7 +881,7 @@ public class MiscTest extends TestCase {
 
         // creating a person that likes the cheese:
         // Retrieve the generated fact type
-        FactType personFact = kbase.getFactType( "org.com.agfa.hap.drools.generatedbeans",
+        FactType personFact = kbase.getFactType( "org.drools.generatedbeans",
                                                  "Person" );
 
         // Create a new Fact instance
@@ -967,7 +967,7 @@ public class MiscTest extends TestCase {
         kbase = SerializationHelper.serializeObject( kbase );
 
         // Retrieve the generated fact type
-        FactType cheeseFact = kbase.getFactType( "org.com.agfa.hap.drools.generatedbeans",
+        FactType cheeseFact = kbase.getFactType( "org.drools.generatedbeans",
                                                  "Cheese" );
 
         // Create a new Fact instance
@@ -988,7 +988,7 @@ public class MiscTest extends TestCase {
         assertEquals( cheese,
                       cheese2 );
 
-        FactType personType = kbase.getFactType( "org.com.agfa.hap.drools.generatedbeans",
+        FactType personType = kbase.getFactType( "org.drools.generatedbeans",
                                                  "Person" );
 
         Object ps = personType.newInstance();
@@ -1045,7 +1045,7 @@ public class MiscTest extends TestCase {
 
         // creating a person that likes the cheese:
         // Retrieve the generated fact type
-        FactType personFact = kbase.getFactType( "org.com.agfa.hap.drools.generatedbeans",
+        FactType personFact = kbase.getFactType( "org.drools.generatedbeans",
                                                  "Person" );
 
         // Create a new Fact instance
@@ -1656,7 +1656,7 @@ public class MiscTest extends TestCase {
 
     public void testFactTemplateFieldBinding() throws Exception {
         // from JBRULES-1512
-        String rule1 = "package org.com.agfa.hap.drools.entity\n";
+        String rule1 = "package org.drools.entity\n";
         rule1 += " global java.util.List list\n";
         rule1 += "template Settlement\n";
         rule1 += "    String InstrumentType\n";
@@ -2395,8 +2395,8 @@ public class MiscTest extends TestCase {
      */
     public void testFromDeclarationWithWorkingMemoryLogger() throws Exception {
         String rule = "package org.test;\n";
-        rule += "import org.com.agfa.hap.drools.Cheesery\n";
-        rule += "import org.com.agfa.hap.drools.Cheese\n";
+        rule += "import org.drools.Cheesery\n";
+        rule += "import org.drools.Cheese\n";
         rule += "global java.util.List list\n";
         rule += "rule \"Test Rule\"\n";
         rule += "when\n";
@@ -2565,7 +2565,7 @@ public class MiscTest extends TestCase {
         person.setStatus( "start" );
         workingMemory.insert( person );
 
-        // TODO org.com.agfa.hap.drools.spi.ConsequenceException: org.com.agfa.hap.drools.FactException: Update error: handle not found for object:
+        // TODO org.drools.spi.ConsequenceException: org.drools.FactException: Update error: handle not found for object:
         //        workingMemory    = SerializationHelper.serializeObject(workingMemory);
         workingMemory.fireAllRules();
 
@@ -4648,7 +4648,7 @@ public class MiscTest extends TestCase {
     public void testSelfJoinWithIndex() {
         String drl = "";
         drl += "package org.test\n";
-        drl += "import org.com.agfa.hap.drools.Person\n";
+        drl += "import org.drools.Person\n";
         drl += "global java.util.List list\n";
         drl += "rule test1\n";
         drl += "when\n";
@@ -4699,11 +4699,11 @@ public class MiscTest extends TestCase {
             builder.addPackageFromDrl( new InputStreamReader( getClass().getResourceAsStream( "test_RuleNameClashes2.drl" ) ) );
             assertEquals( 2,
                           builder.getPackages().length );
-            Package pkg1 = builder.getPackageRegistry( "org.com.agfa.hap.drools.package1" ).getPackage();
+            Package pkg1 = builder.getPackageRegistry( "org.drools.package1" ).getPackage();
             assertEquals( "rule 1",
                           pkg1.getRules()[0].getName() );
 
-            Package pkg2 = builder.getPackageRegistry( "org.com.agfa.hap.drools.package2" ).getPackage();
+            Package pkg2 = builder.getPackageRegistry( "org.drools.package2" ).getPackage();
             assertEquals( "rule 1",
                           pkg2.getRules()[0].getName() );
 
@@ -4718,7 +4718,7 @@ public class MiscTest extends TestCase {
     public void testSelfJoinAndNotWithIndex() {
         String drl = "";
         drl += "package org.test\n";
-        drl += "import org.com.agfa.hap.drools.Person\n";
+        drl += "import org.drools.Person\n";
         drl += "global java.util.List list\n";
         drl += "rule test1\n";
         drl += "when\n";
@@ -4857,7 +4857,7 @@ public class MiscTest extends TestCase {
 
     public void testRuleRemovalWithJoinedRootPattern() {
         String str = "";
-        str += "package org.com.agfa.hap.drools \n";
+        str += "package org.drools \n";
         str += "rule rule1 \n";
         str += "when \n";
         str += "  String() \n";
@@ -4891,7 +4891,7 @@ public class MiscTest extends TestCase {
         assertNotNull( leftTuple );
         assertNotNull( leftTuple.getLeftParentNext() );
 
-        kbase.removeRule( "org.com.agfa.hap.drools",
+        kbase.removeRule( "org.drools",
                           "rule2" );
 
         leftTuple = handle.getFirstLeftTuple();
@@ -5334,7 +5334,7 @@ public class MiscTest extends TestCase {
 
     public void testDynamicallyAddInitialFactRule() throws Exception {
         PackageBuilder builder = new PackageBuilder();
-        String rule = "package org.com.agfa.hap.drools.test\n global java.util.List list\n rule xxx\n when\n i:Integer()\nthen\n list.add(i);\nend";
+        String rule = "package org.drools.test\n global java.util.List list\n rule xxx\n when\n i:Integer()\nthen\n list.add(i);\nend";
         builder.addPackageFromDrl( new StringReader( rule ) );
         Package pkg = builder.getPackage();
 
@@ -5354,7 +5354,7 @@ public class MiscTest extends TestCase {
                       list.get( 0 ) );
 
         builder = new PackageBuilder();
-        rule = "package org.com.agfa.hap.drools.test\n global java.util.List list\n rule xxx\n when\nthen\n list.add(\"x\");\nend";
+        rule = "package org.drools.test\n global java.util.List list\n rule xxx\n when\nthen\n list.add(\"x\");\nend";
         builder.addPackageFromDrl( new StringReader( rule ) );
         pkg = builder.getPackage();
 
@@ -6124,8 +6124,8 @@ public class MiscTest extends TestCase {
 
     public void testOrWithAndUsingNestedBindings() {
         String str = "";
-        str += "package org.com.agfa.hap.drools\n";
-        str += "import org.com.agfa.hap.drools.Person\n";
+        str += "package org.drools\n";
+        str += "import org.drools.Person\n";
         str += "global java.util.List mlist\n";
         str += "global java.util.List jlist\n";
         str += "rule rule1 dialect \"mvel\" \n";
@@ -6221,8 +6221,8 @@ public class MiscTest extends TestCase {
         //JBRULES-2527
         
         String str = "";
-        str += "package org.com.agfa.hap.drools\n";
-        str += "import org.com.agfa.hap.drools.Person\n";
+        str += "package org.drools\n";
+        str += "import org.drools.Person\n";
         str += "global java.util.List mlist\n";
         str += "rule rule1 \n";
         str += "when\n";
@@ -6243,8 +6243,8 @@ public class MiscTest extends TestCase {
         }
         
         str = "";
-        str += "package org.com.agfa.hap.drools\n";
-        str += "import org.com.agfa.hap.drools.Person\n";
+        str += "package org.drools\n";
+        str += "import org.drools.Person\n";
         str += "global java.util.List mlist\n";
         str += "rule rule1 \n";
         str += "when\n";
@@ -6775,7 +6775,7 @@ public class MiscTest extends TestCase {
     }
 
     public void testFireUntilHaltFailingAcrossEntryPoints() throws Exception {
-        String rule1 = "package org.com.agfa.hap.drools\n";
+        String rule1 = "package org.drools\n";
         rule1 += "global java.util.List list\n";
         rule1 += "rule testFireUntilHalt\n";
         rule1 += "when\n";
@@ -6827,7 +6827,7 @@ public class MiscTest extends TestCase {
     }
 
     public void testNetworkBuildErrorAcrossEntryPointsAndFroms() throws Exception {
-        String rule1 = "package org.com.agfa.hap.drools\n";
+        String rule1 = "package org.drools\n";
         rule1 += "global java.util.List list\n";
         rule1 += "rule rule1\n";
         rule1 += "when\n";
@@ -6912,7 +6912,7 @@ public class MiscTest extends TestCase {
         kbase = SerializationHelper.serializeObject( kbase );
 
         // Retrieve the generated fact type
-        FactType cheeseFact = kbase.getFactType( "org.com.agfa.hap.drools.generatedbeans",
+        FactType cheeseFact = kbase.getFactType( "org.drools.generatedbeans",
                                                  "Cheese" );
 
         assertTrue( "Generated beans must be serializable",
@@ -6986,8 +6986,8 @@ public class MiscTest extends TestCase {
     public void testInsert() throws Exception {
         String drl = "";
         drl += "package test\n";
-        drl += "import org.com.agfa.hap.drools.Person\n";
-        drl += "import org.com.agfa.hap.drools.Pet\n";
+        drl += "import org.drools.Person\n";
+        drl += "import org.drools.Pet\n";
         drl += "import java.util.ArrayList\n";
         drl += "rule test\n";
         drl += "when\n";
@@ -7042,8 +7042,8 @@ public class MiscTest extends TestCase {
     public void testMVELConsequenceWithoutSemiColon1() throws Exception {
         String drl = "";
         drl += "package test\n";
-        drl += "import org.com.agfa.hap.drools.Person\n";
-        drl += "import org.com.agfa.hap.drools.Pet\n";
+        drl += "import org.drools.Person\n";
+        drl += "import org.drools.Pet\n";
         drl += "rule test dialect 'mvel'\n";
         drl += "when\n";
         drl += "$person:Person()\n";
@@ -7135,8 +7135,8 @@ public class MiscTest extends TestCase {
     public void FIXME_testMVELConsequenceUsingFactConstructors() throws Exception {
         String drl = "";
         drl += "package test\n";
-        drl += "import org.com.agfa.hap.drools.Person\n";
-        drl += "global org.com.agfa.hap.drools.runtime.StatefulKnowledgeSession ksession\n";
+        drl += "import org.drools.Person\n";
+        drl += "global org.drools.runtime.StatefulKnowledgeSession ksession\n";
         drl += "rule test dialect 'mvel'\n";
         drl += "when\n";
         drl += "    $person:Person( name == 'mark' )\n";
@@ -7211,9 +7211,9 @@ public class MiscTest extends TestCase {
                       fired );
 
         // capture the arguments and check that the retracts happened
-        //        ArgumentCaptor<org.com.agfa.hap.drools.event.rule.ObjectRetractedEvent> retracts = ArgumentCaptor.forClass(org.com.agfa.hap.drools.event.rule.ObjectRetractedEvent.class);
+        //        ArgumentCaptor<org.drools.event.rule.ObjectRetractedEvent> retracts = ArgumentCaptor.forClass(org.drools.event.rule.ObjectRetractedEvent.class);
         //        verify( wml, times(2) ).objectRetracted( retracts.capture() );
-        //        List<org.com.agfa.hap.drools.event.rule.ObjectRetractedEvent> values = retracts.getAllValues();
+        //        List<org.drools.event.rule.ObjectRetractedEvent> values = retracts.getAllValues();
         //        assertThat( values.get( 0 ).getFactHandle(), is( personFH ) );
         //        assertThat( values.get( 1 ).getFactHandle(), is( petFH ) );
     }

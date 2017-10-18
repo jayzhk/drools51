@@ -1,8 +1,8 @@
 package test
 
 #must be in the following order.
-import org.com.agfa.hap.drools.Person
-import org.com.agfa.hap.drools.Cheese
+import org.drools.Person
+import org.drools.Cheese
 
 #refer to test_expander.dsl
 expander test_expander.dsl

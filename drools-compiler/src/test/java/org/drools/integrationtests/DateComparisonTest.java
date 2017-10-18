@@ -30,7 +30,7 @@ public class DateComparisonTest extends TestCase {
         List<String> results = new ArrayList<String>();
         // load up the knowledge base
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
         str += "dialect \"mvel\"\n";
         str += "global java.util.List results;\n";
         str += "rule \"test date greater than\"\n";

@@ -35,7 +35,7 @@ public class ProcessMarchallingTest extends TestCase {
     @SuppressWarnings("unchecked")
 	public void test1() throws Exception {
         String rule = "package org.test;\n";
-        rule += "import org.com.agfa.hap.drools.Person\n";
+        rule += "import org.drools.Person\n";
         rule += "global java.util.List list\n";
         rule += "rule \"Rule 1\"\n";
         rule += "  ruleflow-group \"hello\"\n";
@@ -50,9 +50,9 @@ public class ProcessMarchallingTest extends TestCase {
         
         String process = 
     		"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-    		"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+    		"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
     		"    xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-    		"    xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+    		"    xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
     		"    type=\"RuleFlow\" name=\"ruleflow\" id=\"org.test.ruleflow\" package-name=\"org.test\" >\n" +
     		"  <header>\n" +
     		"  </header>\n" +
@@ -96,14 +96,14 @@ public class ProcessMarchallingTest extends TestCase {
     public void test2() throws Exception {
         String process = 
     		"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-    		"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+    		"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
     		"    xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-    		"    xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+    		"    xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
     		"    type=\"RuleFlow\" name=\"ruleflow\" id=\"org.test.ruleflow\" package-name=\"org.test\" >\n" +
     		"  <header>\n" +
     		"    <variables>\n" +
     		"      <variable name=\"myVariable\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"        <value>OldValue</value>\n" +
     		"      </variable>\n" +
     		"    </variables>\n" +
@@ -113,19 +113,19 @@ public class ProcessMarchallingTest extends TestCase {
     		"    <workItem id=\"2\" name=\"Email\" >\n" +
     		"      <work name=\"Email\" >\n" +
     		"        <parameter name=\"Subject\" >\n" +
-    		"          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"          <value>Mail</value>\n" +
     		"        </parameter>\n" +
     		"        <parameter name=\"Text\" >\n" +
-    		"          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"          <value>This is an email</value>\n" +
     		"        </parameter>\n" +
     		"        <parameter name=\"To\" >\n" +
-    		"          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"          <value>you@mail.com</value>\n" +
     		"        </parameter>\n" +
     		"        <parameter name=\"From\" >\n" +
-    		"          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"          <value>me@mail.com</value>\n" +
     		"        </parameter>\n" +
     		"      </work>\n" +
@@ -168,14 +168,14 @@ public class ProcessMarchallingTest extends TestCase {
     public void test3() throws Exception {
         String process1 = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-        	"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+        	"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "  xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "  xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "  xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "  type=\"RuleFlow\" name=\"ruleflow\" id=\"com.sample.ruleflow\" package-name=\"com.sample\" >\n" +
             "\n" +
             "  <header>\n" +
             "    <imports>\n" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />\n" +
+            "      <import name=\"org.drools.Person\" />\n" +
             "    </imports>\n" +
             "    <swimlanes>\n" +
             "      <swimlane name=\"swimlane\" />\n" +
@@ -201,7 +201,7 @@ public class ProcessMarchallingTest extends TestCase {
             "    <workItem id=\"12\" name=\"Log\" >\n" +
             "      <work name=\"Log\" >\n" +
             "        <parameter name=\"Message\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>This is a log message</value>\n" +
             "        </parameter>\n" +
             "      </work>\n" +
@@ -209,7 +209,7 @@ public class ProcessMarchallingTest extends TestCase {
             "    <composite id=\"13\" name=\"CompositeNode\" >\n" +
             "      <variables>\n" +
             "        <variable name=\"x\" >\n" +
-            "          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "          <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "          <value>x-value</value>\n" +
             "        </variable>\n" +
             "      </variables>\n" +
@@ -217,35 +217,35 @@ public class ProcessMarchallingTest extends TestCase {
             "        <humanTask id=\"1\" name=\"Human Task\" swimlane=\"swimlane\" >\n" +
             "          <work name=\"Human Task\" >\n" +
             "            <parameter name=\"ActorId\" >\n" +
-            "              <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "              <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "              <value>John Doe</value>\n" +
             "            </parameter>\n" +
             "            <parameter name=\"Priority\" >\n" +
-            "              <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "              <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "            </parameter>\n" +
             "            <parameter name=\"TaskName\" >\n" +
-            "              <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "              <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "              <value>Do something !</value>\n" +
             "            </parameter>\n" +
             "            <parameter name=\"Comment\" >\n" +
-            "              <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "              <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "            </parameter>\n" +
             "          </work>\n" +
             "        </humanTask>\n" +
             "        <humanTask id=\"2\" name=\"Human Task\" swimlane=\"swimlane\" >\n" +
             "          <work name=\"Human Task\" >\n" +
             "            <parameter name=\"ActorId\" >\n" +
-            "              <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "              <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "            </parameter>\n" +
             "            <parameter name=\"Priority\" >\n" +
-            "              <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "              <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "            </parameter>\n" +
             "            <parameter name=\"TaskName\" >\n" +
-            "              <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "              <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "              <value>Do something else !</value>\n" +
             "            </parameter>\n" +
             "            <parameter name=\"Comment\" >\n" +
-            "              <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "              <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "            </parameter>\n" +
             "          </work>\n" +
             "          <mapping type=\"in\" from=\"x\" to=\"Priority\" />\n" +
@@ -287,14 +287,14 @@ public class ProcessMarchallingTest extends TestCase {
         
         String process2 =
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "         type=\"RuleFlow\" name=\"flow\" id=\"com.sample.subflow\" package-name=\"com.sample\" >\n" +
             "\n" +
             "  <header>\n" +
             "    <imports>\n" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />\n" +
+            "      <import name=\"org.drools.Person\" />\n" +
             "    </imports>\n" +
             "  </header>\n" +
             "\n" +
@@ -316,7 +316,7 @@ public class ProcessMarchallingTest extends TestCase {
         
         String rule = 
             "package com.sample\n" +
-            "import org.com.agfa.hap.drools.Person;\n" +
+            "import org.drools.Person;\n" +
             "rule \"Hello\" ruleflow-group \"flowgroup\"\n" +
             "    when\n" +
             "    then\n" +
@@ -361,15 +361,15 @@ public class ProcessMarchallingTest extends TestCase {
     public void test4() throws Exception {
         String process = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-        	"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+        	"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "  xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "  xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "  xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "  type=\"RuleFlow\" name=\"ruleflow\" id=\"com.sample.ruleflow\" package-name=\"com.sample\" >\n" +
             "\n" +
             "    <header>\n" +
             "      <variables>\n" +
             "        <variable name=\"list\" >\n" +
-    		"          <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"java.util.List\" />\n" +
+    		"          <type name=\"org.drools.process.core.datatype.impl.type.ObjectDataType\" className=\"java.util.List\" />\n" +
     		"        </variable>\n" +
     		"      </variables>\n" +
     		"    </header>\n" +
@@ -380,16 +380,16 @@ public class ProcessMarchallingTest extends TestCase {
     		"          <humanTask id=\"1\" name=\"Human Task\" >\n" +
     		"            <work name=\"Human Task\" >\n" +
     		"              <parameter name=\"Comment\" >\n" +
-    		"                <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"                <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"              </parameter>\n" +
     		"              <parameter name=\"ActorId\" >\n" +
-    		"                <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"                <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"              </parameter>\n" +
     		"              <parameter name=\"Priority\" >\n" +
-    		"                <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"                <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"              </parameter>\n" +
     		"              <parameter name=\"TaskName\" >\n" +
-    		"                <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"                <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"                <value>Do something: #{item}</value>\n" +
     		"              </parameter>\n" +
     		"            </work>\n" +
@@ -397,16 +397,16 @@ public class ProcessMarchallingTest extends TestCase {
     		"          <humanTask id=\"2\" name=\"Human Task Again\" >\n" +
     		"            <work name=\"Human Task\" >\n" +
     		"              <parameter name=\"Comment\" >\n" +
-    		"                <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"                <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"              </parameter>\n" +
     		"              <parameter name=\"ActorId\" >\n" +
-    		"                <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"                <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"              </parameter>\n" +
     		"              <parameter name=\"Priority\" >\n" +
-    		"                <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"                <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"              </parameter>\n" +
     		"              <parameter name=\"TaskName\" >\n" +
-    		"                <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"                <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"                <value>Do something else: #{item}</value>\n" +
     		"              </parameter>\n" +
     		"            </work>\n" +
@@ -475,9 +475,9 @@ public class ProcessMarchallingTest extends TestCase {
     public void test5() throws Exception {
         String process = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-        	"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+        	"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "  xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "  xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "  xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "  type=\"RuleFlow\" name=\"ruleflow\" id=\"com.sample.ruleflow\" package-name=\"com.sample\" >\n" +
             "\n" +
             "    <header>\n" +
@@ -532,9 +532,9 @@ public class ProcessMarchallingTest extends TestCase {
     public void test6() throws Exception {
         String process = 
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-        	"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+        	"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "  xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "  xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+            "  xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
             "  type=\"RuleFlow\" name=\"ruleflow\" id=\"com.sample.ruleflow\" package-name=\"com.sample\" >\n" +
             "\n" +
             "    <header>\n" +

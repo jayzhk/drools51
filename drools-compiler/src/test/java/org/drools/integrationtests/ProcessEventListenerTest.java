@@ -50,15 +50,15 @@ public class ProcessEventListenerTest extends TestCase{
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.event\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.event\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
     		"    <variables>\n" +
     		"      <variable name=\"MyVar\" >\n" +
-    		"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+    		"        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
     		"        <value>SomeText</value>\n" +
     		"      </variable>\n" +
     		"    </variables>\n" +
@@ -166,13 +166,13 @@ public class ProcessEventListenerTest extends TestCase{
 
         ((WorkingMemory)session).addEventListener(listener);
         ProcessInstance processInstance =
-            session.startProcess("org.com.agfa.hap.drools.event");
+            session.startProcess("org.drools.event");
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals("MyValue", ((VariableScopeInstance)
                                     ((ProcessInstance) processInstance)
                                         .getContextInstance(VariableScope.VARIABLE_SCOPE)).getVariable("MyVar"));
         assertEquals( 26, processEventList.size() );
-        assertEquals( "org.com.agfa.hap.drools.event", ((RuleFlowStartedEvent) processEventList.get(0)).getProcessInstance().getProcessId());
+        assertEquals( "org.drools.event", ((RuleFlowStartedEvent) processEventList.get(0)).getProcessInstance().getProcessId());
 
         assertEquals("MyVar",((RuleFlowVariableChangeEvent) processEventList.get(4)).getVariableId());
         assertEquals("SomeText",((RuleFlowVariableChangeEvent) processEventList.get(4)).getValue());

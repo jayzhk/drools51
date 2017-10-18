@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools.test;
+package org.drools.test;
 
 import org.drools.Cheese;
 
@@ -19,7 +19,7 @@ rule "test MAIN 1"
         // lets also make sure that special chars are converted
         if ( 3 < 4 && 4 > 3 ) {
 			list.add( "MAIN" );
-			com.agfa.hap.drools.setFocus( "agenda group 1" );
+			drools.setFocus( "agenda group 1" );
 		}
 		
 end 

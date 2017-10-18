@@ -20,10 +20,10 @@ public class ProcessRuleFlowGroupTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.ruleset\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.ruleset\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
             "  </header>\n" +
@@ -42,16 +42,16 @@ public class ProcessRuleFlowGroupTest extends TestCase {
             "\n" +
             "</process>");
         Reader source2 = new StringReader(
-            "package org.com.agfa.hap.drools;\n" +
+            "package org.drools;\n" +
             "\n" +
-            "import org.com.agfa.hap.drools.Person;\n" +
-            "import org.com.agfa.hap.drools.runtime.process.ProcessContext;\n" +
+            "import org.drools.Person;\n" +
+            "import org.drools.runtime.process.ProcessContext;\n" +
             "\n" +
             "rule MyRule ruleflow-group \"MyGroup\"\n" +
             "  when\n" +
             "    Person( age > 25 )\n" +
             "  then\n" +
-            "    System.out.println(com.agfa.hap.drools.getContext(ProcessContext.class).getProcessInstance().getProcessName());\n" +
+            "    System.out.println(drools.getContext(ProcessContext.class).getProcessInstance().getProcessName());\n" +
             "end");
         builder.addRuleFlow(source);
         builder.addPackageFromDrl(source2);
@@ -64,7 +64,7 @@ public class ProcessRuleFlowGroupTest extends TestCase {
         workingMemory.insert(person);
         // start process
         RuleFlowProcessInstance processInstance = (RuleFlowProcessInstance)
-            workingMemory.startProcess("org.com.agfa.hap.drools.ruleset");
+            workingMemory.startProcess("org.drools.ruleset");
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         workingMemory.fireAllRules();
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());

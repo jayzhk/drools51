@@ -31,8 +31,8 @@ public class DroolsEventListTest extends TestCase {
     
     public void testOpenQuery() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools.test  \n";
-        str += "import org.com.agfa.hap.drools.Cheese \n";
+        str += "package org.drools.test  \n";
+        str += "import org.drools.Cheese \n";
         str += "query cheeses(String $type1, String $type2) \n";
         str += "    stilton : Cheese(type == $type1, $price : price) \n";
         str += "    cheddar : Cheese(type == $type2, price == stilton.price) \n";

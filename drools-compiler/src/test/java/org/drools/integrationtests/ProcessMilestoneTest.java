@@ -25,14 +25,14 @@ public class ProcessMilestoneTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.milestone\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.milestone\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
             "    <imports>\n" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />\n" +
+            "      <import name=\"org.drools.Person\" />\n" +
             "    </imports>\n" +
             "  </header>\n" +
             "\n" +
@@ -57,7 +57,7 @@ public class ProcessMilestoneTest extends TestCase {
         WorkingMemory workingMemory = ruleBase.newStatefulSession();
         
         ProcessInstance processInstance = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.milestone");
+            workingMemory.startProcess("org.drools.milestone");
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         workingMemory.insert(new Person("Jane Doe", 20));
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
@@ -69,19 +69,19 @@ public class ProcessMilestoneTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.milestone\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.milestone\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
             "    <imports>\n" +
-            "      <import name=\"org.com.agfa.hap.drools.Person\" />\n" +
-            "      <import name=\"org.com.agfa.hap.drools.integrationtests.ProcessMilestoneTest.ProcessUtils\" />\n" +
+            "      <import name=\"org.drools.Person\" />\n" +
+            "      <import name=\"org.drools.integrationtests.ProcessMilestoneTest.ProcessUtils\" />\n" +
             "    </imports>\n" +
             "    <variables>\n" +
             "      <variable name=\"name\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "      </variable>\n" +
             "    </variables>\n" +
             "  </header>\n" +
@@ -89,7 +89,7 @@ public class ProcessMilestoneTest extends TestCase {
             "  <nodes>\n" +
             "    <start id=\"1\" name=\"Start\" />\n" +
             "    <milestone id=\"2\" name=\"Milestone\" >\n" +
-            "      <constraint type=\"rule\" dialect=\"mvel\" >processInstance: org.com.agfa.hap.drools.ruleflow.instance.RuleFlowProcessInstance()\n" +
+            "      <constraint type=\"rule\" dialect=\"mvel\" >processInstance: org.drools.ruleflow.instance.RuleFlowProcessInstance()\n" +
             "Person( name == (ProcessUtils.getValue(processInstance, \"name\")) )</constraint>" +
             "    </milestone>\n" +
             "    <end id=\"3\" name=\"End\" />\n" +
@@ -116,14 +116,14 @@ public class ProcessMilestoneTest extends TestCase {
         Map<String, Object> params = new HashMap<String, Object>();
         params.put("name", john.getName());
         ProcessInstance processInstanceJohn = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.milestone", params);
+            workingMemory.startProcess("org.drools.milestone", params);
         workingMemory.insert(processInstanceJohn);
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstanceJohn.getState());
 
         params = new HashMap<String, Object>();
         params.put("name", jane.getName());
         ProcessInstance processInstanceJane = ( ProcessInstance )
-            workingMemory.startProcess("org.com.agfa.hap.drools.milestone", params);
+            workingMemory.startProcess("org.drools.milestone", params);
         workingMemory.insert(processInstanceJane);
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstanceJane.getState());
         

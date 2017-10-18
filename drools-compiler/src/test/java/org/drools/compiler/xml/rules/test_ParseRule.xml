@@ -6,7 +6,7 @@
          xs:schemaLocation="http://drools.org/drools-5.0 drools.org/drools-5.0.xsd">
 
 	<import name="java.util.HashMap" />
-	<import name="org.com.agfa.hap.drools.*" />
+	<import name="org.drools.*" />
 
 	<global identifier="x" type="com.sample.X" />
 	<global identifier="yada" type="com.sample.Yada" />
@@ -120,7 +120,7 @@
                     <return-value-restriction evaluator="==" >a4 + 1</return-value-restriction>
                     <variable-restriction evaluator="&gt;" identifier="a4" />
                     <qualified-identifier-restriction evaluator="==">
-                        org.com.agfa.hap.drools.Bar.BAR_ENUM_VALUE
+                        org.drools.Bar.BAR_ENUM_VALUE
                     </qualified-identifier-restriction>
                 </or-restriction-connective>
             </field-constraint>

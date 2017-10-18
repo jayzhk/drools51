@@ -368,7 +368,7 @@ public class MultithreadTest extends TestCase {
         final String KEY = "REPLACE";
         final int SIZE = 100;
         final Package[] pkgs = new Package[SIZE];
-        final String DRL = "package org.com.agfa.hap.drools\n" + "    no-loop true\n" + "    dialect \"java\"\n" + "rule \"" + KEY + "\"\n" + "salience 1\n" + "when\n" + "    $fact:Cheese(price == " + KEY + ", oldPrice not in (11,5))\n" + // thread-lock
+        final String DRL = "package org.drools\n" + "    no-loop true\n" + "    dialect \"java\"\n" + "rule \"" + KEY + "\"\n" + "salience 1\n" + "when\n" + "    $fact:Cheese(price == " + KEY + ", oldPrice not in (11,5))\n" + // thread-lock
                            "then\n" + "    //$fact.excludeProduct(" + KEY + ", 1, null, null);\n" + "end\n";
         System.out.print( "Building " + pkgs.length + " packages" );
         for ( int i = 0; i < pkgs.length; i++ ) {
@@ -398,7 +398,7 @@ public class MultithreadTest extends TestCase {
     
     public void testEventExpiration() {
         String rule = 
-            "package org.com.agfa.hap.drools\n" +
+            "package org.drools\n" +
             "declare StockTick @role(event) @expires(0s) end\n" +
             "rule test no-loop true\n" + 
             "when\n" +

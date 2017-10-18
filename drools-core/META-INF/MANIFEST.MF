@@ -1,15 +1,193 @@
 Manifest-Version: 1.0
 Archiver-Version: Plexus Archiver
-Bnd-LastModified: 1508250040499
+Bnd-LastModified: 1508295518270
 Build-Jdk: 1.8.0_65
 Built-By: AXIGI
-Bundle-Activator: org.com.agfa.hap.drools.osgi.core.Activator
+Bundle-Activator: org.drools.osgi.core.Activator
 Bundle-ManifestVersion: 2
 Bundle-Name: Drools :: Core
 Bundle-SymbolicName: org.drools.core
 Bundle-Version: 5.1.0
 Created-By: Apache Maven Bundle Plugin
 DynamicImport-Package: *
+Export-Package: org.drools.reteoo;uses:="org.drools,org.drools.base,org.
+ drools.common,org.drools.concurrent,org.drools.core.util,org.drools.eve
+ nt,org.drools.facttemplates,org.drools.marshalling.impl,org.drools.rete
+ oo.builder,org.drools.reteoo.compiled,org.drools.rule,org.drools.spi";v
+ ersion="5.1.0",org.drools.reteoo.builder;uses:="org.drools.common,org.d
+ rools.reteoo,org.drools.rule,org.drools.spi,org.drools.time";version="5
+ .1.0",org.drools.reteoo.compiled;uses:="org.drools.base,org.drools.comm
+ on,org.drools.reteoo";version="5.1.0",org.drools;version="5.1.0";uses:=
+ "org.drools.command,org.drools.common,org.drools.concurrent,org.drools.
+ event,org.drools.process.core,org.drools.process.instance,org.drools.pr
+ ocess.instance.event,org.drools.process.instance.impl,org.drools.proces
+ s.instance.timer,org.drools.rule,org.drools.spi,org.drools.time,org.dro
+ ols.workflow.instance.impl",org.drools.agent;version="5.1.0";uses:="org
+ .drools,org.drools.agent.impl,org.drools.definitions.impl,org.drools.ru
+ le",org.drools.agent.impl;uses:="org.drools,org.drools.agent,org.drools
+ .core.util,org.drools.definitions.impl,org.drools.rule";version="5.1.0"
+ ,org.drools.audit;uses:="org.drools,org.drools.audit.event,org.drools.e
+ vent";version="5.1.0",org.drools.audit.event;version="5.1.0",org.drools
+ .base;uses:="org.drools,org.drools.base.evaluators,org.drools.common,or
+ g.drools.core.util.asm,org.drools.event,org.drools.reteoo,org.drools.ru
+ le,org.drools.spi,org.drools.time,org.drools.type,org.mvel2.asm,org.mve
+ l2.ast,org.mvel2.integration";version="5.1.0",org.drools.base.accumulat
+ ors;uses:="org.drools,org.drools.base.mvel,org.drools.common,org.drools
+ .rule,org.drools.spi";version="5.1.0",org.drools.base.dataproviders;use
+ s:="org.drools,org.drools.base.mvel,org.drools.rule,org.drools.spi";ver
+ sion="5.1.0",org.drools.base.evaluators;uses:="org.drools.base,org.droo
+ ls.common,org.drools.rule,org.drools.spi,org.drools.time";version="5.1.
+ 0",org.drools.base.extractors;uses:="org.drools.base,org.drools.common,
+ org.drools.spi";version="5.1.0",org.drools.base.field;uses:="org.drools
+ .spi";version="5.1.0",org.drools.base.mvel;uses:="org.drools,org.drools
+ .common,org.drools.rule,org.drools.spi,org.mvel2,org.mvel2.integration,
+ org.mvel2.integration.impl";version="5.1.0",org.drools.builder.conf.imp
+ l;uses:="com.sun.tools.xjc";version="5.1.0",org.drools.command;version=
+ "5.1.0";uses:="org.drools,org.drools.command.impl,org.drools.time",org.
+ drools.command.assertion;uses:="org.drools.command,org.drools.command.i
+ mpl";version="5.1.0",org.drools.command.builder;uses:="org.drools.comma
+ nd,org.drools.command.impl";version="5.1.0",org.drools.command.impl;use
+ s:="org.drools,org.drools.command,org.drools.time";version="5.1.0",org.
+ drools.command.runtime;uses:="javax.xml.bind.annotation,org.drools,org.
+ drools.command,org.drools.command.impl,org.drools.command.runtime.proce
+ ss,org.drools.command.runtime.rule";version="5.1.0",org.drools.command.
+ runtime.process;uses:="javax.xml.bind.annotation,org.drools.command,org
+ .drools.command.impl,org.drools.process.instance";version="5.1.0",org.d
+ rools.command.runtime.rule;uses:="javax.xml.bind.annotation,javax.xml.b
+ ind.annotation.adapters,org.drools.command,org.drools.command.impl,org.
+ drools.reteoo,org.drools.xml.jaxb.util";version="5.1.0",org.drools.comm
+ on;uses:="javax.xml.bind.annotation,org.drools,org.drools.base,org.droo
+ ls.concurrent,org.drools.core.util,org.drools.event,org.drools.marshall
+ ing.impl,org.drools.process.core,org.drools.process.instance,org.drools
+ .process.instance.event,org.drools.process.instance.timer,org.drools.re
+ teoo,org.drools.rule,org.drools.runtime.impl,org.drools.spi,org.drools.
+ time,org.drools.type";version="5.1.0",org.drools.concurrent;uses:="org.
+ drools,org.drools.spi";version="5.1.0",org.drools.conflict;uses:="org.d
+ rools.spi";version="5.1.0",org.drools.core.util;uses:="org.drools,org.d
+ rools.common,org.drools.reteoo,org.drools.rule,org.drools.spi,org.drool
+ s.type";version="5.1.0",org.drools.core.util.asm;uses:="org.mvel2.asm,o
+ rg.mvel2.asm.util";version="5.1.0",org.drools.core.util.debug;uses:="or
+ g.drools,org.drools.common,org.drools.reteoo,org.drools.rule,org.mvel2.
+ templates";version="5.1.0",org.drools.definitions.impl;uses:="org.drool
+ s.rule";version="5.1.0",org.drools.definitions.rule.impl;uses:="org.dro
+ ols.rule";version="5.1.0",org.drools.event;version="5.1.0";uses:="org.d
+ rools,org.drools.agent,org.drools.common,org.drools.process.instance,or
+ g.drools.rule,org.drools.spi",org.drools.event.knowlegebase.impl;uses:=
+ "org.drools";version="5.1.0",org.drools.event.process.impl;uses:="org.d
+ rools,org.drools.event";version="5.1.0",org.drools.event.rule.impl;uses
+ :="org.drools,org.drools.event";version="5.1.0",org.drools.factmodel;us
+ es:="org.drools.base";version="5.1.0",org.drools.facttemplates;uses:="o
+ rg.drools.base,org.drools.common,org.drools.rule,org.drools.spi";versio
+ n="5.1.0",org.drools.impl;uses:="org.drools,org.drools.agent,org.drools
+ .command,org.drools.common,org.drools.event,org.drools.reteoo,org.drool
+ s.rule,org.drools.spi,org.drools.time";version="5.1.0",org.drools.io.im
+ pl;uses:="org.drools,org.drools.io.internal";version="5.1.0",org.drools
+ .io.internal;version="5.1.0",org.drools.management;version="5.1.0";uses
+ :="javax.management,javax.management.openmbean,org.drools,org.drools.co
+ mmon,org.drools.event,org.drools.reteoo",org.drools.marshalling.impl;us
+ es:="org.drools,org.drools.common,org.drools.concurrent,org.drools.core
+ .util,org.drools.process.instance,org.drools.process.instance.timer,org
+ .drools.reteoo,org.drools.rule,org.drools.spi,org.drools.workflow.insta
+ nce,org.drools.workflow.instance.impl";version="5.1.0",org.drools.osgi.
+ core;uses:="org.osgi.framework";version="5.1.0",org.drools.process.core
+ ;uses:="org.drools.process.core.datatype";version="5.1.0",org.drools.pr
+ ocess.core.context;uses:="org.drools.process.core";version="5.1.0",org.
+ drools.process.core.context.exception;uses:="org.drools.process.core,or
+ g.drools.process.core.context,org.drools.workflow.core";version="5.1.0"
+ ,org.drools.process.core.context.exclusive;uses:="org.drools.process.co
+ re,org.drools.process.core.context";version="5.1.0",org.drools.process.
+ core.context.swimlane;uses:="org.drools.process.core,org.drools.process
+ .core.context";version="5.1.0",org.drools.process.core.context.variable
+ ;uses:="org.drools.process.core,org.drools.process.core.context,org.dro
+ ols.process.core.datatype";version="5.1.0",org.drools.process.core.data
+ type;version="5.1.0",org.drools.process.core.datatype.impl;uses:="org.d
+ rools.process.core.datatype";version="5.1.0",org.drools.process.core.da
+ tatype.impl.type;uses:="org.drools.process.core,org.drools.process.core
+ .datatype";version="5.1.0",org.drools.process.core.event;version="5.1.0
+ ",org.drools.process.core.impl;uses:="org.drools.process.core,org.drool
+ s.process.core.datatype";version="5.1.0",org.drools.process.core.timer;
+ version="5.1.0",org.drools.process.core.validation;version="5.1.0",org.
+ drools.process.core.validation.impl;uses:="org.drools.process.core.vali
+ dation";version="5.1.0",org.drools.process.instance;uses:="org.drools,o
+ rg.drools.common,org.drools.process.core";version="5.1.0",org.drools.pr
+ ocess.instance.context;uses:="org.drools.process.core,org.drools.proces
+ s.instance";version="5.1.0",org.drools.process.instance.context.excepti
+ on;uses:="org.drools.process.core.context.exception,org.drools.process.
+ instance.context";version="5.1.0",org.drools.process.instance.context.e
+ xclusive;uses:="org.drools.process.instance.context";version="5.1.0",or
+ g.drools.process.instance.context.swimlane;uses:="org.drools.process.co
+ re.context.swimlane,org.drools.process.instance.context";version="5.1.0
+ ",org.drools.process.instance.context.variable;uses:="org.drools.proces
+ s.core.context.variable,org.drools.process.instance,org.drools.process.
+ instance.context";version="5.1.0",org.drools.process.instance.event;use
+ s:="org.drools,org.drools.common,org.drools.marshalling.impl";version="
+ 5.1.0",org.drools.process.instance.impl;uses:="org.drools,org.drools.co
+ mmon,org.drools.process.core,org.drools.process.instance";version="5.1.
+ 0",org.drools.process.instance.impl.demo;uses:="javax.swing,org.drools.
+ process.instance";version="5.1.0",org.drools.process.instance.impl.fact
+ ory;uses:="org.drools.process.core,org.drools.process.instance,org.droo
+ ls.process.instance.impl";version="5.1.0",org.drools.process.instance.i
+ mpl.humantask;uses:="javax.swing";version="5.1.0",org.drools.process.in
+ stance.timer;uses:="org.drools,org.drools.process.instance,org.drools.t
+ ime";version="5.1.0",org.drools.rule;uses:="org.drools,org.drools.base,
+ org.drools.base.mvel,org.drools.common,org.drools.core.util,org.drools.
+ factmodel,org.drools.facttemplates,org.drools.reteoo,org.drools.spi,org
+ .drools.time,org.drools.time.impl,org.mvel2.ast,org.mvel2.integration,o
+ rg.mvel2.integration.impl";version="5.1.0",org.drools.ruleflow.core;use
+ s:="org.drools.process.core.context.exception,org.drools.process.core.c
+ ontext.swimlane,org.drools.process.core.context.variable,org.drools.pro
+ cess.core.datatype,org.drools.ruleflow.core.factory,org.drools.workflow
+ .core,org.drools.workflow.core.impl,org.drools.workflow.core.node";vers
+ ion="5.1.0",org.drools.ruleflow.core.factory;uses:="org.drools.process.
+ core.context.exception,org.drools.process.core.datatype,org.drools.proc
+ ess.core.event,org.drools.ruleflow.core,org.drools.workflow.core,org.dr
+ ools.workflow.core.node";version="5.1.0",org.drools.ruleflow.core.valid
+ ation;uses:="org.drools.process.core.validation,org.drools.ruleflow.cor
+ e";version="5.1.0",org.drools.ruleflow.instance;uses:="org.drools.proce
+ ss.instance,org.drools.ruleflow.core,org.drools.workflow.instance.impl"
+ ;version="5.1.0",org.drools.runtime.help.impl;uses:="com.thoughtworks.x
+ stream,com.thoughtworks.xstream.converters,com.thoughtworks.xstream.con
+ verters.collections,com.thoughtworks.xstream.converters.reflection,com.
+ thoughtworks.xstream.io,com.thoughtworks.xstream.mapper";version="5.1.0
+ ",org.drools.runtime.impl;uses:="javax.xml.bind.annotation,javax.xml.bi
+ nd.annotation.adapters,org.drools.xml.jaxb.util";version="5.1.0",org.dr
+ ools.runtime.rule.impl;uses:="javax.xml.bind.annotation,javax.xml.bind.
+ annotation.adapters,org.drools,org.drools.base,org.drools.common,org.dr
+ ools.reteoo,org.drools.rule,org.drools.spi";version="5.1.0",org.drools.
+ server;uses:="org.drools";version="5.1.0",org.drools.spi;uses:="org.dro
+ ols,org.drools.base,org.drools.common,org.drools.concurrent,org.drools.
+ core.util,org.drools.event,org.drools.process.instance,org.drools.reteo
+ o,org.drools.rule,org.drools.time";version="5.1.0",org.drools.time;vers
+ ion="5.1.0";uses:="org.drools,org.drools.rule",org.drools.time.impl;use
+ s:="org.drools.common,org.drools.time";version="5.1.0",org.drools.type;
+ version="5.1.0",org.drools.util.codec;version="5.1.0",org.drools.workfl
+ ow.core;uses:="org.drools.process.core,org.drools.spi";version="5.1.0",
+ org.drools.workflow.core.impl;uses:="org.drools.process.core,org.drools
+ .process.core.impl,org.drools.workflow.core";version="5.1.0",org.drools
+ .workflow.core.node;uses:="org.drools.process.core,org.drools.process.c
+ ore.context.variable,org.drools.process.core.datatype,org.drools.proces
+ s.core.event,org.drools.process.core.timer,org.drools.workflow.core,org
+ .drools.workflow.core.impl";version="5.1.0",org.drools.workflow.instanc
+ e;uses:="org.drools,org.drools.process.instance";version="5.1.0",org.dr
+ ools.workflow.instance.context;uses:="org.drools.process.core,org.drool
+ s.process.instance,org.drools.process.instance.impl,org.drools.workflow
+ .instance";version="5.1.0",org.drools.workflow.instance.impl;uses:="org
+ .drools.process.core,org.drools.process.instance,org.drools.process.ins
+ tance.context.variable,org.drools.process.instance.impl,org.drools.spi,
+ org.drools.workflow.core,org.drools.workflow.core.impl,org.drools.workf
+ low.instance,org.drools.workflow.instance.node,org.mvel2.integration,or
+ g.mvel2.integration.impl";version="5.1.0",org.drools.workflow.instance.
+ impl.factory;uses:="org.drools.workflow.instance,org.drools.workflow.in
+ stance.impl";version="5.1.0",org.drools.workflow.instance.node;uses:="o
+ rg.drools,org.drools.event,org.drools.process.core,org.drools.process.c
+ ore.timer,org.drools.process.instance,org.drools.process.instance.conte
+ xt.exception,org.drools.process.instance.timer,org.drools.workflow.core
+ .node,org.drools.workflow.instance,org.drools.workflow.instance.impl";v
+ ersion="5.1.0",org.drools.xml;uses:="javax.xml.parsers,org.drools,org.w
+ 3c.dom,org.xml.sax,org.xml.sax.helpers";version="5.1.0",org.drools.xml.
+ changeset;uses:="org.drools.xml,org.xml.sax";version="5.1.0",org.drools
+ .xml.jaxb.util;uses:="javax.xml.bind,javax.xml.bind.annotation,javax.xm
+ l.bind.annotation.adapters";version="5.1.0"
 Import-Package: com.sun.tools.xjc,com.thoughtworks.xstream;resolution:=o
  ptional,com.thoughtworks.xstream.annotations;resolution:=optional,com.t
  houghtworks.xstream.converters;resolution:=optional,com.thoughtworks.xs
@@ -21,21 +199,14 @@ Import-Package: com.sun.tools.xjc,com.thoughtworks.xstream;resolution:=o
  mapper;resolution:=optional,javax.management,javax.management.openmbean
  ,javax.swing,javax.swing.border,javax.swing.event,javax.xml.bind,javax.
  xml.bind.annotation,javax.xml.bind.annotation.adapters,javax.xml.parser
- s,org.drools.builder,org.drools.builder.conf,org.drools.conf,org.drools
- .definition,org.drools.definition.process,org.drools.definition.rule,or
- g.drools.definition.type,org.drools.event.io,org.drools.event.knowledge
- agent,org.drools.event.knowledgebase,org.drools.event.process,org.drool
- s.event.rule,org.drools.io,org.drools.logger,org.drools.marshalling,org
- .drools.runtime,org.drools.runtime.conf,org.drools.runtime.help,org.dro
- ols.runtime.process,org.drools.runtime.rule,org.drools.util,org.mvel2;v
- ersion="[2.0,3)",org.mvel2.asm;version="[2.0,3)",org.mvel2.asm.util;ver
- sion="[2.0,3)",org.mvel2.ast;version="[2.0,3)",org.mvel2.compiler;versi
- on="[2.0,3)",org.mvel2.debug;version="[2.0,3)",org.mvel2.integration;ve
- rsion="[2.0,3)",org.mvel2.integration.impl;version="[2.0,3)",org.mvel2.
- optimizers;version="[2.0,3)",org.mvel2.templates;version="[2.0,3)",org.
- mvel2.util;version="[2.0,3)",org.osgi.framework;version="[1.5,2)",org.w
- 3c.dom,org.xml.sax,org.xml.sax.helpers,org.osgi.util.tracker;version="[
- 1.4,2)"
+ s,org.mvel2;version="[2.0,3)",org.mvel2.asm;version="[2.0,3)",org.mvel2
+ .asm.util;version="[2.0,3)",org.mvel2.ast;version="[2.0,3)",org.mvel2.c
+ ompiler;version="[2.0,3)",org.mvel2.debug;version="[2.0,3)",org.mvel2.i
+ ntegration;version="[2.0,3)",org.mvel2.integration.impl;version="[2.0,3
+ )",org.mvel2.optimizers;version="[2.0,3)",org.mvel2.templates;version="
+ [2.0,3)",org.mvel2.util;version="[2.0,3)",org.osgi.framework;version="[
+ 1.5,2)",org.w3c.dom,org.xml.sax,org.xml.sax.helpers,org.osgi.util.track
+ er;version="[1.4,2)"
 Include-Resource: META-INF/drools.default.rulebase.conf=src/main/resourc
  es/META-INF/drools.default.rulebase.conf,META-INF/MANIFEST.MF=src/main/
  resources/META-INF/MANIFEST.MF,META-INF/WorkDefinitions.conf=src/main/r
@@ -43,11 +214,11 @@ Include-Resource: META-INF/drools.default.rulebase.conf=src/main/resourc
  /overview.html
 Originally-Created-By: Apache Maven
 Private-Package: org.drools,org.drools.agent,org.drools.agent.impl,org.d
- rools.audit,org.drools.audit.event,org.drools.base,org.drools.base.accu
+ rools.audit.event,org.drools.audit,org.drools.base,org.drools.base.accu
  mulators,org.drools.base.dataproviders,org.drools.base.evaluators,org.d
  rools.base.extractors,org.drools.base.field,org.drools.base.mvel,org.dr
- ools.builder.conf.impl,org.drools.command,org.drools.command.assertion,
- org.drools.command.builder,org.drools.command.impl,org.drools.command.r
+ ools.builder.conf.impl,org.drools.command.assertion,org.drools.command.
+ builder,org.drools.command,org.drools.command.impl,org.drools.command.r
  untime,org.drools.command.runtime.process,org.drools.command.runtime.ru
  le,org.drools.common,org.drools.concurrent,org.drools.conflict,org.droo
  ls.core.util,org.drools.core.util.asm,org.drools.core.util.debug,org.dr
@@ -56,13 +227,13 @@ Private-Package: org.drools,org.drools.agent,org.drools.agent.impl,org.d
  rools.event.rule.impl,org.drools.factmodel,org.drools.facttemplates,org
  .drools.impl,org.drools.io.impl,org.drools.io.internal,org.drools.manag
  ement,org.drools.marshalling.impl,org.drools.osgi.core,org.drools.proce
- ss.core,org.drools.process.core.context,org.drools.process.core.context
- .exception,org.drools.process.core.context.exclusive,org.drools.process
- .core.context.swimlane,org.drools.process.core.context.variable,org.dro
+ ss.core.context,org.drools.process.core.context.exception,org.drools.pr
+ ocess.core.context.exclusive,org.drools.process.core.context.swimlane,o
+ rg.drools.process.core.context.variable,org.drools.process.core,org.dro
  ols.process.core.datatype,org.drools.process.core.datatype.impl,org.dro
  ols.process.core.datatype.impl.type,org.drools.process.core.event,org.d
  rools.process.core.impl,org.drools.process.core.timer,org.drools.proces
- s.core.validation,org.drools.process.core.validation.impl,org.drools.pr
+ s.core.validation.impl,org.drools.process.core.validation,org.drools.pr
  ocess.instance,org.drools.process.instance.context,org.drools.process.i
  nstance.context.exception,org.drools.process.instance.context.exclusive
  ,org.drools.process.instance.context.swimlane,org.drools.process.instan
@@ -70,17 +241,17 @@ Private-Package: org.drools,org.drools.agent,org.drools.agent.impl,org.d
  s.instance.impl,org.drools.process.instance.impl.demo,org.drools.proces
  s.instance.impl.factory,org.drools.process.instance.impl.humantask,org.
  drools.process.instance.timer,org.drools.reteoo,org.drools.reteoo.build
- er,org.drools.reteoo.compiled,org.drools.rule,org.drools.ruleflow.core,
- org.drools.ruleflow.core.factory,org.drools.ruleflow.core.validation,or
+ er,org.drools.reteoo.compiled,org.drools.rule,org.drools.ruleflow.core.
+ factory,org.drools.ruleflow.core,org.drools.ruleflow.core.validation,or
  g.drools.ruleflow.instance,org.drools.runtime.help.impl,org.drools.runt
  ime.impl,org.drools.runtime.rule.impl,org.drools.server,org.drools.spi,
- org.drools.time,org.drools.time.impl,org.drools.type,org.drools.util.co
+ org.drools.time.impl,org.drools.time,org.drools.type,org.drools.util.co
  dec,org.drools.workflow.core,org.drools.workflow.core.impl,org.drools.w
- orkflow.core.node,org.drools.workflow.instance,org.drools.workflow.inst
- ance.context,org.drools.workflow.instance.impl,org.drools.workflow.inst
- ance.impl.factory,org.drools.workflow.instance.node,org.drools.xml,org.
+ orkflow.core.node,org.drools.workflow.instance.context,org.drools.workf
+ low.instance.impl,org.drools.workflow.instance.impl.factory,org.drools.
+ workflow.instance.node,org.drools.workflow.instance,org.drools.xml,org.
  drools.xml.changeset,org.drools.xml.jaxb.util
-Require-Bundle: org.com.agfa.hap.drools.api;visibility:=reexport;bundle-
- version="5.1.0"
+Require-Bundle: org.drools.api;visibility:=reexport;bundle-version="5.1.
+ 0"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"
 Tool: Bnd-3.3.0.201609221906

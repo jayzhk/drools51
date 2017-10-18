@@ -266,12 +266,12 @@ public class XmlPackageReaderTest extends TestCase {
                       imports.size() );
         assertEquals( "java.util.HashMap",
                       ((ImportDescr) imports.get( 0 )).getTarget() );
-        assertEquals( "org.com.agfa.hap.drools.*",
+        assertEquals( "org.drools.*",
                       ((ImportDescr) imports.get( 1 )).getTarget() );
         
         final List functionImport = packageDescr.getFunctionImports();
         
-        assertEquals("org.com.agfa.hap.drools.function",
+        assertEquals("org.drools.function",
                      ((FunctionImportDescr) functionImport.get( 0 )).getTarget() );
     }
 
@@ -288,7 +288,7 @@ public class XmlPackageReaderTest extends TestCase {
                       imports.size() );
         assertEquals( "java.util.HashMap",
                       ((ImportDescr) imports.get( 0 )).getTarget() );
-        assertEquals( "org.com.agfa.hap.drools.*",
+        assertEquals( "org.drools.*",
                       ((ImportDescr) imports.get( 1 )).getTarget() );
 
         final List globals = packageDescr.getGlobals();
@@ -319,7 +319,7 @@ public class XmlPackageReaderTest extends TestCase {
                       imports.size() );
         assertEquals( "java.util.HashMap",
                       ((ImportDescr) imports.get( 0 )).getTarget() );
-        assertEquals( "org.com.agfa.hap.drools.*",
+        assertEquals( "org.drools.*",
                       ((ImportDescr) imports.get( 1 )).getTarget() );
 
         final List globals = packageDescr.getGlobals();
@@ -366,7 +366,7 @@ public class XmlPackageReaderTest extends TestCase {
                       imports.size() );
         assertEquals( "java.util.HashMap",
                       ((ImportDescr) imports.get( 0 )).getTarget() );
-        assertEquals( "org.com.agfa.hap.drools.*",
+        assertEquals( "org.drools.*",
                       ((ImportDescr) imports.get( 1 )).getTarget() );
 
         final List globals = packageDescr.getGlobals();
@@ -435,7 +435,7 @@ public class XmlPackageReaderTest extends TestCase {
                       imports.size() );
         assertEquals( "java.util.HashMap",
                       ((ImportDescr) imports.get( 0 )).getTarget() );
-        assertEquals( "org.com.agfa.hap.drools.*",
+        assertEquals( "org.drools.*",
                       ((ImportDescr) imports.get( 1 )).getTarget() );
 
         final List globals = packageDescr.getGlobals();
@@ -574,7 +574,7 @@ public class XmlPackageReaderTest extends TestCase {
                       imports.size() );
         assertEquals( "java.util.HashMap",
                       ((ImportDescr) imports.get( 0 )).getTarget() );
-        assertEquals( "org.com.agfa.hap.drools.*",
+        assertEquals( "org.drools.*",
                       ((ImportDescr) imports.get( 1 )).getTarget() );
 
         final List globals = packageDescr.getGlobals();
@@ -630,7 +630,7 @@ public class XmlPackageReaderTest extends TestCase {
                       imports.size() );
         assertEquals( "java.util.HashMap",
                       ((ImportDescr) imports.get( 0 )).getTarget() );
-        assertEquals( "org.com.agfa.hap.drools.*",
+        assertEquals( "org.drools.*",
                       ((ImportDescr) imports.get( 1 )).getTarget() );
 
         final List globals = packageDescr.getGlobals();

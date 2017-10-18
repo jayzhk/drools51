@@ -111,11 +111,11 @@ public class QueryTest extends TestCase {
         assertEquals( 1,
                       results.size() );
 
-        assertNotNull( ruleBase.getPackage( "org.com.agfa.hap.drools.test" ).getRule( "simple query" ) );
+        assertNotNull( ruleBase.getPackage( "org.drools.test" ).getRule( "simple query" ) );
         
-        ruleBase.removeQuery( "org.com.agfa.hap.drools.test", "simple query" );
+        ruleBase.removeQuery( "org.drools.test", "simple query" );
        
-        assertNull( ruleBase.getPackage( "org.com.agfa.hap.drools.test" ).getRule( "simple query" ) );
+        assertNull( ruleBase.getPackage( "org.drools.test" ).getRule( "simple query" ) );
        
         results = session.getQueryResults( "simple query" );
         assertEquals( 0,
@@ -245,8 +245,8 @@ public class QueryTest extends TestCase {
 
     public void testQueryWithMultipleResultsOnKnowledgeApi() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools.test  \n";
-        str += "import org.com.agfa.hap.drools.Cheese \n";
+        str += "package org.drools.test  \n";
+        str += "import org.drools.Cheese \n";
         str += "query cheeses \n";
         str += "    stilton : Cheese(type == 'stilton') \n";
         str += "    cheddar : Cheese(type == 'cheddar', price == stilton.price) \n";
@@ -548,8 +548,8 @@ public class QueryTest extends TestCase {
     
     public void testQueriesWithVariableUnification() throws Exception {
             String str = "";
-            str += "package org.com.agfa.hap.drools.test  \n";
-            str += "import org.com.agfa.hap.drools.Person \n";
+            str += "package org.drools.test  \n";
+            str += "import org.drools.Person \n";
             str += "query peeps( String $name, String $likes, int $age ) \n";
             str += "    $p : Person(name == $name, likes == $likes, age == $age) \n";
             str += "end\n";
@@ -580,8 +580,8 @@ public class QueryTest extends TestCase {
             ksession.insert( p4 );
 
 
-            //org.com.agfa.hap.drools.runtime.rule.QueryResults results = ksession.getQueryResults( "peeps", new Object[] {"darth", "stilton", 100} );
-            //org.com.agfa.hap.drools.runtime.rule.QueryResults results = ksession.getQueryResults( "peeps", new Object[] { new Variable(), "stilton", 300 } );
+            //org.drools.runtime.rule.QueryResults results = ksession.getQueryResults( "peeps", new Object[] {"darth", "stilton", 100} );
+            //org.drools.runtime.rule.QueryResults results = ksession.getQueryResults( "peeps", new Object[] { new Variable(), "stilton", 300 } );
             org.drools.runtime.rule.QueryResults results = ksession.getQueryResults( "peeps", new Object[] { new Variable(),new Variable(), 300 } );
             System.out.println( Arrays.asList( results.getIdentifiers() ) );
 //            assertEquals( 4,
@@ -597,7 +597,7 @@ public class QueryTest extends TestCase {
             
             
 //            Set newSet = new HashSet();
-//            for ( org.com.agfa.hap.drools.runtime.rule.QueryResultsRow result : results ) {
+//            for ( org.drools.runtime.rule.QueryResultsRow result : results ) {
 //                list = new ArrayList();
 //                list.add( result.get( "stilton" ) );
 //                list.add( result.get( "cheddar" ) );
@@ -612,7 +612,7 @@ public class QueryTest extends TestCase {
 //            assertEquals( 2,
 //                          flatResults.getIdentifiers().length );
 //            newSet = new HashSet();
-//            for ( org.com.agfa.hap.drools.runtime.rule.QueryResultsRow result : flatResults ) {
+//            for ( org.drools.runtime.rule.QueryResultsRow result : flatResults ) {
 //                list = new ArrayList();
 //                list.add( result.get( "stilton" ) );
 //                list.add( result.get( "cheddar" ) );
@@ -624,8 +624,8 @@ public class QueryTest extends TestCase {
     
     public void testOpenQuery() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools.test  \n";
-        str += "import org.com.agfa.hap.drools.Cheese \n";
+        str += "package org.drools.test  \n";
+        str += "import org.drools.Cheese \n";
         str += "query cheeses(String $type1, String $type2) \n";
         str += "    stilton : Cheese(type == $type1, $price : price) \n";
         str += "    cheddar : Cheese(type == $type2, price == stilton.price) \n";
@@ -763,7 +763,7 @@ public class QueryTest extends TestCase {
     
     public void runQueryListenerTest( QueryListenerOption option ) {
         String str = "";
-        str += "package org.com.agfa.hap.drools\n";
+        str += "package org.drools\n";
         str += "query cheeses(String $type) \n";
         str += "    $cheese : Cheese(type == $type) \n";
         str += "end\n";

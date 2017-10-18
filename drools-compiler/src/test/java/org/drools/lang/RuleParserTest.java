@@ -344,7 +344,7 @@ public class RuleParserTest extends TestCase {
         // the following assertion.
         assertFalse( parser.hasErrors() );
 
-        assertEquals( "br.com.auster.com.agfa.hap.drools.sample",
+        assertEquals( "br.com.auster.drools.sample",
                       pkg.getName() );
         assertEquals( 1,
                       pkg.getRules().size() );
@@ -3395,7 +3395,7 @@ public class RuleParserTest extends TestCase {
                        "semicolon.drl" );
 
         final PackageDescr pkg = this.walker.getPackageDescr();
-        assertEquals( "org.com.agfa.hap.drools",
+        assertEquals( "org.drools",
                       pkg.getName() );
         assertEquals( 1,
                       pkg.getGlobals().size() );
@@ -3421,7 +3421,7 @@ public class RuleParserTest extends TestCase {
                        "eval_parsing.drl" );
 
         final PackageDescr pkg = this.walker.getPackageDescr();
-        assertEquals( "org.com.agfa.hap.drools",
+        assertEquals( "org.drools",
                       pkg.getName() );
         assertEquals( 1,
                       pkg.getRules().size() );
@@ -3538,13 +3538,13 @@ public class RuleParserTest extends TestCase {
     }
 
     public void testAccessorPaths() throws Exception {
-        final String text = "org   .   com.agfa.hap.drools/*comment*/\t  .Message( text not matches $c#comment\n. property )\n";
+        final String text = "org   .   drools/*comment*/\t  .Message( text not matches $c#comment\n. property )\n";
 
         PatternDescr pattern = (PatternDescr) parse( "lhs_pattern",
                                                      "lhs_pattern",
                                                      text );
 
-        assertEquals( "org.com.agfa.hap.drools.Message",
+        assertEquals( "org.drools.Message",
                       pattern.getObjectType() );
 
         FieldConstraintDescr fieldConstr = (FieldConstraintDescr) pattern.getConstraint().getDescrs().get( 0 );
@@ -3838,7 +3838,7 @@ public class RuleParserTest extends TestCase {
         final TypeDeclarationDescr descr = declarations.get( 0 );
         assertEquals( "event",
                       descr.getMetaAttribute( "role" ) );
-        assertEquals( "org.com.agfa.hap.drools.events.Call",
+        assertEquals( "org.drools.events.Call",
                       descr.getMetaAttribute( "class" ) );
         assertEquals( "duration",
                       descr.getMetaAttribute( "duration" ) );
@@ -4197,7 +4197,7 @@ public class RuleParserTest extends TestCase {
             Object ruleReturn = ruleName.invoke( parser );
 
             if ( !parser.hasErrors() ) {
-                Class _return = Class.forName( "org.com.agfa.hap.drools.lang.DRLParser" + "$" + testRuleName + "_return" );
+                Class _return = Class.forName( "org.drools.lang.DRLParser" + "$" + testRuleName + "_return" );
                 Method returnName = _return.getMethod( "getTree" );
                 DroolsTree tree = (DroolsTree) returnName.invoke( ruleReturn );
 
@@ -4218,10 +4218,10 @@ public class RuleParserTest extends TestCase {
                 /** If return object is instanceof AST, get the toStringTree */
                 if ( treeRuleReturn.toString().indexOf( testTreeRuleName + "_return" ) > 0 ) {
                     try { // NullPointerException may happen here...
-                        Class _treeReturn = Class.forName( "org.com.agfa.hap.drools.lang.DescrBuilderTree" + "$" + testTreeRuleName + "_return" );
+                        Class _treeReturn = Class.forName( "org.drools.lang.DescrBuilderTree" + "$" + testTreeRuleName + "_return" );
                         Field[] fields = _treeReturn.getDeclaredFields();
                         for ( Field field : fields ) {
-                            if ( field.getType().getName().contains( "org.com.agfa.hap.drools.lang.descr." ) ) {
+                            if ( field.getType().getName().contains( "org.drools.lang.descr." ) ) {
                                 return field.get( treeRuleReturn );
                             }
                         }

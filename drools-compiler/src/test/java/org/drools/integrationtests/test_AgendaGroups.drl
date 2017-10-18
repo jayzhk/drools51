@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools.test;
+package org.drools.test;
 
 import org.drools.Cheese;
 
@@ -10,7 +10,7 @@ rule "test MAIN 1"
     	Cheese( )
     then
 		list.add( "MAIN" );
-		com.agfa.hap.drools.setFocus( "group1" );
+		drools.setFocus( "group1" );
 end 
 
 rule "test MAIN 2"
@@ -53,7 +53,7 @@ rule "test group3 1"
     	Cheese( )
     then    	
 		list.add( "group3" );
-		com.agfa.hap.drools.setFocus( "group4" );
+		drools.setFocus( "group4" );
 end  
 
 rule "test group3 2"

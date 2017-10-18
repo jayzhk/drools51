@@ -1,5 +1,5 @@
 #created on: 27-Jun-2007
-package org.com.agfa.hap.drools.test
+package org.drools.test
 
 dialect "mvel"
 

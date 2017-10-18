@@ -39,8 +39,8 @@
             <version>${mvel.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.com.agfa.hap.drools</groupId>
-            <artifactId>com.agfa.hap.drools-api</artifactId>
+            <groupId>org.drools</groupId>
+            <artifactId>drools-api</artifactId>
         </dependency>
         <dependency>
             <groupId>org.antlr</groupId>
@@ -152,17 +152,17 @@
                                         <echo message="Generating Antlr Grammars" />
                                         <java classname="org.antlr.Tool" fork="true">
                                             <arg
-                                                    line="-lib src/test/resources/org/com.agfa.hap.drools/reteoo/test/parser src/test/resources/org/com.agfa.hap.drools/reteoo/test/parser/NodeTestDSL.g src/test/resources/org/com.agfa.hap.drools/reteoo/test/parser/NodeTestDSLTree.g" />
+                                                    line="-lib src/test/resources/org/drools/reteoo/test/parser src/test/resources/org/drools/reteoo/test/parser/NodeTestDSL.g src/test/resources/org/drools/reteoo/test/parser/NodeTestDSLTree.g" />
                                             <classpath refid="base.classpath" />
                                         </java>
-                                        <move todir="src/test/java/org/com.agfa.hap.drools/reteoo/test/parser">
-                                            <fileset dir="src/test/resources/org/com.agfa.hap.drools/reteoo/test/parser">
+                                        <move todir="src/test/java/org/drools/reteoo/test/parser">
+                                            <fileset dir="src/test/resources/org/drools/reteoo/test/parser">
                                                 <include name="**/*.java" />
                                                 <exclude name="**/__*" />
                                             </fileset>
                                         </move>
                                         <delete>
-                                            <fileset dir="src/test/resources/org/com.agfa.hap.drools/reteoo/test/parser">
+                                            <fileset dir="src/test/resources/org/drools/reteoo/test/parser">
                                                 <include name="**/*.tokens" />
                                                 <include name="**/classes" />
                                                 <include name="**/__*" />
@@ -209,12 +209,12 @@
                     <manifestLocation>META-INF</manifestLocation>
                     <instructions>
                         <_removeheaders>Ignore-Package</_removeheaders>
-                        <Require-Bundle>org.com.agfa.hap.drools.api;visibility:=reexport;bundle-version="${pom.version}"</Require-Bundle>
-                        <Import-Package>!org.com.agfa.hap.drools.*, *,org.osgi.util.tracker</Import-Package>
-                        <Export-Package>!org.com.agfa.hap.drools.visualize,org.com.agfa.hap.drools.reteoo.*,
-                            org.com.agfa.hap.drools.*</Export-Package>
+                        <Require-Bundle>org.drools.api;visibility:=reexport;bundle-version="${pom.version}"</Require-Bundle>
+                        <Import-Package>!org.drools.*, *,org.osgi.util.tracker</Import-Package>
+                        <Export-Package>!org.drools.visualize,org.drools.reteoo.*,
+                            org.drools.*</Export-Package>
                         <DynamicImport-Package>*</DynamicImport-Package>
-                        <Bundle-Activator>org.com.agfa.hap.drools.osgi.core.Activator</Bundle-Activator>
+                        <Bundle-Activator>org.drools.osgi.core.Activator</Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>
@@ -252,13 +252,13 @@
                     <author>false</author>
                     <bottom>true</bottom>
                     <header>JBoss Drools</header>
-                  <!--  <packagenames>org.com.agfa.hap.drools.*</packagenames>-->
+                  <!--  <packagenames>org.drools.*</packagenames>-->
                     <use>true</use>
                     <version>true</version>
                     <windowtitle>${project.name} ${project.version} API</windowtitle>
                     <breakiterator>true</breakiterator>
                     <excludePackageNames>
-                        org.com.agfa.hap.drools.asm*,org.com.agfa.hap.drools.objenesis.*,org.com.agfa.hap.drools.commons.jci.*</excludePackageNames>
+                        org.drools.asm*,org.drools.objenesis.*,org.drools.commons.jci.*</excludePackageNames>
                 </configuration>
             </plugin>
         </plugins>

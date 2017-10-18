@@ -167,9 +167,9 @@ public class LargeRuleBase {
 	}
 
 	public static String getHeader() {
-		return "package org.com.agfa.hap.drools.test; \n " + "import org.com.agfa.hap.drools.Person; \n "
-				+ "import org.com.agfa.hap.drools.Cheese; \n "
-				+ "import org.com.agfa.hap.drools.Cheesery; \n "
+		return "package org.drools.test; \n " + "import org.drools.Person; \n "
+				+ "import org.drools.Cheese; \n "
+				+ "import org.drools.Cheesery; \n "
 				+ " import java.util.List \n "
 				+ " global List list \n dialect 'mvel'\n  ";
 	}

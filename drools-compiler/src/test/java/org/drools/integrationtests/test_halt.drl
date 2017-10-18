@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools;
+package org.drools;
 
 global java.util.List results;
 
@@ -16,5 +16,5 @@ rule "stop"
 when
 	Number( intValue == 10 )
 then
-    com.agfa.hap.drools.halt();
+    drools.halt();
 end

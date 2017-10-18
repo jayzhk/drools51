@@ -26,10 +26,10 @@ public class ProcessStateTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.state\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.state\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
             "  </header>\n" +
@@ -63,7 +63,7 @@ public class ProcessStateTest extends TestCase {
         WorkingMemory workingMemory = ruleBase.newStatefulSession();
         // start process
         RuleFlowProcessInstance processInstance = (RuleFlowProcessInstance)
-            workingMemory.startProcess("org.com.agfa.hap.drools.state");
+            workingMemory.startProcess("org.drools.state");
         // should be in state A
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         Collection<NodeInstance> nodeInstances = processInstance.getNodeInstances();
@@ -107,10 +107,10 @@ public class ProcessStateTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.state\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.state\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <globals>\n" +
@@ -156,7 +156,7 @@ public class ProcessStateTest extends TestCase {
         WorkingMemory workingMemory = ruleBase.newStatefulSession();
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
-        ProcessInstance processInstance = workingMemory.startProcess("org.com.agfa.hap.drools.state");
+        ProcessInstance processInstance = workingMemory.startProcess("org.drools.state");
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals(1, list.size());
         assertEquals("1", list.get(0));
@@ -166,10 +166,10 @@ public class ProcessStateTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.state\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.state\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <globals>\n" +
@@ -215,7 +215,7 @@ public class ProcessStateTest extends TestCase {
         WorkingMemory workingMemory = ruleBase.newStatefulSession();
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
-        ProcessInstance processInstance = workingMemory.startProcess("org.com.agfa.hap.drools.state");
+        ProcessInstance processInstance = workingMemory.startProcess("org.drools.state");
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals(1, list.size());
         assertEquals("1", list.get(0));
@@ -225,10 +225,10 @@ public class ProcessStateTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.state\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.state\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <globals>\n" +
@@ -274,7 +274,7 @@ public class ProcessStateTest extends TestCase {
         WorkingMemory workingMemory = ruleBase.newStatefulSession();
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
-        ProcessInstance processInstance = workingMemory.startProcess("org.com.agfa.hap.drools.state");
+        ProcessInstance processInstance = workingMemory.startProcess("org.drools.state");
         assertEquals(ProcessInstance.STATE_COMPLETED, processInstance.getState());
         assertEquals(1, list.size());
         assertEquals("2", list.get(0));
@@ -284,14 +284,14 @@ public class ProcessStateTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.state\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.state\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <imports>\n" +
-			"      <import name=\"org.com.agfa.hap.drools.Person\" />\n" +
+			"      <import name=\"org.drools.Person\" />\n" +
 			"    </imports>\n" +
 			"    <globals>\n" +
 			"      <global identifier=\"list\" type=\"java.util.List\" />\n" +
@@ -336,7 +336,7 @@ public class ProcessStateTest extends TestCase {
         WorkingMemory workingMemory = ruleBase.newStatefulSession();
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
-        ProcessInstance processInstance = workingMemory.startProcess("org.com.agfa.hap.drools.state");
+        ProcessInstance processInstance = workingMemory.startProcess("org.drools.state");
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         assertTrue(list.isEmpty());
         Person person = new Person("John Doe", 30);
@@ -350,14 +350,14 @@ public class ProcessStateTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.state\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.state\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <imports>\n" +
-			"      <import name=\"org.com.agfa.hap.drools.Person\" />\n" +
+			"      <import name=\"org.drools.Person\" />\n" +
 			"    </imports>\n" +
 			"    <globals>\n" +
 			"      <global identifier=\"list\" type=\"java.util.List\" />\n" +
@@ -402,7 +402,7 @@ public class ProcessStateTest extends TestCase {
         WorkingMemory workingMemory = ruleBase.newStatefulSession();
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
-        ProcessInstance processInstance = workingMemory.startProcess("org.com.agfa.hap.drools.state");
+        ProcessInstance processInstance = workingMemory.startProcess("org.drools.state");
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         assertTrue(list.isEmpty());
         Person person = new Person("John Doe", 20);
@@ -416,14 +416,14 @@ public class ProcessStateTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.state\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.state\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <imports>\n" +
-			"      <import name=\"org.com.agfa.hap.drools.Person\" />\n" +
+			"      <import name=\"org.drools.Person\" />\n" +
 			"    </imports>\n" +
 			"    <globals>\n" +
 			"      <global identifier=\"list\" type=\"java.util.List\" />\n" +
@@ -468,7 +468,7 @@ public class ProcessStateTest extends TestCase {
         WorkingMemory workingMemory = ruleBase.newStatefulSession();
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
-        ProcessInstance processInstance = workingMemory.startProcess("org.com.agfa.hap.drools.state");
+        ProcessInstance processInstance = workingMemory.startProcess("org.drools.state");
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         assertTrue(list.isEmpty());
         Person person = new Person("John Doe", 30);
@@ -482,14 +482,14 @@ public class ProcessStateTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.state\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.state\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
 			"    <imports>\n" +
-			"      <import name=\"org.com.agfa.hap.drools.Person\" />\n" +
+			"      <import name=\"org.drools.Person\" />\n" +
 			"    </imports>\n" +
 			"    <globals>\n" +
 			"      <global identifier=\"list\" type=\"java.util.List\" />\n" +
@@ -534,7 +534,7 @@ public class ProcessStateTest extends TestCase {
         WorkingMemory workingMemory = ruleBase.newStatefulSession();
         List<String> list = new ArrayList<String>();
         workingMemory.setGlobal("list", list);
-        ProcessInstance processInstance = workingMemory.startProcess("org.com.agfa.hap.drools.state");
+        ProcessInstance processInstance = workingMemory.startProcess("org.drools.state");
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         assertTrue(list.isEmpty());
         Person person = new Person("John Doe", 30);
@@ -548,10 +548,10 @@ public class ProcessStateTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.state\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.state\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
             "    <globals>\n" +
@@ -559,7 +559,7 @@ public class ProcessStateTest extends TestCase {
             "    </globals>\n" +
             "    <variables>\n" +
             "      <variable name=\"s\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "        <value>a</value>\n" +
             "      </variable>\n" +
             "    </variables>\n" +
@@ -595,7 +595,7 @@ public class ProcessStateTest extends TestCase {
         workingMemory.setGlobal("list", list);
         // start process
         RuleFlowProcessInstance processInstance = (RuleFlowProcessInstance)
-            workingMemory.startProcess("org.com.agfa.hap.drools.state");
+            workingMemory.startProcess("org.drools.state");
         // should be in state A
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         Collection<NodeInstance> nodeInstances = processInstance.getNodeInstances();
@@ -618,10 +618,10 @@ public class ProcessStateTest extends TestCase {
         PackageBuilder builder = new PackageBuilder();
         Reader source = new StringReader(
             "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-            "<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+            "<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
             "         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-            "         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-            "         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.state\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+            "         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+            "         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.state\" package-name=\"org.drools\" version=\"1\" >\n" +
             "\n" +
             "  <header>\n" +
             "    <globals>\n" +
@@ -629,7 +629,7 @@ public class ProcessStateTest extends TestCase {
             "    </globals>\n" +
             "    <variables>\n" +
             "      <variable name=\"s\" >\n" +
-            "        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+            "        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
             "        <value>a</value>\n" +
             "      </variable>\n" +
             "    </variables>\n" +
@@ -670,7 +670,7 @@ public class ProcessStateTest extends TestCase {
         }).start();
         // start process
         RuleFlowProcessInstance processInstance = (RuleFlowProcessInstance)
-            workingMemory.startProcess("org.com.agfa.hap.drools.state");
+            workingMemory.startProcess("org.drools.state");
         // should be in state A
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         Collection<NodeInstance> nodeInstances = processInstance.getNodeInstances();

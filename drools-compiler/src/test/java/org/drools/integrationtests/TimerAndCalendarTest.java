@@ -113,8 +113,8 @@ public class TimerAndCalendarTest extends TestCase {
 
     public void testDurationMemoryLeakonRepeatedUpdate() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools.test\n";
-        str += "import org.com.agfa.hap.drools.Alarm\n";
+        str += "package org.drools.test\n";
+        str += "import org.drools.Alarm\n";
         str += "global java.util.List list;";
         str += "rule \"COMPTEUR\"\n";
         str += "  timer 50\n";

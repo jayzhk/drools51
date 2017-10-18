@@ -78,7 +78,7 @@ public class QueryRemotionTest extends TestCase {
     public void testRemoveQueryChangeSet() throws Exception {
 
         String header = "";
-        header += "package org.com.agfa.hap.drools.test\n";
+        header += "package org.drools.test\n";
         header += "global java.util.List list\n\n";
 
         String query1 = "";
@@ -93,9 +93,9 @@ public class QueryRemotionTest extends TestCase {
         output.close();
 
         String xml = "";
-        xml += "<change-set xmlns='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set'";
+        xml += "<change-set xmlns='http://drools.org/drools-5.0/change-set'";
         xml += "    xmlns:xs='http://www.w3.org/2001/XMLSchema-instance'";
-        xml += "    xs:schemaLocation='http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/com.agfa.hap.drools-api/src/main/resources/change-set-1.0.0.xsd' >";
+        xml += "    xs:schemaLocation='http://drools.org/drools-5.0/change-set http://anonsvn.jboss.org/repos/labs/labs/jbossrules/trunk/drools-api/src/main/resources/change-set-1.0.0.xsd' >";
         xml += "    <add> ";
         xml += "        <resource source='http://localhost:" + this.getPort() + "/rules.drl' type='DRL' />";
         xml += "    </add> ";
@@ -150,14 +150,14 @@ public class QueryRemotionTest extends TestCase {
 
     private KnowledgeAgent createKAgent(KnowledgeBase kbase) {
         ResourceChangeScannerConfiguration sconf = ResourceFactory.getResourceChangeScannerService().newResourceChangeScannerConfiguration();
-        sconf.setProperty("com.agfa.hap.drools.resource.scanner.interval", "2");
+        sconf.setProperty("drools.resource.scanner.interval", "2");
         ResourceFactory.getResourceChangeScannerService().configure(sconf);
 
         KnowledgeAgentConfiguration aconf = KnowledgeAgentFactory.newKnowledgeAgentConfiguration();
-        aconf.setProperty("com.agfa.hap.drools.agent.scanDirectories", "true");
-        aconf.setProperty("com.agfa.hap.drools.agent.scanResources", "true");
+        aconf.setProperty("drools.agent.scanDirectories", "true");
+        aconf.setProperty("drools.agent.scanResources", "true");
         // Testing incremental build here
-        aconf.setProperty("com.agfa.hap.drools.agent.newInstance", "false");
+        aconf.setProperty("drools.agent.newInstance", "false");
         KnowledgeAgent kagent = KnowledgeAgentFactory.newKnowledgeAgent(
                 "test agent", kbase, aconf);
 

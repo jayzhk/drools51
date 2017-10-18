@@ -1,4 +1,4 @@
-package com.agfa.hap.drools;
+package drools;
 
 public class Account {
 

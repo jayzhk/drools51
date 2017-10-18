@@ -10,11 +10,11 @@
 
 <global identifier="m" type="HashMap" />
 <global identifier="s" type="HashSet" />
-<global identifier="p" type="org.com.agfa.hap.drools.Person" />
+<global identifier="p" type="org.drools.Person" />
 
-<importfunction name="org.com.agfa.hap.drools.xml.DumperTest.testStaticMethod1"/>
-<importfunction name="org.com.agfa.hap.drools.xml.DumperTest.testStaticMethod2"/>
-<importfunction name="org.com.agfa.hap.drools.xml.DumperTest.testStaticMethod3"/>
+<importfunction name="org.drools.xml.DumperTest.testStaticMethod1"/>
+<importfunction name="org.drools.xml.DumperTest.testStaticMethod2"/>
+<importfunction name="org.drools.xml.DumperTest.testStaticMethod3"/>
 
 
 <rule name="simple_rule">

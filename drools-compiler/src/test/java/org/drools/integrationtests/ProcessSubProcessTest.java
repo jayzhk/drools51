@@ -87,19 +87,19 @@ public class ProcessSubProcessTest extends TestCase {
 		PackageBuilder builder = new PackageBuilder();
 		Reader source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
 			"         type=\"RuleFlow\" name=\"ruleflow\" id=\"com.sample.ruleflow\" package-name=\"com.sample\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"    <variables>\n" +
 			"      <variable name=\"x\" >\n" +
-			"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+			"        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
 			"        <value></value>\n" +
 			"      </variable>\n" +
 			"      <variable name=\"m\" >\n" +
-			"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.IntegerDataType\" />\n" +
+			"        <type name=\"org.drools.process.core.datatype.impl.type.IntegerDataType\" />\n" +
 			"        <value></value>\n" +
 			"      </variable>\n" +
 			"    </variables>\n" + 
@@ -125,29 +125,29 @@ public class ProcessSubProcessTest extends TestCase {
 		builder.addRuleFlow(source);
 		source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
 			"         type=\"RuleFlow\" name=\"flow\" id=\"com.sample.subflow\" package-name=\"com.sample\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"    <imports>\n" +
-			"      <import name=\"org.com.agfa.hap.drools.Person\" />\n" +
+			"      <import name=\"org.drools.Person\" />\n" +
 			"    </imports>\n" +
 			"    <variables>\n" +
 			"      <variable name=\"y\" >\n" +
-			"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+			"        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
 			"        <value></value>\n" +
 			"      </variable>\n" +
 			"      <variable name=\"z\" >\n" +
-			"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+			"        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
 			"        <value>z-value</value>\n" +
 			"      </variable>\n" +
 			"      <variable name=\"n\" >\n" +
-			"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.IntegerDataType\" />\n" +
+			"        <type name=\"org.drools.process.core.datatype.impl.type.IntegerDataType\" />\n" +
 			"      </variable>\n" +
 			"      <variable name=\"o\" >\n" +
-			"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.IntegerDataType\" />\n" +
+			"        <type name=\"org.drools.process.core.datatype.impl.type.IntegerDataType\" />\n" +
 			"        <value>10</value>\n" +
 			"      </variable>\n" +
 			"    </variables>\n" + 
@@ -192,15 +192,15 @@ public class ProcessSubProcessTest extends TestCase {
 		PackageBuilder builder = new PackageBuilder();
 		Reader source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
 			"         type=\"RuleFlow\" name=\"ruleflow\" id=\"com.sample.ruleflow\" package-name=\"com.sample\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"    <variables>\n" +
 			"      <variable name=\"x\" >\n" +
-			"        <type name=\"org.com.agfa.hap.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
+			"        <type name=\"org.drools.process.core.datatype.impl.type.StringDataType\" />\n" +
 			"        <value></value>\n" +
 			"      </variable>\n" +
 			"    </variables>\n" + 
@@ -221,14 +221,14 @@ public class ProcessSubProcessTest extends TestCase {
 		builder.addRuleFlow(source);
 		source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
 			"         type=\"RuleFlow\" name=\"flow\" id=\"com.sample.subflow\" package-name=\"com.sample\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"    <imports>\n" +
-			"      <import name=\"org.com.agfa.hap.drools.Person\" />\n" +
+			"      <import name=\"org.drools.Person\" />\n" +
 			"    </imports>\n" +
 			"  </header>\n" +
 			"\n" +

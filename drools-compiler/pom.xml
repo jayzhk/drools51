@@ -13,8 +13,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
    <dependencies>
       <!-- Internal dependencies -->
       <dependency>
-         <groupId>org.com.agfa.hap.drools</groupId>
-         <artifactId>com.agfa.hap.drools-core</artifactId>
+         <groupId>org.drools</groupId>
+         <artifactId>drools-core</artifactId>
          <version>5.1.0</version>
       </dependency>
       <!-- External dependencies -->
@@ -163,48 +163,48 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
                               <property name="antlr_classpath" refid="maven.compile.classpath" />
                               <echo message="Generating Antlr Grammars" />
                               <java classname="org.antlr.Tool" fork="true">
-                                 <arg line="-lib src/main/resources/org/com.agfa.hap.drools/lang src/main/resources/org/com.agfa.hap.drools/lang/DRL.g src/main/resources/org/com.agfa.hap.drools/lang/DescrBuilderTree.g" />
+                                 <arg line="-lib src/main/resources/org/drools/lang src/main/resources/org/drools/lang/DRL.g src/main/resources/org/drools/lang/DescrBuilderTree.g" />
                                  <classpath refid="base.classpath" />
                               </java>
-                              <move todir="src/main/java/org/com.agfa.hap.drools/lang/">
-                                 <fileset dir="src/main/resources/org/com.agfa.hap.drools/lang">
+                              <move todir="src/main/java/org/drools/lang/">
+                                 <fileset dir="src/main/resources/org/drools/lang">
                                     <include name="**/*.java" />
                                  </fileset>
                               </move>
                               <java classname="org.antlr.Tool" fork="true">
-                                 <arg line="-lib src/main/resources/org/com.agfa.hap.drools/lang src/main/resources/org/com.agfa.hap.drools/lang/Tree2TestDRL.g" />
+                                 <arg line="-lib src/main/resources/org/drools/lang src/main/resources/org/drools/lang/Tree2TestDRL.g" />
                                  <classpath refid="base.classpath" />
                               </java>
-                              <move todir="src/test/java/org/com.agfa.hap.drools/lang/">
-                                 <fileset dir="src/main/resources/org/com.agfa.hap.drools/lang">
+                              <move todir="src/test/java/org/drools/lang/">
+                                 <fileset dir="src/main/resources/org/drools/lang">
                                     <include name="**/*.java" />
                                  </fileset>
                               </move>
                               <java classname="org.antlr.Tool" fork="true">
-                                 <arg line="-lib src/main/resources/org/com.agfa.hap.drools/lang/dsl src/main/resources/org/com.agfa.hap.drools/lang/dsl/DSLMap.g src/main/resources/org/com.agfa.hap.drools/lang/dsl/DSLMapWalker.g" />
+                                 <arg line="-lib src/main/resources/org/drools/lang/dsl src/main/resources/org/drools/lang/dsl/DSLMap.g src/main/resources/org/drools/lang/dsl/DSLMapWalker.g" />
                                  <classpath refid="base.classpath" />
                               </java>
-                              <move todir="src/main/java/org/com.agfa.hap.drools/lang/dsl/">
-                                 <fileset dir="src/main/resources/org/com.agfa.hap.drools/lang/dsl">
+                              <move todir="src/main/java/org/drools/lang/dsl/">
+                                 <fileset dir="src/main/resources/org/drools/lang/dsl">
                                     <include name="**/*.java" />
                                  </fileset>
                               </move>
                               <java classname="org.antlr.Tool" fork="true">
-                                 <arg line="-lib src/main/resources/org/com.agfa.hap.drools/semantics/java/parser src/main/resources/org/com.agfa.hap.drools/semantics/java/parser/Java.g" />
+                                 <arg line="-lib src/main/resources/org/drools/semantics/java/parser src/main/resources/org/drools/semantics/java/parser/Java.g" />
                                  <classpath refid="base.classpath" />
                               </java>
-                              <move todir="src/main/java/org/com.agfa.hap.drools/rule/builder/dialect/java/parser">
-                                 <fileset dir="src/main/resources/org/com.agfa.hap.drools/semantics/java/parser">
+                              <move todir="src/main/java/org/drools/rule/builder/dialect/java/parser">
+                                 <fileset dir="src/main/resources/org/drools/semantics/java/parser">
                                     <include name="**/*.java" />
                                  </fileset>
                               </move>
                               <delete>
-                                 <fileset dir="src/main/resources/org/com.agfa.hap.drools/lang">
+                                 <fileset dir="src/main/resources/org/drools/lang">
                                     <include name="**/*.tokens" />
                                     <include name="DRL__.g" />
                                     <include name="dsl/DSLMap__.g" />
                                  </fileset>
-                                 <fileset dir="src/main/resources/org/com.agfa.hap.drools/semantics/java/parser">
+                                 <fileset dir="src/main/resources/org/drools/semantics/java/parser">
                                     <include name="**/*.tokens" />
                                     <include name="Java__.g" />
                                  </fileset>
@@ -248,17 +248,17 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
                <manifestLocation>META-INF</manifestLocation>
                <instructions>
                   <_removeheaders>Ignore-Package</_removeheaders> 
-                  <Bundle-SymbolicName>org.com.agfa.hap.drools.compiler;singleton:=true</Bundle-SymbolicName>
-                  <Require-Bundle>org.com.agfa.hap.drools.core;bundle-version="${pom.version}"</Require-Bundle>
-                  <!--<Import-Package>!org.com.agfa.hap.drools.*,-->
+                  <Bundle-SymbolicName>org.drools.compiler;singleton:=true</Bundle-SymbolicName>
+                  <Require-Bundle>org.drools.core;bundle-version="${pom.version}"</Require-Bundle>
+                  <!--<Import-Package>!org.drools.*,-->
                   <!--&lt;!&ndash; java compilers are optional: only need one at most &ndash;&gt;-->
                   <!--org.codehaus.janino.*;resolution:=optional,org.eclipse.jdt.*;resolution:=optional,-->
                    <!--*</Import-Package>-->
-                  <Export-Package>org.com.agfa.hap.drools.lang.descr,!org.com.agfa.hap.drools.commons.*, !org.com.agfa.hap.drools.lang.*, org.com.agfa.hap.drools.builder.impl,
+                  <Export-Package>org.drools.lang.descr,!org.drools.commons.*, !org.drools.lang.*, org.drools.builder.impl,
                   <!-- add this one manually as BND seems to miss it out -->
-                  org.com.agfa.hap.drools.*</Export-Package>
+                  org.drools.*</Export-Package>
                   <DynamicImport-Package>*</DynamicImport-Package>
-                  <Bundle-Activator>org.com.agfa.hap.drools.osgi.compiler.Activator</Bundle-Activator>
+                  <Bundle-Activator>org.drools.osgi.compiler.Activator</Bundle-Activator>
                </instructions>
             </configuration>
          </plugin>

@@ -77,7 +77,7 @@ public class FailureOnRemovalTest extends TestCase {
 
     private KnowledgeBuilderConfiguration createKnowledgeBuilderConfiguration() {
         Properties properties = new Properties();
-        properties.setProperty( "com.agfa.hap.drools.dialect.java.compiler",
+        properties.setProperty( "drools.dialect.java.compiler",
                                 "JANINO" );
         KnowledgeBuilderConfiguration kconf = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration( properties,
                                                                                                         getClass().getClassLoader() );

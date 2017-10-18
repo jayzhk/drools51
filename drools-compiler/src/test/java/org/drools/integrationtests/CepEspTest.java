@@ -1266,7 +1266,7 @@ public class CepEspTest extends TestCase {
         final RuleBase ruleBase = loadRuleBase( reader,
                                                 rbconf );
 
-        final Rule rule = ruleBase.getPackage( "org.com.agfa.hap.drools" ).getRule( "Delaying Not" );
+        final Rule rule = ruleBase.getPackage( "org.drools" ).getRule( "Delaying Not" );
         assertEquals( 10000,
                       ((DurationTimer) rule.getTimer()).getDuration() );
 
@@ -1665,7 +1665,7 @@ public class CepEspTest extends TestCase {
     }
 
     public void testPseudoSchedulerRemoveJobTest() {
-        String str = "import org.com.agfa.hap.drools.integrationtests.CepEspTest.A\n";
+        String str = "import org.drools.integrationtests.CepEspTest.A\n";
         str += "declare A\n";
         str += "    @role( event )\n";
         str += "end\n";

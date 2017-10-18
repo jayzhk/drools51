@@ -26,14 +26,14 @@ public class ProcessTimerTest extends TestCase {
 		PackageBuilder builder = new PackageBuilder();
 		Reader source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-			"         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.timer\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+			"         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.timer\" package-name=\"org.drools\" version=\"1\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"    <imports>\n" +
-			"      <import name=\"org.com.agfa.hap.drools.Message\" />\n" +
+			"      <import name=\"org.drools.Message\" />\n" +
 			"    </imports>\n" +
 			"    <globals>\n" +
 			"      <global identifier=\"myList\" type=\"java.util.List\" />\n" +
@@ -85,7 +85,7 @@ public class ProcessTimerTest extends TestCase {
         }).start();
 		
         ProcessInstance processInstance = ( ProcessInstance )
-        	session.startProcess("org.com.agfa.hap.drools.timer");
+        	session.startProcess("org.drools.timer");
         assertEquals(0, myList.size());
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         assertEquals(1, session.getTimerManager().getTimers().size());
@@ -126,10 +126,10 @@ public class ProcessTimerTest extends TestCase {
 		PackageBuilder builder = new PackageBuilder();
 		Reader source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-			"         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.timer\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+			"         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.timer\" package-name=\"org.drools\" version=\"1\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"  </header>\n" +
@@ -158,10 +158,10 @@ public class ProcessTimerTest extends TestCase {
 		PackageBuilder builder = new PackageBuilder();
 		Reader source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-			"         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.timer\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+			"         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.timer\" package-name=\"org.drools\" version=\"1\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"    <globals>\n" +
@@ -204,7 +204,7 @@ public class ProcessTimerTest extends TestCase {
         }).start();
 		
         ProcessInstance processInstance = ( ProcessInstance )
-        	session.startProcess("org.com.agfa.hap.drools.timer");
+        	session.startProcess("org.drools.timer");
         assertEquals(0, myList.size());
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         assertEquals(1, session.getTimerManager().getTimers().size());
@@ -239,10 +239,10 @@ public class ProcessTimerTest extends TestCase {
 		PackageBuilder builder = new PackageBuilder();
 		Reader source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-			"         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.timer\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+			"         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.timer\" package-name=\"org.drools\" version=\"1\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"    <globals>\n" +
@@ -287,7 +287,7 @@ public class ProcessTimerTest extends TestCase {
         }).start();
 		
         ProcessInstance processInstance = ( ProcessInstance )
-        	session.startProcess("org.com.agfa.hap.drools.timer");
+        	session.startProcess("org.drools.timer");
         assertEquals(0, myList.size());
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         assertEquals(1, session.getTimerManager().getTimers().size());
@@ -321,10 +321,10 @@ public class ProcessTimerTest extends TestCase {
 		PackageBuilder builder = new PackageBuilder();
 		Reader source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-			"         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.timer\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+			"         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.timer\" package-name=\"org.drools\" version=\"1\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"    <globals>\n" +
@@ -364,10 +364,10 @@ public class ProcessTimerTest extends TestCase {
 		PackageBuilder builder = new PackageBuilder();
 		Reader source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-			"         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.timer\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+			"         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.timer\" package-name=\"org.drools\" version=\"1\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"    <globals>\n" +
@@ -410,7 +410,7 @@ public class ProcessTimerTest extends TestCase {
         }).start();
 
         ProcessInstance processInstance = ( ProcessInstance )
-        	session.startProcess("org.com.agfa.hap.drools.timer");
+        	session.startProcess("org.drools.timer");
         assertEquals(0, myList.size());
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         assertEquals(1, session.getTimerManager().getTimers().size());
@@ -444,10 +444,10 @@ public class ProcessTimerTest extends TestCase {
 		PackageBuilder builder = new PackageBuilder();
 		Reader source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-			"         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.timer\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+			"         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.timer\" package-name=\"org.drools\" version=\"1\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"    <globals>\n" +
@@ -493,7 +493,7 @@ public class ProcessTimerTest extends TestCase {
         }).start();
 
         ProcessInstance processInstance = ( ProcessInstance )
-        	session.startProcess("org.com.agfa.hap.drools.timer");
+        	session.startProcess("org.drools.timer");
         assertEquals(0, myList.size());
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         assertEquals(2, session.getTimerManager().getTimers().size());
@@ -542,10 +542,10 @@ public class ProcessTimerTest extends TestCase {
 		PackageBuilder builder = new PackageBuilder();
 		Reader source = new StringReader(
 			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-			"<process xmlns=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process\"\n" +
+			"<process xmlns=\"http://drools.org/drools-5.0/process\"\n" +
 			"         xmlns:xs=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-			"         xs:schemaLocation=\"http://com.agfa.hap.drools.org/com.agfa.hap.drools-5.0/process com.agfa.hap.drools-processes-5.0.xsd\"\n" +
-			"         type=\"RuleFlow\" name=\"flow\" id=\"org.com.agfa.hap.drools.timer\" package-name=\"org.com.agfa.hap.drools\" version=\"1\" >\n" +
+			"         xs:schemaLocation=\"http://drools.org/drools-5.0/process drools-processes-5.0.xsd\"\n" +
+			"         type=\"RuleFlow\" name=\"flow\" id=\"org.drools.timer\" package-name=\"org.drools\" version=\"1\" >\n" +
 			"\n" +
 			"  <header>\n" +
 			"    <globals>\n" +
@@ -561,7 +561,7 @@ public class ProcessTimerTest extends TestCase {
 			"          <action type=\"expression\" dialect=\"java\" >myList.add(\"Executing timer\");</action>\n" +
 			"        </timer>\n" +
 			"      </timers>\n" +
-			"      <constraint type=\"rule\" dialect=\"mvel\" >org.com.agfa.hap.drools.Message( )</constraint>\n" +
+			"      <constraint type=\"rule\" dialect=\"mvel\" >org.drools.Message( )</constraint>\n" +
 			"    </milestone>\n" +
 			"    <end id=\"3\" name=\"End\" />\n" +
 			"  </nodes>\n" +
@@ -588,7 +588,7 @@ public class ProcessTimerTest extends TestCase {
         }).start();
 		
         ProcessInstance processInstance = ( ProcessInstance )
-        	session.startProcess("org.com.agfa.hap.drools.timer");
+        	session.startProcess("org.drools.timer");
         assertEquals(0, myList.size());
         assertEquals(ProcessInstance.STATE_ACTIVE, processInstance.getState());
         assertEquals(1, session.getTimerManager().getTimers().size());

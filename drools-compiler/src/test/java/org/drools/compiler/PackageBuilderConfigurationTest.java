@@ -49,13 +49,13 @@ import org.drools.util.ChainedProperties;
 public class PackageBuilderConfigurationTest extends TestCase {
 
     protected void setUp() throws Exception {
-        System.getProperties().remove( "com.agfa.hap.drools.dialect.java.compiler" );
-        System.getProperties().remove( "com.agfa.hap.drools.dialect.default" );
+        System.getProperties().remove( "drools.dialect.java.compiler" );
+        System.getProperties().remove( "drools.dialect.default" );
     }
 
     protected void tearDown() throws Exception {
-        System.getProperties().remove( "com.agfa.hap.drools.dialect.java.compiler" );
-        System.getProperties().remove( "com.agfa.hap.drools.dialect.default" );
+        System.getProperties().remove( "drools.dialect.java.compiler" );
+        System.getProperties().remove( "drools.dialect.default" );
     }
 
     public void testIgnoreDefaults() {
@@ -63,9 +63,9 @@ public class PackageBuilderConfigurationTest extends TestCase {
         ChainedProperties chainedProperties = new ChainedProperties( "packagebuilder.conf",
                                                                      getClass().getClassLoader(),
                                                                      true );
-        //System.out.println( chainedProperties.getProperty( "com.agfa.hap.drools.dialect.java.compiler",
+        //System.out.println( chainedProperties.getProperty( "drools.dialect.java.compiler",
         //                                                   null ) );
-        assertNotNull( chainedProperties.getProperty( "com.agfa.hap.drools.dialect.java.compiler",
+        assertNotNull( chainedProperties.getProperty( "drools.dialect.java.compiler",
                                                       null ) );
 
 
@@ -73,9 +73,9 @@ public class PackageBuilderConfigurationTest extends TestCase {
         chainedProperties = new ChainedProperties( "packagebuilder.conf",
                                                    getClass().getClassLoader(),
                                                    false );
-        //System.out.println( chainedProperties.getProperty( "com.agfa.hap.drools.dialect.java.compiler",
+        //System.out.println( chainedProperties.getProperty( "drools.dialect.java.compiler",
         //                                                   null ) );
-        assertNull( chainedProperties.getProperty( "com.agfa.hap.drools.dialect.java.compiler",
+        assertNull( chainedProperties.getProperty( "drools.dialect.java.compiler",
                                                    null ) );
 
 
@@ -83,9 +83,9 @@ public class PackageBuilderConfigurationTest extends TestCase {
         chainedProperties = new ChainedProperties( "packagebuilder.conf",
                                                    getClass().getClassLoader(),
                                                    true );
-        //System.out.println( chainedProperties.getProperty( "com.agfa.hap.drools.dialect.java.compiler",
+        //System.out.println( chainedProperties.getProperty( "drools.dialect.java.compiler",
         //                                                   null ) );
-        assertNotNull( chainedProperties.getProperty( "com.agfa.hap.drools.dialect.java.compiler",
+        assertNotNull( chainedProperties.getProperty( "drools.dialect.java.compiler",
                                                       null ) );
     }
 
@@ -95,7 +95,7 @@ public class PackageBuilderConfigurationTest extends TestCase {
         assertEquals( JavaDialectConfiguration.ECLIPSE,
                       javaConf.getCompiler() );
 
-        System.setProperty( "com.agfa.hap.drools.dialect.java.compiler",
+        System.setProperty( "drools.dialect.java.compiler",
                             "JANINO" );
         cfg = new PackageBuilderConfiguration();
         javaConf = (JavaDialectConfiguration) cfg.getDialectConfiguration( "java" );
@@ -107,7 +107,7 @@ public class PackageBuilderConfigurationTest extends TestCase {
         assertEquals( javaConf.getCompiler(),
                       javaConf2.getCompiler() );
 
-        System.setProperty( "com.agfa.hap.drools.dialect.java.compiler",
+        System.setProperty( "drools.dialect.java.compiler",
                             "ECLIPSE" );
         cfg = new PackageBuilderConfiguration();
         javaConf = (JavaDialectConfiguration) cfg.getDialectConfiguration( "java" );
@@ -133,7 +133,7 @@ public class PackageBuilderConfigurationTest extends TestCase {
         assertTrue( cfg.getDefaultDialect().equals( "java") );
 
         Properties properties = new Properties();
-        properties.setProperty( "com.agfa.hap.drools.dialect.default",
+        properties.setProperty( "drools.dialect.default",
                                 "mvel" );
         PackageBuilderConfiguration cfg1 = new PackageBuilderConfiguration( properties );
         assertEquals("mvel", cfg1.getDefaultDialect() );

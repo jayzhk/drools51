@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools.generatedbeans;
+package org.drools.generatedbeans;
 
 global java.util.List list;
 global Cheese cg;

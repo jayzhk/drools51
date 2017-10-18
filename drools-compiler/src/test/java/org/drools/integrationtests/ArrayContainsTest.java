@@ -20,7 +20,7 @@ import junit.framework.TestCase;
 public class ArrayContainsTest extends TestCase {
     public void testContainsBooleanArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Boolean bGlobal;\n";
@@ -84,7 +84,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testNotContainsBooleanArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Boolean bGlobal;\n";
@@ -149,7 +149,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testContainsByteArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Byte bGlobal;\n";        
@@ -213,7 +213,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testNotContainsByteArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Byte bGlobal;\n";        
@@ -277,7 +277,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testContainsShortArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Short sGlobal;\n";        
@@ -341,7 +341,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testNotContainsShortArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Short sGlobal;\n";        
@@ -405,7 +405,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testContainsCharArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Character cGlobal;\n";
@@ -469,7 +469,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testNotContainsCharArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Character cGlobal;\n";
@@ -533,7 +533,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testContainsIntArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Integer iGlobal;\n";        
@@ -598,7 +598,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testNotContainsIntArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Integer iGlobal;\n";        
@@ -663,7 +663,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testContainsLongArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Long lGlobal;\n";        
@@ -728,7 +728,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testNotContainsLongArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Long lGlobal;\n";        
@@ -793,7 +793,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testContainsFloatArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Float fGlobal;\n";
@@ -858,7 +858,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testNotContainsFloatArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Float fGlobal;\n";
@@ -924,7 +924,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testContainsDoubleArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Double dGlobal;\n";
@@ -990,7 +990,7 @@ public class ArrayContainsTest extends TestCase {
     
     public void testNotContainsDoubleArray() throws Exception {
         String str = "";
-        str += "package org.com.agfa.hap.drools;\n";
+        str += "package org.drools;\n";
 
         str += "global java.util.List list;\n";
         str += "global Double dGlobal;\n";

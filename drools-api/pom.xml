@@ -110,12 +110,12 @@
                 <configuration>
                     <manifestLocation>META-INF</manifestLocation>
                     <instructions>
-                        <Bundle-SymbolicName>org.com.agfa.hap.drools.api;singleton:=true</Bundle-SymbolicName>
+                        <Bundle-SymbolicName>org.drools.api;singleton:=true</Bundle-SymbolicName>
                         <_removeheaders>Ignore-Package</_removeheaders>
-                        <Import-Package>!org.com.agfa.hap.drools.*,*;resolution:=optional,com.sun.tools.xjc;resolution:=optional</Import-Package>
-                        <Export-Package>org.com.agfa.hap.drools.*</Export-Package>
+                        <Import-Package>!org.drools.*,*;resolution:=optional,com.sun.tools.xjc;resolution:=optional</Import-Package>
+                        <Export-Package>org.drools.*</Export-Package>
                         <DynamicImport-Package>*</DynamicImport-Package>
-                        <Bundle-Activator>org.com.agfa.hap.drools.osgi.api.Activator</Bundle-Activator>
+                        <Bundle-Activator>org.drools.osgi.api.Activator</Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>
@@ -158,37 +158,37 @@
                     <author>false</author>
                     <bottom>true</bottom>
                     <header>JBoss Drools</header>
-                  <!--  <packagenames>org.com.agfa.hap.drools.*</packagenames>-->
+                  <!--  <packagenames>org.drools.*</packagenames>-->
                     <use>true</use>
                     <version>true</version>
                     <windowtitle>${project.name} ${project.version} API</windowtitle>
                     <breakiterator>true</breakiterator>
-                    <excludePackageNames>org.com.agfa.hap.drools.util*</excludePackageNames>
+                    <excludePackageNames>org.drools.util*</excludePackageNames>
                     <overview>src/main/java/overview.html</overview>
                     <groups>
                         <group>
                             <title>Knowledge Base API</title>
-                            <packages>org.com.agfa.hap.drools</packages>
+                            <packages>org.drools</packages>
                         </group>
                         <group>
                             <title>Builder API</title>
-                            <packages>org.com.agfa.hap.drools.builder</packages>
+                            <packages>org.drools.builder</packages>
                         </group>
                         <group>
                             <title>Definition API</title>
-                            <packages>org.com.agfa.hap.drools.definition*</packages>
+                            <packages>org.drools.definition*</packages>
                         </group>
                         <group>
                             <title>Event API</title>
-                            <packages>org.com.agfa.hap.drools.event*</packages>
+                            <packages>org.drools.event*</packages>
                         </group>
                         <group>
                             <title>Runtime API</title>
-                            <packages>org.com.agfa.hap.drools.runtime*</packages>
+                            <packages>org.drools.runtime*</packages>
                         </group>
                         <group>
                             <title>Time API</title>
-                            <packages>org.com.agfa.hap.drools.time*</packages>
+                            <packages>org.drools.time*</packages>
                         </group>
                     </groups>
                 </configuration>

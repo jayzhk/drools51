@@ -415,31 +415,31 @@ public class KnowledgeBaseConfigurationTest extends TestCase {
         
         // checking the string based getProperty() method
         assertEquals( "",
-                      config.getProperty( "com.agfa.hap.drools.ruleBaseUpdateHandler" ) );
+                      config.getProperty( "drools.ruleBaseUpdateHandler" ) );
 
         // setting the options using the string based setProperty() method
-        config.setProperty( "com.agfa.hap.drools.ruleBaseUpdateHandler",
+        config.setProperty( "drools.ruleBaseUpdateHandler",
                             "somethingElse" );
         
         // checking the string based getProperty() method
         assertEquals( "somethingElse",
-                      config.getProperty( "com.agfa.hap.drools.ruleBaseUpdateHandler" ) );
+                      config.getProperty( "drools.ruleBaseUpdateHandler" ) );
 
         // setting the options using the string based setProperty() method
-        config.setProperty( "com.agfa.hap.drools.ruleBaseUpdateHandler",
+        config.setProperty( "drools.ruleBaseUpdateHandler",
                             null );
         
         // checking the string based getProperty() method
         assertEquals( "",
-                      config.getProperty( "com.agfa.hap.drools.ruleBaseUpdateHandler" ) );
+                      config.getProperty( "drools.ruleBaseUpdateHandler" ) );
 
         // setting the options using the string based setProperty() method
-        config.setProperty( "com.agfa.hap.drools.ruleBaseUpdateHandler",
+        config.setProperty( "drools.ruleBaseUpdateHandler",
                             "" );
         
         // checking the string based getProperty() method
         assertEquals( "",
-                      config.getProperty( "com.agfa.hap.drools.ruleBaseUpdateHandler" ) );
+                      config.getProperty( "drools.ruleBaseUpdateHandler" ) );
     }
     
     

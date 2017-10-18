@@ -11,11 +11,11 @@
 		<jar-file>M2_REPO/org/dcm4che/dcm4che-net/dcm4che3.version/dcm4che-net-dcm4che3.version.jar</jar-file>
 		<jar-file>M2_REPO/org/dcm4che/dcm4che-conf-core-api/dcm4che3.version/dcm4che-conf-core-api-dcm4che3.version.jar</jar-file>
 		<jar-file>M2_REPO/org/dcm4che/dcm4chee-arc/dcm4chee-arc-entity/dcm4chee-arc.version/dcm4chee-arc-entity-dcm4chee-arc.version-oracle.jar</jar-file>
-		<jar-file>M2_REPO/com/agfa/hap/accesscontrol/com.agfa.hap.accesscontrol.pap/hap.accesscontrol.version/com.agfa.hap.accesscontrol.pap-hap.accesscontrol.version.jar</jar-file>
-		<jar-file>M2_REPO/com/agfa/hap/utilities/com.agfa.hap.drools.common/hap.com.agfa.hap.drools.version/com.agfa.hap.drools.common-hap.com.agfa.hap.drools.version.jar</jar-file>
+		<jar-file>M2_REPO/accesscontrol/accesscontrol.pap/hap.accesscontrol.version/accesscontrol.pap-hap.accesscontrol.version.jar</jar-file>
+		<jar-file>M2_REPO/utilities/drools.common/hap.drools.version/drools.common-hap.drools.version.jar</jar-file>
 		<jar-file>M2_REPO/com/agfa/agility/model/com.agfa.agility.model.core/project.version/com.agfa.agility.model.core-project.version.jar</jar-file>
 		 <jar-file>M2_REPO/com/agfa/agility/ris/com.agfa.ris.server.api/project.version/com.agfa.ris.server.api-project.version.jar</jar-file>
-        <jar-file>M2_REPO/com/agfa/agility/ris/com.agfa.hap.workflow.sdo/project.version/com.agfa.hap.workflow.sdo-project.version.jar</jar-file>
+        <jar-file>M2_REPO/com/agfa/agility/ris/workflow.sdo/project.version/workflow.sdo-project.version.jar</jar-file>
         <jar-file>M2_REPO/com/agfa/agility/server/com.agfa.agility.pacs.dicom.entity/agility-server-common.version/com.agfa.agility.pacs.dicom.entity-agility-server-common.version.jar</jar-file>
 
         <properties>

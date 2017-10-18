@@ -40,7 +40,7 @@ public class ReteooBuilderTest extends TestCase {
                                final String fileName) throws IOException {
         final XStream xstream = new XStream();
 
-        final PrintWriter out = new PrintWriter( new BufferedWriter( new FileWriter( "src/test/resources/org/com.agfa.hap.drools/reteoo/" + fileName ) ) );
+        final PrintWriter out = new PrintWriter( new BufferedWriter( new FileWriter( "src/test/resources/org/drools/reteoo/" + fileName ) ) );
 
         xstream.toXML( ruleBase,
                        out );

@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools.reteoo;
+package org.drools.reteoo;
 
 import org.drools.Message
 import org.drools.Cheese

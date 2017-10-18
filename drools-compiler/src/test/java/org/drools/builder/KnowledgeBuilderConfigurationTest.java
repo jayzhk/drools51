@@ -250,16 +250,16 @@ public class KnowledgeBuilderConfigurationTest extends TestCase {
 
         // setting the default dialect using the string based setProperty() method
         config.setProperty( DefaultPackageNameOption.PROPERTY_NAME,
-                            "org.com.agfa.hap.drools" );
+                            "org.drools" );
         
         // checking the type safe getOption() method
-        assertEquals( DefaultPackageNameOption.get( "org.com.agfa.hap.drools" ),
+        assertEquals( DefaultPackageNameOption.get( "org.drools" ),
                       config.getOption( DefaultPackageNameOption.class ) );
         // checking string conversion
-        assertEquals( "org.com.agfa.hap.drools",
+        assertEquals( "org.drools",
                       config.getOption( DefaultPackageNameOption.class ).getPackageName() );
         // checking the string based getProperty() method
-        assertEquals( "org.com.agfa.hap.drools",
+        assertEquals( "org.drools",
                       config.getProperty( DefaultPackageNameOption.PROPERTY_NAME ) );
     }
     

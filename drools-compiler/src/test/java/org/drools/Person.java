@@ -120,28 +120,28 @@ public class Person
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#getStatus()
+     * @see org.drools.PersonInterface#getStatus()
      */
     public String getStatus() {
         return this.status;
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#setStatus(java.lang.String)
+     * @see org.drools.PersonInterface#setStatus(java.lang.String)
      */
     public void setStatus(final String status) {
         this.status = status;
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#getLikes()
+     * @see org.drools.PersonInterface#getLikes()
      */
     public String getLikes() {
         return this.likes;
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#getName()
+     * @see org.drools.PersonInterface#getName()
      */
     public String getName() {
         return this.name;
@@ -152,7 +152,7 @@ public class Person
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#getAge()
+     * @see org.drools.PersonInterface#getAge()
      */
     public int getAge() {
         return this.age;
@@ -163,28 +163,28 @@ public class Person
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#isAlive()
+     * @see org.drools.PersonInterface#isAlive()
      */
     public boolean isAlive() {
         return this.alive;
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#setAlive(boolean)
+     * @see org.drools.PersonInterface#setAlive(boolean)
      */
     public void setAlive(final boolean alive) {
         this.alive = alive;
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#getSex()
+     * @see org.drools.PersonInterface#getSex()
      */
     public char getSex() {
         return this.sex;
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#setSex(char)
+     * @see org.drools.PersonInterface#setSex(char)
      */
     public void setSex(final char sex) {
         this.sex = sex;
@@ -249,28 +249,28 @@ public class Person
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#getBigDecimal()
+     * @see org.drools.PersonInterface#getBigDecimal()
      */
     public BigDecimal getBigDecimal() {
         return this.bigDecimal;
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#setBigDecimal(java.math.BigDecimal)
+     * @see org.drools.PersonInterface#setBigDecimal(java.math.BigDecimal)
      */
     public void setBigDecimal(final BigDecimal bigDecimal) {
         this.bigDecimal = bigDecimal;
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#getBigInteger()
+     * @see org.drools.PersonInterface#getBigInteger()
      */
     public BigInteger getBigInteger() {
         return this.bigInteger;
     }
 
     /* (non-Javadoc)
-     * @see org.com.agfa.hap.drools.PersonInterface#setBigInteger(java.math.BigInteger)
+     * @see org.drools.PersonInterface#setBigInteger(java.math.BigInteger)
      */
     public void setBigInteger(final BigInteger bigInteger) {
         this.bigInteger = bigInteger;

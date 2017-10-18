@@ -83,7 +83,7 @@ public class RuleBuilderTest extends TestCase {
         final DrlParser parser = new DrlParser();
 
         final PackageBuilder pkgBuilder = new PackageBuilder();
-        pkgBuilder.addPackage( new PackageDescr( "org.com.agfa.hap.drools" ) );
+        pkgBuilder.addPackage( new PackageDescr( "org.drools" ) );
         Package pkg = pkgBuilder.getPackage();
 
         final PackageDescr pkgDescr = parser.parse( new InputStreamReader( getClass().getResourceAsStream( "nestedConditionalElements.drl" ) ) );
@@ -275,7 +275,7 @@ public class RuleBuilderTest extends TestCase {
     }
 
     public void testBuildBigDecimalLiteralConstraint() throws Exception {
-        final PackageDescr pkgDescr = new PackageDescr( "org.com.agfa.hap.drools" );
+        final PackageDescr pkgDescr = new PackageDescr( "org.drools" );
         final RuleDescr ruleDescr = new RuleDescr( "Test Rule" );
         AndDescr andDescr = new AndDescr();
         PatternDescr patDescr = new PatternDescr( "java.math.BigDecimal",
@@ -305,7 +305,7 @@ public class RuleBuilderTest extends TestCase {
     }
 
     public void testBuildBigIntegerLiteralConstraint() throws Exception {
-        final PackageDescr pkgDescr = new PackageDescr( "org.com.agfa.hap.drools" );
+        final PackageDescr pkgDescr = new PackageDescr( "org.drools" );
         final RuleDescr ruleDescr = new RuleDescr( "Test Rule" );
         AndDescr andDescr = new AndDescr();
         PatternDescr patDescr = new PatternDescr( "java.math.BigInteger",

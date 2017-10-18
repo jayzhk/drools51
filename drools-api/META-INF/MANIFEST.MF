@@ -1,15 +1,56 @@
 Manifest-Version: 1.0
 Archiver-Version: Plexus Archiver
-Bnd-LastModified: 1508250015415
+Bnd-LastModified: 1508295482226
 Build-Jdk: 1.8.0_65
 Built-By: AXIGI
-Bundle-Activator: org.com.agfa.hap.drools.osgi.api.Activator
+Bundle-Activator: org.drools.osgi.api.Activator
 Bundle-ManifestVersion: 2
 Bundle-Name: Drools :: API
-Bundle-SymbolicName: org.com.agfa.hap.drools.api;singleton:=true
+Bundle-SymbolicName: org.drools.api;singleton:=true
 Bundle-Version: 5.1.0
 Created-By: Apache Maven Bundle Plugin
 DynamicImport-Package: *
+Export-Package: org.drools;uses:="org.drools.conf,org.drools.definition,
+ org.drools.definition.process,org.drools.definition.rule,org.drools.def
+ inition.type,org.drools.event.knowledgebase,org.drools.io,org.drools.ru
+ ntime";version="5.1.0",org.drools.agent;uses:="org.drools,org.drools.bu
+ ilder,org.drools.event.knowledgeagent,org.drools.io,org.drools.runtime"
+ ;version="5.1.0",org.drools.builder;uses:="com.sun.tools.xjc,org.drools
+ ,org.drools.builder.conf,org.drools.definition,org.drools.io,org.drools
+ .runtime";version="5.1.0",org.drools.builder.conf;uses:="org.drools.con
+ f,org.drools.runtime.rule";version="5.1.0",org.drools.builder.help;uses
+ :="com.sun.tools.xjc,javax.xml.bind,org.drools,org.drools.builder,org.d
+ rools.io";version="5.1.0",org.drools.command;uses:="org.drools.runtime,
+ org.drools.runtime.rule";version="5.1.0",org.drools.conf;uses:="org.dro
+ ols.runtime.rule";version="5.1.0",org.drools.definition;uses:="org.droo
+ ls.definition.process,org.drools.definition.rule";version="5.1.0",org.d
+ rools.definition.process;uses:="org.drools.definition";version="5.1.0",
+ org.drools.definition.rule;uses:="org.drools.definition";version="5.1.0
+ ",org.drools.definition.type;version="5.1.0",org.drools.event;uses:="or
+ g.drools.event.process,org.drools.event.rule,org.drools.runtime";versio
+ n="5.1.0",org.drools.event.io;uses:="org.drools";version="5.1.0",org.dr
+ ools.event.knowledgeagent;uses:="org.drools,org.drools.agent,org.drools
+ .builder,org.drools.definition,org.drools.io";version="5.1.0",org.drool
+ s.event.knowledgebase;uses:="org.drools,org.drools.definition,org.drool
+ s.definition.rule";version="5.1.0",org.drools.event.process;uses:="org.
+ drools.event,org.drools.runtime.process";version="5.1.0",org.drools.eve
+ nt.rule;uses:="org.drools.event,org.drools.event.knowledgeagent,org.dro
+ ols.runtime.rule";version="5.1.0",org.drools.io;uses:="org.drools,org.d
+ rools.event.io";version="5.1.0",org.drools.logger;uses:="org.drools.eve
+ nt";version="5.1.0",org.drools.management;uses:="javax.management";vers
+ ion="5.1.0",org.drools.marshalling;uses:="org.drools,org.drools.runtime
+ ";version="5.1.0",org.drools.osgi.api;uses:="org.osgi.framework,org.osg
+ i.util.tracker";version="5.1.0",org.drools.persistence.jpa;uses:="org.d
+ rools,org.drools.runtime";version="5.1.0",org.drools.runtime;uses:="org
+ .drools,org.drools.command,org.drools.event,org.drools.runtime.conf,org
+ .drools.runtime.process,org.drools.runtime.rule,org.drools.time";versio
+ n="5.1.0",org.drools.runtime.conf;uses:="org.drools.conf,org.drools.run
+ time.process";version="5.1.0",org.drools.runtime.help;uses:="com.though
+ tworks.xstream,org.drools.time,org.quartz";version="5.1.0",org.drools.r
+ untime.process;uses:="org.drools.runtime";version="5.1.0",org.drools.ru
+ ntime.rule;uses:="org.drools.definition.rule,org.drools.runtime";versio
+ n="5.1.0",org.drools.task.service;version="5.1.0",org.drools.time;versi
+ on="5.1.0",org.drools.util;uses:="org.drools";version="5.1.0"
 Import-Package: com.sun.tools.xjc;resolution:=optional,com.thoughtworks.
  xstream;resolution:=optional,javax.management;resolution:=optional,java
  x.xml.bind;resolution:=optional,org.osgi.framework;resolution:=optional
@@ -19,11 +60,11 @@ Import-Package: com.sun.tools.xjc;resolution:=optional,com.thoughtworks.
 Include-Resource: META-INF/MANIFEST.MF=src/main/resources/META-INF/MANIF
  EST.MF
 Originally-Created-By: Apache Maven
-Private-Package: org.drools,org.drools.agent,org.drools.builder,org.droo
- ls.builder.conf,org.drools.builder.help,org.drools.command,org.drools.c
+Private-Package: org.drools.agent,org.drools.builder.conf,org.drools.bui
+ lder,org.drools.builder.help,org.drools,org.drools.command,org.drools.c
  onf,org.drools.definition,org.drools.definition.process,org.drools.defi
- nition.rule,org.drools.definition.type,org.drools.event,org.drools.even
- t.io,org.drools.event.knowledgeagent,org.drools.event.knowledgebase,org
+ nition.rule,org.drools.definition.type,org.drools.event.io,org.drools.e
+ vent.knowledgeagent,org.drools.event.knowledgebase,org.drools.event,org
  .drools.event.process,org.drools.event.rule,org.drools.io,org.drools.lo
  gger,org.drools.management,org.drools.marshalling,org.drools.osgi.api,o
  rg.drools.persistence.jpa,org.drools.runtime,org.drools.runtime.conf,or

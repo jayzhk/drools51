@@ -1,4 +1,4 @@
-package org.com.agfa.hap.drools.package2
+package org.drools.package2
 
 import org.drools.Cheese
 
