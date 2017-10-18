@@ -1,11 +1,32 @@
 package droolsbook
 import com.agfa.hap.drools.Account
+import com.agfa.hap.drools.service.AccountService
+import java.math.BigDecimal;
 
-dialect "mvel"
+
+global  AccountService accountService;
+
+//dialect "mvel"
 
 rule "basic rule"
+
 when
-    Account( balance < 100)
+    $account1: Account( balance >= 100)
+    $account2 : Account(balance < 100)
 then
-    System.out.println("Account balance is less than 100");
+    System.out.println("Account balance is less than 100 ");
+    accountService.transfer($account1, $account2, 10);
+    System.out.println("from account balance = " + calculateTotal($account1));
+    System.out.println("to account balance = " + $account2.getBalance());
  end
+
+ function long calculateTotal(Account account) {
+    return account.getBalance();
+ }
+
+ declare Person
+    ID : Long @key
+    name : String @key
+    salary : BigDecimal
+    isStudent : boolean
+  end

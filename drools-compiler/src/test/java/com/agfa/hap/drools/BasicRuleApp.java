@@ -1,5 +1,6 @@
 package com.agfa.hap.drools;
 
+import com.agfa.hap.drools.service.AccountService;
 import org.drools.KnowledgeBase;
 import org.drools.KnowledgeBaseFactory;
 import org.drools.builder.KnowledgeBuilder;
@@ -15,9 +16,15 @@ public class BasicRuleApp {
         KnowledgeBase base = createKnowledgeBase();
         StatefulKnowledgeSession session = base.newStatefulKnowledgeSession();
         try {
-            Account account = new Account();
-            account.setBalance(50);
-            session.insert(account);
+            Account account1 = new Account();
+            Account account2 = new Account();
+            AccountService service = new AccountService();
+            account1.setBalance(100);
+            account2.setBalance(50);
+            session.insert(account1);
+            session.insert(account2);
+
+            session.setGlobal("accountService", service);
             session.fireAllRules();
         }finally{
             session.dispose();
